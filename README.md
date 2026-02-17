@@ -10,3 +10,4 @@ Corpus (i.e., the text or collection of texts you will be using for the project)
 Odyssey (Circe and Penelope): https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0218
 Argonauts: https://www.theoi.com/Text/ApolloniusRhodius4.html 
 Medea: https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0006.tlg003.perseus-eng2:0-85/ 
+(temp)
