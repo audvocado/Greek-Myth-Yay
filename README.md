@@ -9,9 +9,9 @@ Project mentor: Polly
 Outside faculty mentor: potentially Sarah Brucia Breitenfeld (Classics and WGS)
 Tentative Meeting: Sunday 5pm
 
-# Core research questions: How have women in power been depicted in ancient Greek texts? 
+## Core research questions: How have women in power been depicted in ancient Greek texts? 
 
-# Corpus - our collection of texts we will be using for the project 
+## Corpus - our collection of texts we will be using for the project 
 
   Odyssey (Circe and Penelope): https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0218
 
