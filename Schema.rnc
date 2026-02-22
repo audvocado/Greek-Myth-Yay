@@ -1,0 +1,17 @@
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+
+element test { xsd:double }
+start = document 
+document = element document ( meta, body )
+
+    meta = element meta ( author, date of publication )
+body = element body mixed ( theme, characters, dialogue, powerstructure )
+    theme = element theme (text, type)
+        type = attribute type ( text ) #mother, evil
+    dialogue = element dialogue (text)  
+    powerstructure = element powerstructure (text, type)
+        type = attribute type ( text, "political" | "man vs woman" | "husband vs wife" | "resistance" | "gender roles" )
+            #these are some of the general power sturctures we will look at and examine how they connect to our two major themes 
+characters = element characters (text, name)
+    name = attribute name (text, "penelope"| "circe" | "medea") 
+    
