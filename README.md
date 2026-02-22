@@ -1,11 +1,15 @@
 # Greek-Myth-Yay
 
-##Women in Power in Ancient Greek Mythology
-##Project by: Alivia, Audrey, Maxine, Carmel, Eliver
-##Project mentor: Polly
-##Outside faculty mentor: potentially Sarah Brucia Breitenfeld (Classics and WGS)
-##Tentative Meeting: Sunday 5pm
-##Core research questions: How have women in power been depicted in ancient Greek texts? 
+Women in Power in Ancient Greek Mythology
+
+Project by: Alivia, Audrey, Maxine, Carmel, Eliver
+
+Project mentor: Polly
+
+Outside faculty mentor: potentially Sarah Brucia Breitenfeld (Classics and WGS)
+Tentative Meeting: Sunday 5pm
+
+Core research questions: How have women in power been depicted in ancient Greek texts? 
 
 ##Corpus - our collection of texts we will be using for the project 
 
