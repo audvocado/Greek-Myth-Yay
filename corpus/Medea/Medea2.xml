@@ -1,0 +1,111 @@
+
+<GetPassage xmlns="http://chs.harvard.edu/xmlns/cts">
+    <request>
+        <requestName>GetPassage</requestName>
+        <requestUrn>urn:cts:greekLit:tlg0006.tlg003.perseus-eng2:65-115</requestUrn>
+    </request>
+    <reply>
+        <urn>urn:cts:greekLit:tlg0006.tlg003.perseus-eng2:65-115</urn>
+        <passage>
+            <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:py="http://codespeak.net/lxml/objectify/pytype" py:pytype="TREE">
+                <text xml:lang="eng">
+                    <body>
+                        <div type="translation" n="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" xml:lang="eng">
+                            <div type="textpart" subtype="episode">
+                                <sp>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="65">Nay, by thy beard I conjure thee, hide it not from thy fellow-slave; I will be silent, if need be, on that text.</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Attendant</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="67">
+                                        I heard one say, pretending not to listen as I approached the place where our greybeards sit playing draughts
+                                        <note resp="editor">
+                                            <foreign xml:lang="grc">πεσσοὺς</foreign>
+                                            literally the game itself; here; explained by the Scholiast as the place where it was habitually played.
+                                        </note>
+                                        near Pirene’s sacred spring,
+                                    </l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="70">that Creon, the ruler of this land, is bent on driving these children and their mother from the boundaries of Corinth; but I know not whether the news is to be relied upon, and would fain it were not.</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Nurse</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="74">What! will Jason brook such treatment of his sons, </l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="75">even though he be at variance with their mother?</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Attendant</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="76">Old ties give way to new; he bears no longer any love to this family.</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Nurse</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="78">Undone, it seems, are we, if to old woes fresh ones we add, ere we have drained the former to the dregs.</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Attendant</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="80">Hold thou thy peace, say not a word of this; ’tis no time for our mistress to learn hereof.</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Nurse</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="82">O children, do ye hear how your father feels towards you? Perdition catch him, but no! he is my master still; yet is he proved a veiy traitor to his nearest and dearest.</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Attendant</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="85">And who ’mongst men is not? Art learning only now, that every single man cares for himself more than for his neighbour, some from honest, motives, others for mere gain’s sake? seeing that to indulge his passion their father has ceased to love these children.</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Nurse</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="89">Go, children, within the house; all will be well. </l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="90">
+                                        Do thou keep them as far away as may be, and bring them not near their mother in her evil hour. For ere this have I seen her eyeing them savagely, as though she were minded
+                                        <pb xml:id="p.36"/>
+                                        to do them some hurt, and well I know she will not cease from her fury till she have pounced on some victim.
+                                    </l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="95">At least may she turn her hand against her foes, and not against her friends.</l>
+                                </sp>
+                            </div>
+                            <milestone n="96" unit="card" resp="perseus"/>
+                            <div type="textpart" subtype="choral">
+                                <div type="textpart" subtype="anapests">
+                                    <sp>
+                                        <speaker>Medea</speaker>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="96">
+                                            <stage rend="italic">(within).</stage>
+                                            Ah, me! a wretched suffering woman I! O would that I could die!
+                                        </l>
+                                    </sp>
+                                </div>
+                                <div type="textpart" subtype="anapests">
+                                    <sp>
+                                        <speaker>Nurse</speaker>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="98">’Tis as I said, my dear children; wild fancies stir your mother’s heart, wild fury goads her on.</l>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="100">Into the house without delay, come not near her eye, approach her not, beware her savage mood, the fell tempest of her reckless heart.</l>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="105">In, in with what speed ye may. For ’tis plain she will soon redouble her fury; that cry is but the herald of the gathering storm-cloud whose lightning soon will flash; what will her proud restless </l>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="110">
+                                            soul, in the anguish of despair, be guilty of?
+                                            <stage rend="italic">[Exit Attendant with the children.</stage>
+                                        </l>
+                                    </sp>
+                                </div>
+                                <div type="textpart" subtype="anapests">
+                                    <sp>
+                                        <speaker>Medea</speaker>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="111">
+                                            <stage rend="italic">(within).</stage>
+                                            Ah, me! the agony I have suffered, deep enough to call for these laments! Curse you and your father too, ye children damned, sons of a doomed mother! Ruin seize the whole family!
+                                        </l>
+                                    </sp>
+                                </div>
+                                <div type="textpart" subtype="anapests">
+                                    <sp>
+                                        <speaker>Nurse</speaker>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="115">Ah me! ah me! the pity of it! Why, pray, do thy children share their father’s crime? Why hatest thou them? Woe is you, poor children, how do I grieve for you lest ye suffer some outrage! Strange are the tempers of princes, </l>
+                                    </sp>
+                                </div>
+                            </div>
+                        </div>
+                    </body>
+                </text>
+            </TEI>
+        </passage>
+    </reply>
+</GetPassage>

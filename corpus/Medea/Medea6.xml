@@ -1,0 +1,96 @@
+
+<GetPassage xmlns="http://chs.harvard.edu/xmlns/cts">
+    <request>
+        <requestName>GetPassage</requestName>
+        <requestUrn>urn:cts:greekLit:tlg0006.tlg003.perseus-eng2:326-357</requestUrn>
+    </request>
+    <reply>
+        <urn>urn:cts:greekLit:tlg0006.tlg003.perseus-eng2:326-357</urn>
+        <passage>
+            <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:py="http://codespeak.net/lxml/objectify/pytype" py:pytype="TREE">
+                <text xml:lang="eng">
+                    <body>
+                        <div type="translation" n="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" xml:lang="eng">
+                            <div type="textpart" subtype="episode">
+                                <sp>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="326">What, wilt thou banish me, and to my prayers no pity yield?</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Creon</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="327">I will, for I love not thee above my own family.</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Medea</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="328">O my country! what fond memories I have of thee in this hour!</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Creon</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="329">Yea, for I myself love my city best of all things save my children.</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Medea</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="330">Ah me! ah me! to mortal man how dread a scourge is love!</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Creon</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="331">That, I deem, is according to the turn our fortunes take.</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Medea</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="332">O Zeus! let not the author of these my troubles escape thee.</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Creon</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="333">Begone, thou silly woman, and free me from my toil.</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Medea</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="334">The toil is mine, no lack of it.</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Creon</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="335">Soon wilt thou be thrust out forcibly by the hand of servants.</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Medea</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="336">Not that, not that, I do entreat thee, Creon!</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Creon</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="337">Thou wilt cause disturbance yet, it seems.</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Medea</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="338">I will begone; I ask thee not this boon to grant.</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Creon</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="339">Why then this violence? why dost thou not depart?</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Medea</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="340">Suffer me to abide this single day and devise some plan for the manner of my exile, and means of living for my children, since their father cares not to provide his babes therewith. Then pity them; thou too hast children of thine own; </l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="345">thou needs must have a kindly heart. For my own lot I care naught, though I an exile am, but for those babes I weep, that they should learn what sorrow means.</l>
+                                </sp>
+                                <pb xml:id="p.43"/>
+                                <sp>
+                                    <speaker>Creon</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="348">Mine is a nature anything but harsh; full oft by showing pity have I suffered shipwreck; </l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="350">and now albeit I clearly see my error, yet shalt thou gain this request, lady; but I do forewarn thee, if to-morrow’s rising sun shall find thee and thy children within the borders of this land, thou diest; my word is spoken and it will not lie. </l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="355">So now, if abide thou must, stay this one day only, for in it thou canst not do any of the fearful deeds I dread.</l>
+                                </sp>
+                                <milestone n="357" unit="card" resp="perseus"/>
+                                <div type="textpart" subtype="anapests">
+                                    <sp>
+                                        <speaker>Chorus</speaker>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="357">Ah! poor lady, woe is thee! Alas, for thy sorrows! Whither wilt thou turn? What protection, </l>
+                                    </sp>
+                                </div>
+                            </div>
+                        </div>
+                    </body>
+                </text>
+            </TEI>
+        </passage>
+    </reply>
+</GetPassage>

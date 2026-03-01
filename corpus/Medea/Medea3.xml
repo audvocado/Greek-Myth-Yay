@@ -1,0 +1,121 @@
+
+<GetPassage xmlns="http://chs.harvard.edu/xmlns/cts">
+    <request>
+        <requestName>GetPassage</requestName>
+        <requestUrn>urn:cts:greekLit:tlg0006.tlg003.perseus-eng2:120-184</requestUrn>
+    </request>
+    <reply>
+        <urn>urn:cts:greekLit:tlg0006.tlg003.perseus-eng2:120-184</urn>
+        <passage>
+            <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:py="http://codespeak.net/lxml/objectify/pytype" py:pytype="TREE">
+                <text xml:lang="eng">
+                    <body>
+                        <div type="translation" n="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" xml:lang="eng">
+                            <div type="textpart" subtype="choral">
+                                <div type="textpart" subtype="anapests">
+                                    <sp>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="120">and maybe because they seldom have to obey, and mostly lord it over others, change they their moods with difficulty. ’Tis better then to have been trained to live on equal terms. Be it mine to reach old age, not in proud pomp, but in security! </l>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="125">Moderation wins the day first as a better word for men to use, and likewise it is far the best course for them to pursue; but greatness that doth o’erreach itself, brings no blessing to mortal men; but pays a penalty of greater ruin whenever </l>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="130">fortune is wroth with a family.</l>
+                                    </sp>
+                                </div>
+                                <milestone n="131" unit="card" resp="perseus"/>
+                                <div type="textpart" subtype="lyric">
+                                    <sp>
+                                        <speaker>Chorus</speaker>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="131">I heard the voice, uplifted loud, of our poor Colchian lady, nor yet is she quiet; speak, aged dame, </l>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="135">
+                                            for as I stood by the house with double gates I heard a voice of
+                                            <pb xml:id="p.37"/>
+                                            weeping from within, and I do grieve, lady, for the sorrows of this house, for it hath won my love.
+                                        </l>
+                                    </sp>
+                                </div>
+                                <milestone n="139" unit="card" resp="perseus"/>
+                                <div type="textpart" subtype="anapests">
+                                    <sp>
+                                        <speaker>Nurse</speaker>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="139">’Tis a house no more; all that is passed away long since; </l>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="140">a royal bride keeps Jason at her side, while our mistress pines away in her bower, finding no comfort for her soul in aught her friends can say.</l>
+                                    </sp>
+                                    <sp>
+                                        <speaker>Medea</speaker>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="144">
+                                            <stage rend="italic">(within).</stage>
+                                            Oh, oh! Would that Heaven’s levin bolt would cleave this head in twain!
+                                        </l>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="145">What gain is life to me? Woe, woe is me! O, to die and win release, quitting this loathed existence!</l>
+                                    </sp>
+                                </div>
+                                <milestone n="148" unit="card" resp="perseus"/>
+                                <div type="textpart" subtype="strophe" n="1">
+                                    <sp>
+                                        <speaker>Chorus</speaker>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="148">Didst hear, O Zeus, thou earth, and thou, O light, the piteous note of woe </l>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="150">
+                                            the hapless wife is uttering? How shall a yearning for that insatiate
+                                            <note resp="editor">
+                                                So MSS.
+                                                <foreign xml:lang="grc">ἀπλήστου</foreign>
+                                                . Elmsley, whom many editors have followed, proposed
+                                                <foreign xml:lang="grc">ἀπλάτου</foreign>
+                                                =
+                                                <q type="gloss">terrible.</q>
+                                            </note>
+                                            resting-place ever hasten for thee, poor reckless one, the end that death alone can bring? Never pray for that.
+                                        </l>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="155">And if thy lord prefers a fresh love, be not angered with him for that; Zeus will judge ’twixt thee and him herein. Then mourn not for thy husband’s loss too much, nor waste thyself away.</l>
+                                    </sp>
+                                </div>
+                                <milestone n="160" unit="card" resp="perseus"/>
+                                <div type="textpart" subtype="anapests">
+                                    <sp>
+                                        <speaker>Medea</speaker>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="160">
+                                            <stage rend="italic">(within).</stage>
+                                            Great Themis, and husband
+                                            <note resp="editor">
+                                                <foreign xml:lang="grc">καὶ πότνι’ Ἄρτεμι</foreign>
+                                                , corrupt and pointless. The reading here adopted by the translator is
+                                                <foreign xml:lang="grc">καὶ πόσις, ἄρτι με</foreign>
+                                                , suggested by Munro (Journal of Philology, No. 22, p. 275)
+                                                <foreign xml:lang="grc">πόσις</foreign>
+                                                = Zeus.
+                                            </note>
+                                            of Themis, behold what I am suffering now, though I did bind that accursed one, my husband, by strong oaths to me? O, to see him and his bride some day brought to utter destruction, they and their house with them,
+                                        </l>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="165">for that they presume to wrong me thus unprovoked. O my father, my country, that I have left to my shame, after slaying my own brother.</l>
+                                    </sp>
+                                    <sp>
+                                        <speaker>Nurse</speaker>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="168">Do ye hear her words, how loudly she adjures Themis, oft invoked, and Zeus, whom </l>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="170">men regard as keeper of their oaths? On no mere trifle surely will our mistress spend her rage.</l>
+                                    </sp>
+                                </div>
+                                <milestone n="173" unit="card" resp="perseus"/>
+                                <div type="textpart" subtype="antistrophe" n="1">
+                                    <sp>
+                                        <speaker>Chorus</speaker>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="173">
+                                            Would that she would come forth for us to see, and
+                                            <pb xml:id="p.38"/>
+                                        </l>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="175">listen to the words of counsel we might give, if haply she might lay aside the fierce fury of her wrath, and her temper stern. Never be my zeal at any rate denied my friends! </l>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="180">But go thou and bring her hither outside the house, and tell her this our friendly thought; haste thee ere she do some mischief to those inside the house, for this sorrow of hers is mounting high.</l>
+                                    </sp>
+                                </div>
+                                <milestone n="184" unit="card" resp="perseus"/>
+                                <div type="textpart" subtype="anapests">
+                                    <sp>
+                                        <speaker>Nurse</speaker>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="184">This will I do; but I have my doubts whether I shall persuade </l>
+                                    </sp>
+                                </div>
+                            </div>
+                        </div>
+                    </body>
+                </text>
+            </TEI>
+        </passage>
+    </reply>
+</GetPassage>
