@@ -1,0 +1,47 @@
+/**
+ * Perseus display overrides for playing nice with sidecart
+ */
+#main_col, #right_col {
+    position: relative;  
+    padding-top:20px;
+    z-index: 0;
+}
+
+/**
+ * ld queries - make sure to always hide
+ *
+ */
+#perseusld_query_md_annotations, #text_annotations_query {
+	display: none;
+}
+
+/**
+ * Perseusld display overrides
+ */
+.oac_annotation {
+	color: #222
+}
+.oac_annotation .oac_motivation {
+    font-weight: bold;
+}
+
+.oac_annotation .copyright {
+    font-size: smaller;
+}
+.oac_annotation .oac_creator {
+	text-align: right;
+}
+.oac_annotation .oac_annotatedAt {
+	text-align: right;
+	color: #888;
+	margin-bottom: 20px
+}
+
+
+/**
+ * Sidecart display overrides
+ */
+.sidecart {
+   position:absolute !important;
+   font: 12px/14px "Lucida Grande",Verdana,Helvetica,Arial,sans-serif !important;
+}
