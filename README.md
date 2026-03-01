@@ -1,4 +1,5 @@
-# Greek-Myth-Yay
+# Read Me
+
 
 Women in Power in Ancient Greek Mythology
 
@@ -20,3 +21,4 @@ Tentative Meeting: Sunday 5pm
   Medea: https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0006.tlg003.perseus-eng2:0-85/ 
 
 ## This text can be found online for public usage. 
+>>>>>>> refs/remotes/origin/main
