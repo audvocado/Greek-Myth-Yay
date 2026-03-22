@@ -1,0 +1,33 @@
+
+<GetPassage xmlns="http://chs.harvard.edu/xmlns/cts">
+    <request>
+        <requestName>GetPassage</requestName>
+        <requestUrn>urn:cts:greekLit:tlg0006.tlg003.perseus-eng2:357-364</requestUrn>
+    </request>
+    <reply>
+        <urn>urn:cts:greekLit:tlg0006.tlg003.perseus-eng2:357-364</urn>
+        <passage>
+            <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:py="http://codespeak.net/lxml/objectify/pytype" py:pytype="TREE">
+                <text xml:lang="eng">
+                    <body>
+                        <div type="translation" n="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" xml:lang="eng">
+                            <div type="textpart" subtype="episode">
+                                <div type="textpart" subtype="anapests">
+                                    <sp>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="357">Ah! poor lady, woe is thee! Alas, for thy sorrows! Whither wilt thou turn? What protection, </l>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="360">what home or country to save thee from thy troubles wilt thou find? O Medea, in what a hopeless sea of misery heaven hath plunged thee!</l>
+                                    </sp>
+                                    <milestone n="364" unit="card" resp="perseus"/>
+                                    <sp>
+                                        <speaker>Medea</speaker>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="364">On all sides sorrow pens me in. Who shall gainsay this? </l>
+                                    </sp>
+                                </div>
+                            </div>
+                        </div>
+                    </body>
+                </text>
+            </TEI>
+        </passage>
+    </reply>
+</GetPassage>

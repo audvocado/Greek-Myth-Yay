@@ -1,0 +1,69 @@
+
+<GetPassage xmlns="http://chs.harvard.edu/xmlns/cts">
+    <request>
+        <requestName>GetPassage</requestName>
+        <requestUrn>urn:cts:greekLit:tlg0006.tlg003.perseus-eng2:185-260</requestUrn>
+    </request>
+    <reply>
+        <urn>urn:cts:greekLit:tlg0006.tlg003.perseus-eng2:185-260</urn>
+        <passage>
+            <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:py="http://codespeak.net/lxml/objectify/pytype" py:pytype="TREE">
+                <text xml:lang="eng">
+                    <body>
+                        <div type="translation" n="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" xml:lang="eng">
+                            <div type="textpart" subtype="choral">
+                                <div type="textpart" subtype="anapests">
+                                    <sp>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="185">my mistress; still willingly will I undertake this trouble for you; albeit, she glares upon her servants with the look of a lioness with cubs, whenso anyone draws nigh to speak to her. </l>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="190">Wert thou to call the men of old time rude uncultured boors thou wouldst not err, seeing that they devised their hymns for festive occasions, for banquets, and to grace the board, a pleasure to catch the ear, shed o’er our life, </l>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="195">but no man hath found a way to allay hated grief by music and the minstrel’s varied strain, whence arise slaughters and fell strokes of fate to o’erthrow the homes of men. And yet this were surely a gain, </l>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="200">to heal men’s wounds by music’s spell, but why tune they their idle song where rich banquets are spread? for of itself doth the rich banquet, set before them, afford to men delight.</l>
+                                    </sp>
+                                </div>
+                                <milestone n="204" unit="card" resp="perseus"/>
+                                <div type="textpart" subtype="epode">
+                                    <sp>
+                                        <speaker>Chorus</speaker>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="204">I heard a bitter cry of lamentation! </l>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="205">loudly, bitterly she calls on the traitor of her marriage bed, her perfidious spouse; by grievous wrongs oppressed she invokes Themis, bride of Zeus, witness of oaths, who brought her </l>
+                                        <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="210">unto Hellas, the land that fronts the strand of Asia, o’er the sea by night through ocean’s boundless gate.</l>
+                                    </sp>
+                                </div>
+                            </div>
+                            <milestone n="214" unit="card" resp="perseus"/>
+                            <div type="textpart" subtype="episode">
+                                <sp>
+                                    <speaker>Medea</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="214">From the house I have come forth, Corinthian ladies, </l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="215">
+                                        for fear lest you be blaming me;
+                                        <note resp="editor">To extract any satisfactory meaning from this passage, as it stands in our editions, seems an almost impossible task, to judge from the attempts at present made. I have not ventured to alter Paley’s text, or proposed interpretation, unsatisfactory as it seems to me. Verrall’s emendations, though bold in the extreme, do at least make the Greek intelligible, and to his ingenious note I would refer the curious.</note>
+                                        for well I know that amongst men many by showing pride have gotten them
+                                        <pb xml:id="p.39"/>
+                                        an ill name and a reputation for indifference, both those who shun men’s gaze and those who move amid the stranger crowd, and likewise they who choose a quiet walk in life. For there is no just discernment in the eyes of men,
+                                    </l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="220">for they, or ever they have surely learnt their neighbour’s heart, loathe him at first sight, though never wronged by him; and so a stranger most of all should adopt a city’s views; nor do I commend that citizen, who, in the stubbornness of his heart, from churlishness resents the city’s will.</l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="225">But on me hath fallen this unforeseen disaster, and sapped my life; ruined I am, and long to resign the boon of existence, kind friends, and die. For he who was all the world to me, as well thou knowest, hath turned out the veriest villain, my own husband. </l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="230">Of all things that have life and sense we women are the most hapless creatures; first must we buy a husband at an exorbitant price, and o’er ourselves a tyrant set which is an evil worse than the first; </l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="235">and herein lies the most important issue, whether our choice be good or bad. For divorce is discreditable to women, nor can we disown our lords. Next must the wife, coming as she does to ways and customs new, since she hath not learnt the lesson in her home, have a diviner’s eye to see </l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="240">how best to treat the partner of her life. If haply we perform these tasks with thoroughness and tact, and the husband live with us, without resenting the yoke, our life is a happy one; if not, ’twere best to die. But when a man is vexed with what he finds indoors, </l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="245">he goeth forth and rids his soul of its disgust, betaking him to some friend or comrade of like age; whilst we must needs regard his single self.</l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="249">And yet they say we live secure at home, while they are at the wars, </l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="250">
+                                        with their sorry reasoning, for I would gladly take my stand in battle array three times o’er, than once give
+                                        <pb xml:id="p.40"/>
+                                        birth.
+                                    </l>
+                                    <milestone n="252" unit="card" resp="perseus"/>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="252">But enough! this language suits not thee as it does me; thou hast a city here, a father’s house, some joy in life, and friends to share thy thoughts, </l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="255">but I am destitute, without a city, and therefore scorned by my husband, a captive I from a foreign shore, with no mother, brother, or kinsman in whom to find a new haven of refuge from this calamity. Wherefore this one boon and only this I wish to win from thee,—</l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="260">thy silence, if haply I can some way or means devise to avenge me on my husband for this cruel treatment, and on the man who gave to him his daughter, and on her who is his wife. For though a woman be timorous enough in all else, and as regards courage, a coward at the mere sight of steel, </l>
+                                </sp>
+                            </div>
+                        </div>
+                    </body>
+                </text>
+            </TEI>
+        </passage>
+    </reply>
+</GetPassage>

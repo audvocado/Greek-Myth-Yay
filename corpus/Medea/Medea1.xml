@@ -1,0 +1,128 @@
+
+<GetPassage xmlns="http://chs.harvard.edu/xmlns/cts">
+    <request>
+        <requestName>GetPassage</requestName>
+        <requestUrn>urn:cts:greekLit:tlg0006.tlg003.perseus-eng2:0-85</requestUrn>
+    </request>
+    <reply>
+        <urn>urn:cts:greekLit:tlg0006.tlg003.perseus-eng2:0-85</urn>
+        <passage>
+            <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:py="http://codespeak.net/lxml/objectify/pytype" py:pytype="TREE">
+                <text xml:lang="eng">
+                    <body>
+                        <div type="translation" n="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" xml:lang="eng">
+                            <milestone n="1" unit="card" resp="perseus"/>
+                            <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" style="hidden" n="0"/>
+                            <note resp="editor" place="inline">
+                                <p xml:lang="lat">Dramatis Personae</p>
+                                <p>Nurse of Medea</p>
+                                <p>Attendant of her children</p>
+                                <p>Medea</p>
+                                <p>Chorus of Corinthian women</p>
+                                <p>Creon</p>
+                                <p>Jason</p>
+                                <p>Aegeus</p>
+                                <p>Messenger</p>
+                                <p>Two Sons of Jason and Medea</p>
+                            </note>
+                            <div type="textpart" subtype="episode">
+                                <pb xml:id="p.33"/>
+                                <stage rend="italic">Scene.—Before the Palace of Creon at Corinth.</stage>
+                                <sp>
+                                    <speaker>Nurse</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="1">Ah! would to Heaven the good ship Argo ne’er had sped its course to the Colchian land through the misty blue Symplegades, nor ever in the glens of Pelion the pine been felled to furnish with oars the chieftain’s hands, </l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="5">who went to fetch the golden fleece for Pelias; for then would my own mistress Medea never have sailed to the turrets of Iolcos, her soul with love for Jason smitten, nor would she have beguiled the daughters of Pelias </l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="10">to slay their father and come to live here in the land of Corinth with her husband and children, where her exile found favour with the citizens to whose land she had come, and in all things of her own accord was she at one with Jason, the greatest safeguard this </l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="15">when wife and husband do agree; but now their love is all turned to hate, and tenderest ties are weak. For Jason hath betrayed his own children and my mistress dear for the love of a royal bride, for he hath wedded the daughter of Creon, lord of this land.</l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="20">While Medea his hapless wife, thus scorned, appeals to the oaths he swore, recalls the strong pledge his right hand gave, and bids heaven be witness what requital she is finding from Jason. And here she lies fasting, yielding her body to her grief, </l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="25">wasting away in tears ever since she learnt that she was wronged by her husband, never lifting her eye nor raising her face from off the ground; and she lends as deaf an ear to her friend’s warning as if she were a rock or ocean billow, save when she turns her snow-white neck aside </l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="30">
+                                        and softly to herself bemoans her father dear, her country and her home, which
+                                        <pb xml:id="p.34"/>
+                                        she gave up to come hither with the man who now holds her in dishonour. She, poor lady, hath by sad experience learnt how good a thing it is
+                                    </l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="35">never to quit one’s native land. And she hates her children now and feels no joy at seeing them; I am afeard she may contrive some untoward scheme; for her mood is dangerous nor will she brook her cruel treatment; full well I know her, and I much do dread </l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="40">that she will plunge the keen sword through their heart, stealing without a word into the chamber where their marriage couch is spread, or else that she will slay the prince and bridegroom too, and so find some calamity still more grievous than the present; for dreadful is her wrath; </l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="45">verily the man that doth incur her hate will have no easy task to raise o’er her a song of triumph. Lo! where her sons come hither from their childish sports; little they reck of their mother’s woes, for the soul of the young is no inend to sorrow.</l>
+                                </sp>
+                                <milestone n="49" unit="card" resp="perseus"/>
+                                <sp>
+                                    <speaker>Attendant</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="49">Why dost thou, so long my lady’s own handmaid, </l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="50">stand here at the gate alone, loudly lamenting to thyself the piteous tale? how comes it that Medea will have thee leave her to herself?</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Nurse</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="53">Old man, attendant on the sons of Jason, our masters’ fortunes when they go awry make good slaves grieve</l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="55">and touch their hearts. Oh! I have come to such a pitch of grief that there stole a yearning wish upon me to come forth hither and proclaim to heaven and earth my mistress’s hard fate.</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Attendant</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="59">What! has not the poor lady ceased yet from her lamentation?</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Nurse</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="60">Would I were as thou art! the mischief is but now beginning; it has not reached its climax yet.</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Attendant</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="61">O foolish one, if I may call my mistress such a name; how little she recks of evils yet more recent!</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Nurse</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="63">What mean’st, old man? grudge not to tell me.</l>
+                                </sp>
+                                <pb xml:id="p.35"/>
+                                <sp>
+                                    <speaker>Attendant</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="64">’Tis naught; I do repent me even of the words I have spoken.</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Nurse</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="65">Nay, by thy beard I conjure thee, hide it not from thy fellow-slave; I will be silent, if need be, on that text.</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Attendant</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="67">
+                                        I heard one say, pretending not to listen as I approached the place where our greybeards sit playing draughts
+                                        <note resp="editor">
+                                            <foreign xml:lang="grc">πεσσοὺς</foreign>
+                                            literally the game itself; here; explained by the Scholiast as the place where it was habitually played.
+                                        </note>
+                                        near Pirene’s sacred spring,
+                                    </l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="70">that Creon, the ruler of this land, is bent on driving these children and their mother from the boundaries of Corinth; but I know not whether the news is to be relied upon, and would fain it were not.</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Nurse</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="74">What! will Jason brook such treatment of his sons, </l>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" n="75">even though he be at variance with their mother?</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Attendant</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="76">Old ties give way to new; he bears no longer any love to this family.</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Nurse</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="78">Undone, it seems, are we, if to old woes fresh ones we add, ere we have drained the former to the dregs.</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Attendant</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="80">Hold thou thy peace, say not a word of this; ’tis no time for our mistress to learn hereof.</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Nurse</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="82">O children, do ye hear how your father feels towards you? Perdition catch him, but no! he is my master still; yet is he proved a veiy traitor to his nearest and dearest.</l>
+                                </sp>
+                                <sp>
+                                    <speaker>Attendant</speaker>
+                                    <l xml:base="urn:cts:greekLit:tlg0006.tlg003.perseus-eng2" resp="perseus" rend="indent" n="85">And who ’mongst men is not? Art learning only now, that every single man cares for himself more than for his neighbour, some from honest, motives, others for mere gain’s sake? seeing that to indulge his passion their father has ceased to love these children.</l>
+                                </sp>
+                            </div>
+                        </div>
+                    </body>
+                </text>
+            </TEI>
+        </passage>
+    </reply>
+</GetPassage>
