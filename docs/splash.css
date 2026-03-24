@@ -1,37 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One&display=swap');
 
+/* BACKGROUND & GLOBAL COLORS */
 body {
     margin: 0;
     padding: 0;
-    background-color: #F3EFE6; /* Palette Cream */
-    color: #2F6F7E; /* Deep Teal */
+    background-color: #F3EFE6; /* Cream from your palette */
+    color: #2F6F7E; /* Deep Teal from your palette */
     font-family: 'Fauna One', serif;
 }
 
+/* NAVIGATION BAR */
 .top-bar {
-    background: #2F6F7E;
-    border-bottom: 4px solid #D9B98C; /* Gold Accent */
+    background: #2F6F7E; /* Deep Teal */
+    border-bottom: 4px solid #D9B98C; /* Champagne Gold */
     padding: 20px 0;
     text-align: center;
 }
 
 .nav-link {
-    color: #F3EFE6;
+    color: #F3EFE6; /* Cream Text */
     text-decoration: none;
     font-family: 'Cinzel', serif;
     margin: 0 20px;
+    letter-spacing: 2px;
     text-transform: uppercase;
+    transition: 0.3s;
 }
 
+.nav-link:hover {
+    color: #D9B98C; /* Gold on hover */
+}
+
+/* THE VAN GOGH SPLIT LAYOUT */
 .split-container {
     display: flex;
     width: 100%;
-    min-height: 400px;
+    min-height: 500px; /* Gives plenty of room for Circe and Medea */
     background: white;
-    border-bottom: 2px solid #CFD6D8;
+    border-bottom: 2px solid #CFD6D8; /* Light Grey Divider */
 }
 
-/* This class flips the order of text and image */
+/* Flips the order for the second section */
 .reverse {
     flex-direction: row-reverse;
 }
@@ -42,43 +51,59 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #F3EFE6;
+    background-color: #F3EFE6; /* Matches the body cream */
 }
 
 .column-image {
     flex: 1;
-    background-color: #CFD6D8;
+    overflow: hidden;
+    background-color: #CFD6D8; 
 }
 
 .column-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Fills the space perfectly */
+    object-fit: cover; /* This is vital: it crops Circe/Medea to fill the 50% box */
+    display: block;
 }
 
+/* TYPOGRAPHY */
 h2 {
     font-family: 'Cinzel', serif;
     color: #2F6F7E;
     margin-top: 0;
     text-align: center;
+    border-bottom: 2px solid #D9B98C;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 p {
     line-height: 1.8;
+    font-size: 1.1rem;
     margin: 0;
 }
 
+/* SCROLL TO TOP BUTTON */
 #scrollTopBtn {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background: #D9B98C;
-    border: none;
+    color: #2F6F7E;
+    border: 2px solid #2F6F7E;
     padding: 15px;
     font-family: 'Cinzel';
+    font-weight: bold;
     cursor: pointer;
+    border-radius: 5px;
+    z-index: 100;
 }
 
+#scrollTopBtn:hover {
+    background: #2F6F7E;
+    color: #F3EFE6;
+}
 
 /**{background-color: #e0ddd5}
 h1 {
