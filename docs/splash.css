@@ -1,4 +1,113 @@
-*{background-color: #e0ddd5}
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One&display=swap');
+
+:root {
+    --gold: #c6934b;
+    --deep-blue: #1e293b;
+    --marble: #f4f1ea;
+    --bronze-text: #5c3d2e;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--marble);
+    /* Subtle texture feel */
+    background-image: radial-gradient(#dcd9d0 1px, transparent 1px);
+    background-size: 20px 20px;
+    font-family: 'Fauna One', serif; /* Neat and readable */
+    color: var(--deep-blue);
+    line-height: 1.8;
+    padding-top: 80px; /* Space for the fixed nav bar */
+}
+
+/* --- THE TOP BAR --- */
+.top-bar {
+    background-color: var(--deep-blue);
+    border-bottom: 3px solid var(--gold);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.nav-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav-link {
+    color: var(--marble);
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--gold);
+    text-shadow: 0 0 8px var(--gold);
+}
+
+/* --- HEADINGS --- */
+h1 {
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    color: var(--deep-blue);
+    margin: 40px auto;
+    max-width: 800px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 0px rgba(198, 147, 75, 0.3);
+}
+
+h2 {
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    margin: 30px 0 15px 0;
+    border-bottom: 1px solid var(--gold);
+    display: inline-block;
+}
+
+/* --- CONTENT BOXES (Making info "Pop") --- */
+p, ul {
+    background: white;
+    border-left: 8px solid var(--gold); /* The "Pop" accent */
+    border-radius: 4px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li {
+    list-style: none;
+    padding: 8px 0;
+    border-bottom: 1px dotted #eee;
+    color: var(--bronze-text);
+}
+
+li:last-child {
+    border-bottom: none;
+    color: var(--deep-blue);
+    font-weight: bold;
+}
+
+
+
+
+
+
+/**{background-color: #e0ddd5}
 h1 {
 text-shadow: 0 0 2px #00e9ff, 0 0 3px #0088ff;
     color: #283d70;
@@ -35,4 +144,4 @@ li {
     color: #703529;
     background-color: #c6934b;
     font-family: Georgia, serif;
-}
+}*/
