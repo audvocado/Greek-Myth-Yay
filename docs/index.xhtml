@@ -20,85 +20,46 @@
             <h1 class="main-title">Women in <span style="color:#D9B98C;">Power</span></h1>
         </div>
         
-        <div class="content-container">
-            
-            <div class="content-box">
-                <div class="box-header" onclick="toggleBox(this)">
-                    <h2>Our Mission <span>[−]</span></h2>
-                </div>
-                <div class="box-body">
-                    <div class="box-text">
-                        <p>With this project, we want to discover how women in power in Greek texts have been
-                            depicted through various lenses. We aim to look at themes of motherhood and percieved
-                            deception/witchcraft, descriptive language and adjectives, and dialougue to see how the
-                            women are percieved from the male perspective.</p>
-                    </div>
-                    <div class="box-image-container">
-                        <img src="image_0ebb24.jpg" alt="Aesthetic Mission" class="collage-img" style="transform: rotate(2deg);" />
-                    </div>
-                </div>
+        <div class="split-container">
+            <div class="column-text">
+                <h2>Our Mission</h2>
+                <p>With this project, we want to discover how women in power in Greek texts have been 
+                    depicted through various lenses. We aim to look at themes of motherhood and percieved 
+                    deception/witchcraft, descriptive language and adjectives, and dialougue to see how 
+                    the women are percieved from the male perspective.</p>
             </div>
-            
-            <div style="text-align:center; margin: 30px 0;">
-                <img src="image_0ebb87.jpg" alt="Divider Wave" style="width:90%; border-top:2px solid #D9B98C; border-bottom:2px solid #D9B98C; height:120px; object-fit:cover; opacity: 0.8;" />
+            <div class="column-image">
+                <img src="image_0ebb24.jpg" alt="Mission Image" />
             </div>
-            
-            <div class="content-box">
-                <div class="box-header" onclick="toggleBox(this)">
-                    <h2>The Team <span>[−]</span></h2>
-                </div>
-                <div class="box-body reverse">
-                    <div class="box-text">
-                        <ul style="list-style:none; padding:0; text-align:center; font-family:'Cinzel'; color:#741b47; font-weight:bold;">
-                            <li style="margin: 10px 0;">Alivia Pierce</li>
-                            <li style="margin: 10px 0;">Elivier Russo</li>
-                            <li style="margin: 10px 0;">Audrey Weeden</li>
-                            <li style="margin: 10px 0;">Carmel Levin</li>
-                            <li style="margin: 10px 0;">Maxine Van Nortwick</li>
-                        </ul>
-                    </div>
-                    <div class="box-image-container">
-                        <img src="image_0ebb62.jpg" alt="Aesthetic Team" class="collage-img" style="transform: rotate(-2deg);" />
-                    </div>
-                </div>
-            </div>
-            
         </div>
         
-        <div style="background:#366f91; color:#D9B98C; padding:50px; text-align:center; font-family:'Cinzel'; border-top:5px solid #967117; margin-top:50px;">
+        <div class="split-container reverse">
+            <div class="column-text">
+                <h2>About the Team</h2>
+                <ul style="list-style:none; padding:0; font-family:'Cinzel'; color:#741b47; font-weight:bold;">
+                    <li style="margin-bottom: 10px;">Alivia Pierce</li>
+                    <li style="margin-bottom: 10px;">Elivier Russo</li>
+                    <li style="margin-bottom: 10px;">Audrey Weeden</li>
+                    <li style="margin-bottom: 10px;">Carmel Levin</li>
+                    <li style="margin-bottom: 10px;">Maxine Van Nortwick</li>
+                </ul>
+            </div>
+            <div class="column-image">
+                <img src="image_0ebb62.jpg" alt="Team Image" />
+            </div>
+        </div>
+        
+        <div style="background:#366f91; color:#D9B98C; padding:40px; text-align:center; font-family:'Cinzel'; border-top:5px solid #967117;">
             <p>✧ ANCIENT WISDOM • MODERN ANALYSIS ✧</p>
         </div>
         
         <script type="text/javascript">
     //<![CDATA[
-        function toggleBox(header) {
-            var body = header.nextElementSibling;
-            var span = header.querySelector('span');
-            if (body.style.display === "none") {
-                body.style.display = "flex"; // Changed from 'block' to 'flex' to keep layout!
-                span.innerHTML = "[−]";
-            } else {
-                body.style.display = "none";
-                span.innerHTML = "[+]";
-            }
-        }
-
-        var mybutton = document.getElementById("scrollTopBtn");
-        window.onscroll = function() {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        };
-        function topFunction() {
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        }
+        function topFunction() { window.scrollTo({top: 0, behavior: 'smooth'}); }
     //]]>
     </script>
     </body>
 </html>
-
 
    <!-- <body>   
         <nav class="top-bar">
