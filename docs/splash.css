@@ -3,7 +3,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #efbbff; /* Your Lavender */
+    background-color: #efbbff; 
     color: #330033;
     font-family: 'Fauna One', serif;
 }
@@ -31,7 +31,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 5px solid #D9B98C; /* Gold Accent */
+    border-bottom: 5px solid #D9B98C; 
 }
 
 .main-title {
@@ -61,7 +61,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center; /* THIS CENTERS YOUR MISSION TEXT */
+    text-align: center; 
 }
 
 .column-image {
@@ -82,18 +82,19 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* TEAM LIST STYLE (Matches Mission Font) */
+/* TEAM LIST STYLE - MIRRORS PARAGRAPH EXACTLY */
 .team-list {
     list-style: none;
     padding: 0;
-    font-family: 'Fauna One', serif; /* Matching Mission Font */
-    font-weight: bold;
+    font-family: 'Fauna One', serif; 
     color: #330033;
     font-size: 1.1rem;
+    line-height: 1.8;
+    font-weight: normal; /* Removed Bold */
 }
 
 .team-list li {
-    margin: 10px 0;
+    margin: 5px 0;
 }
 
 #scrollTopBtn {
@@ -108,7 +109,6 @@ h2 {
     border: 1px solid #efbbff;
     cursor: pointer;
 }
-
 
 /**{background-color: #e0ddd5}
 h1 {
