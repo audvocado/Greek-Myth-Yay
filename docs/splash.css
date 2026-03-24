@@ -24,10 +24,9 @@ body {
     text-transform: uppercase;
 }
 
-/* THE MISSING TITLE HEADER SECTION */
+/* TITLE HEADER */
 .hero-collage {
     height: 300px;
-    background-color: #800080; /* Deep Purple fallback */
     background: linear-gradient(rgba(102, 0, 102, 0.6), rgba(54, 111, 145, 0.6));
     display: flex;
     align-items: center;
@@ -62,6 +61,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center; /* THIS CENTERS YOUR MISSION TEXT */
 }
 
 .column-image {
@@ -79,6 +79,21 @@ h2 {
     font-family: 'Cinzel', serif;
     color: #800080;
     border-bottom: 2px solid #D9B98C;
+    margin-bottom: 20px;
+}
+
+/* TEAM LIST STYLE (Matches Mission Font) */
+.team-list {
+    list-style: none;
+    padding: 0;
+    font-family: 'Fauna One', serif; /* Matching Mission Font */
+    font-weight: bold;
+    color: #330033;
+    font-size: 1.1rem;
+}
+
+.team-list li {
+    margin: 10px 0;
 }
 
 #scrollTopBtn {
@@ -91,6 +106,7 @@ h2 {
     border-radius: 50%;
     font-family: 'Cinzel';
     border: 1px solid #efbbff;
+    cursor: pointer;
 }
 
 
