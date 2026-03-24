@@ -1,148 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One&family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One&display=swap');
 
+/* THE BACKGROUND VIBE */
 body {
     margin: 0;
     padding: 0;
-    /* This color matches the creamy parchment in your collage */
-    background-color: #eaddca; 
+    background-color: #eaddca; /* The parchment tan from your collage */
     background-image: url('https://www.transparenttextures.com/patterns/papyros.png');
-    color: #2c262c;
+    color: #1a2a3a; /* Deep Navy text */
     font-family: 'Fauna One', serif;
-    line-height: 1.8;
 }
 
-/* NAVIGATION - NAVY & GOLD */
+/* NAVY TOP BAR */
 .top-bar {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #1a2a3a; /* Deep Navy from your wave image */
-    border-bottom: 3px solid #d4af37;
+    background: #1a2a3a; /* Deep Navy */
+    border-bottom: 3px solid #d4af37; /* Gold rim */
     z-index: 1000;
     padding: 15px 0;
+    text-align: center;
 }
 
 .nav-link {
-    margin: 0 25px;
-    text-decoration: none;
     color: #f4f1ea;
+    text-decoration: none;
     font-family: 'Cinzel', serif;
+    margin: 0 20px;
     letter-spacing: 2px;
-    font-size: 0.85rem;
-    transition: 0.3s;
+    text-transform: uppercase;
 }
 
-.nav-link:hover {
-    color: #d4af37;
-}
-
-/* THE HERO SECTION - MOOD BOARD STYLE */
-.hero-section {
-    padding: 160px 20px 80px;
-    text-align: center;
-    /* Soft celestial glow background */
-    background: radial-gradient(circle, rgba(212,175,55,0.1) 0%, rgba(234,221,202,0) 70%);
-}
-
-.main-title {
-    font-family: 'Cinzel', serif;
-    font-size: 4rem;
-    letter-spacing: 8px;
-    color: #1a2a3a;
-}
-
-.gold-pop {
-    color: #b89129;
-    text-shadow: 1px 1px 0px #fff;
-}
-
-/* CARDS - LAYERED PAPER EFFECT */
-.aesthetic-card {
-    background: #fdfbf7;
-    padding: 50px;
-    margin-bottom: 50px;
-    border: 1px solid #d1c7b7;
-    /* This creates that "stacked" collage shadow */
-    box-shadow: 5px 5px 0px #1a2a3a, 10px 10px 0px #d4af37;
-    position: relative;
-}
-
-h2 {
-    font-family: 'Cinzel', serif;
-    font-style: italic;
-    color: #1a2a3a;
-    border-bottom: 1px double #d4af37;
-    display: inline-block;
-    margin-bottom: 25px;
-}
-
-/* IMAGE STYLING - ANTIQUE BORDER */
-.gallery-item img {
-    border: 8px solid #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    filter: sepia(20%); /* Makes images feel like they belong in the collage */
-}
-
-.footer-area {
-    background: #1a2a3a;
-    color: #d4af37;
-    padding: 40px;
-    text-align: center;
-    font-family: 'Cinzel', serif;
-    letter-spacing: 4px;
-}
-
-/* Create the Overlapping Hero Look */
+/* THE COLLAGE HEADER */
 .hero-collage {
-    position: relative;
-    height: 400px;
-    overflow: hidden;
+    height: 450px;
+    background: url('image_0ebb44.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 3px solid #d4af37;
+    margin-top: 50px;
+    border-bottom: 5px solid #d4af37;
+    position: relative;
 }
 
-.fresco-bg {
+.hero-collage::after {
+    content: "";
     position: absolute;
-    width: 100%;
-    filter: sepia(30%) brightness(60%);
-    z-index: 1;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(26, 42, 58, 0.5); /* Navy overlay so text is readable */
 }
 
-.hero-text-overlay {
+.main-title {
     position: relative;
     z-index: 2;
-    text-align: center;
-    color: white;
+    font-family: 'Cinzel', serif;
+    font-size: 4rem;
+    color: #f4f1ea;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
 }
 
-/* Side-by-side collage image styling */
-.collage-style {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+/* THE CARDS (Torn Paper look) */
+.aesthetic-card {
+    background: #fdfbf7;
+    margin: 50px auto;
+    max-width: 800px;
+    padding: 40px;
+    border: 1px solid #d1c7b7;
+    box-shadow: 8px 8px 0px #1a2a3a, 16px 16px 0px #d4af37; /* Layered shadow vibe */
+    position: relative;
 }
 
-.reverse { flex-direction: row-reverse; }
-
-.side-collage-img {
-    width: 250px;
-    height: auto;
-    border: 5px solid #fff;
+/* FLOATING COLLAGE IMAGES */
+.floating-img {
+    width: 200px;
+    border: 6px solid white;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
-    transform: rotate(-2deg); /* Gives it that "taped on" look */
+    transform: rotate(-3deg);
+    float: right;
+    margin-left: 20px;
 }
 
-/* Wave Image Divider */
-.wave-divider img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-top: 2px solid #d4af37;
-    border-bottom: 2px solid #d4af37;
-    margin: 40px 0;
-}
+.gold-pop { color: #b89129; font-weight: bold; }
 
 
 
