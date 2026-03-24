@@ -154,7 +154,32 @@ h2 {
     }
 }
 
-/* --- TABLE LINK STYLING --- */
+/* --- TABLE STYLING --- */
+.table-container {
+    padding: 60px 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 90%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    font-family: 'Fauna One', serif;
+}
+
+thead {
+    background-color: #366f91; /* Your Blue */
+    color: #efbbff; /* Your Lavender */
+    font-family: 'Cinzel', serif;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #D9B98C; /* Your Gold */
+}
 
 .table-link {
     color: #366f91;
@@ -163,17 +188,7 @@ h2 {
 }
 
 .table-link:hover {
-    color: #800080; /* Changes to Purple on hover */
-}
-
-/* Ensure the table is responsive on mobile */
-@media screen and (max-width: 600px) {
-    table {
-        font-size: 0.8rem;
-    }
-    th, td {
-        padding: 8px;
-    }
+    color: #800080;
 }
 
 /**{background-color: #e0ddd5}
