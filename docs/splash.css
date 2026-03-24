@@ -92,6 +92,59 @@ h2 {
     letter-spacing: 4px;
 }
 
+/* Create the Overlapping Hero Look */
+.hero-collage {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 3px solid #d4af37;
+}
+
+.fresco-bg {
+    position: absolute;
+    width: 100%;
+    filter: sepia(30%) brightness(60%);
+    z-index: 1;
+}
+
+.hero-text-overlay {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+/* Side-by-side collage image styling */
+.collage-style {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.reverse { flex-direction: row-reverse; }
+
+.side-collage-img {
+    width: 250px;
+    height: auto;
+    border: 5px solid #fff;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+    transform: rotate(-2deg); /* Gives it that "taped on" look */
+}
+
+/* Wave Image Divider */
+.wave-divider img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-top: 2px solid #d4af37;
+    border-bottom: 2px solid #d4af37;
+    margin: 40px 0;
+}
+
+
 
 /**{background-color: #e0ddd5}
 h1 {
