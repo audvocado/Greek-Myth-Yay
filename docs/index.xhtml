@@ -4,44 +4,85 @@
     <head>
         <title>Women in Power</title>
         <link rel="stylesheet" type="text/css" href="splash.css" />
+        <link rel="icon" type="image/x-icon" href="image_0ebe8e.jpg" />
     </head>
     <body>
         
+        <button onclick="topFunction()" id="scrollTopBtn">UP</button>
+        
         <div class="top-bar">
-            <div class="nav-container">
-                <a href="index.xhtml" class="nav-link">Home</a>
-                <a href="about.xhtml" class="nav-link">About</a>
-                <a href="corpus.xhtml" class="nav-link">Corpus</a>
-                <a href="analysis.xhtml" class="nav-link">Analysis</a>
-            </div>
+            <a href="index.xhtml" class="nav-link">Home</a>
+            <a href="about.xhtml" class="nav-link">About</a>
+            <a href="corpus.xhtml" class="nav-link">Corpus</a>
+            <a href="analysis.xhtml" class="nav-link">Analysis</a>
         </div>
         
         <div class="hero-collage">
-            <h1 class="main-title">Women in <span class="gold-pop">Power</span></h1>
+            <h1 class="main-title">Women in <span style="color:#D9B98C;">Power</span></h1>
+            <p style="color:white; font-family:'Cinzel'; letter-spacing:3px;">Divinity • Deception • Domesticity</p>
         </div>
         
         <div class="content-container">
-            <div class="aesthetic-card">
-                <img src="image_0ebb24.jpg" alt="collage" class="floating-img" />
-                <h2>Our <span class="gold-pop">Mission</span></h2>
-                <p>Exploring the depiction of <strong>Circe</strong> and <strong>Medea</strong> through the lens of motherhood, magic, and the male gaze.</p>
+            
+            <div class="content-box">
+                <div class="box-header" onclick="toggleBox(this)">
+                    <h2>Our Mission <span>[−]</span></h2>
+                </div>
+                <div class="box-body">
+                    <p>We are deconstructing the classical "witch" by examining <strong>Circe</strong> and <strong>Medea</strong>. We explore how patriarchal narratives transformed female intelligence into something monstrous.</p>
+                    <div class="stats-row">
+                        <div style="text-align:center;"><span style="display:block; font-family:'Cinzel'; color:#2F6F7E;">2 FIGURES</span><small>Primary Focus</small></div>
+                        <div style="text-align:center;"><span style="display:block; font-family:'Cinzel'; color:#2F6F7E;">3 TEXTS</span><small>Analyzed</small></div>
+                    </div>
+                </div>
             </div>
             
             <div style="text-align:center; margin: 40px 0;">
-                <img src="image_0ebb87.jpg" alt="waves" style="width:100%; height:150px; object-fit:cover; border-top:3px solid #d4af37; border-bottom:3px solid #d4af37;" />
+                <img src="image_0ebb87.jpg" alt="waves" style="width:90%; border:2px solid #D9B98C;" />
             </div>
             
-            <div class="aesthetic-card">
-                <img src="image_0ebb62.jpg" alt="greek" class="floating-img" style="float:left; margin-right:20px; transform: rotate(3deg);" />
-                <h2>The <span class="gold-pop">Team</span></h2>
-                <p>Alivia Pierce, Elivier Russo, Audrey Weeden, Carmel Levin, Maxine Van Nortwick</p>
+            <div class="content-box">
+                <div class="box-header" onclick="toggleBox(this)">
+                    <h2>The Team <span>[−]</span></h2>
+                </div>
+                <div class="box-body">
+                    <p style="text-align:center; font-family:'Cinzel';">Alivia Pierce • Elivier Russo • Audrey Weeden • Carmel Levin • Maxine Van Nortwick</p>
+                </div>
             </div>
+            
         </div>
         
-        <div class="footer-area" style="background:#1a2a3a; color:#d4af37; padding:40px; text-align:center; font-family:Cinzel;">
+        <div style="background:#1a2a3a; color:#D9B98C; padding:60px; text-align:center; font-family:'Cinzel';">
             <p>✧ ANCIENT WISDOM • MODERN ANALYSIS ✧</p>
         </div>
         
+        <script type="text/javascript">
+    //<![CDATA[
+        function toggleBox(header) {
+            var body = header.nextElementSibling;
+            var span = header.querySelector('span');
+            if (body.style.display === "none") {
+                body.style.display = "block";
+                span.innerHTML = "[−]";
+            } else {
+                body.style.display = "none";
+                span.innerHTML = "[+]";
+            }
+        }
+
+        var mybutton = document.getElementById("scrollTopBtn");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        };
+        function topFunction() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    //]]>
+    </script>
     </body>
 </html>
 
