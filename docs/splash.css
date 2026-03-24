@@ -3,16 +3,16 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #f2e6f2; /* Muted Lavender-Grey */
+    background-color: #f2e6f2; 
     color: #443344;
     font-family: 'Fauna One', serif;
     scroll-behavior: smooth;
 }
 
-/* NAVIGATION - DEEP BLUE & CHAMPAGNE GOLD */
+/* NAVIGATION */
 .top-bar {
     background: #366f91; 
-    border-bottom: 4px solid #D9B98C; /* Champagne Gold */
+    border-bottom: 4px solid #D9B98C; 
     padding: 20px 0;
     text-align: center;
     position: sticky;
@@ -27,7 +27,6 @@ body {
     margin: 0 20px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    transition: 0.3s;
 }
 
 .nav-link:hover { color: #D9B98C; }
@@ -43,7 +42,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 5px solid #967117; /* Bronze Accent */
+    border-bottom: 5px solid #967117;
 }
 
 .main-title {
@@ -54,13 +53,13 @@ body {
     margin: 0;
 }
 
-/* SECTION BOXES */
+/* BOX STRUCTURE */
 .content-box {
     background: #ffffff;
-    max-width: 850px;
+    max-width: 900px; /* Widened slightly to fit side-by-side content */
     margin: 40px auto;
     border: 2px solid #741b47;
-    box-shadow: 12px 12px 0px #d5a6bd; /* Muted Rose Shadow */
+    box-shadow: 12px 12px 0px #d5a6bd;
     overflow: hidden;
 }
 
@@ -68,18 +67,16 @@ body {
     background: #741b47; 
     padding: 15px;
     text-align: center;
-    border-bottom: 3px solid #D9B98C; /* Gold Border */
+    border-bottom: 3px solid #D9B98C;
     cursor: pointer;
     position: relative;
 }
 
-/* Gold Stars ✧ */
 .box-header::before, .box-header::after {
     content: '✧';
     position: absolute;
     color: #D9B98C;
     top: 15px;
-    font-size: 1.2rem;
 }
 .box-header::before { left: 20px; }
 .box-header::after { right: 20px; }
@@ -89,26 +86,37 @@ body {
     color: #f2e6f2;
     font-family: 'Cinzel', serif;
     letter-spacing: 3px;
-    font-size: 1.3rem;
 }
 
+/* NEW: FLEX LAYOUT FOR IMAGE/TEXT SIDES */
 .box-body {
     padding: 30px;
-    display: block;
-    line-height: 1.8;
+    display: flex; /* Makes items sit side-by-side */
+    align-items: center;
+    gap: 30px;
 }
 
-/* IMAGE ACCENTS */
-.collage-inset {
-    width: 220px;
-    float: right;
-    margin: 0 0 15px 15px;
+.box-text {
+    flex: 1; /* Takes up remaining space */
+}
+
+.box-image-container {
+    flex: 0 0 250px; /* Fixed width for the image */
+}
+
+.collage-img {
+    width: 100%;
+    height: auto;
     border: 6px solid white;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
-    transform: rotate(2deg);
 }
 
-/* UP BUTTON - GOLD THEME */
+/* Class to flip the order for the Team box */
+.reverse {
+    flex-direction: row-reverse;
+}
+
+/* UP BUTTON */
 #scrollTopBtn {
     display: none;
     position: fixed;
@@ -122,10 +130,7 @@ body {
     border-radius: 50%;
     cursor: pointer;
     font-family: 'Cinzel';
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
-
 
 
 /**{background-color: #e0ddd5}

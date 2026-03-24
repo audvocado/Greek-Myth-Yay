@@ -27,11 +27,15 @@
                     <h2>Our Mission <span>[−]</span></h2>
                 </div>
                 <div class="box-body">
-                    <img src="image_0ebb24.jpg" alt="Mission Aesthetic" class="collage-inset" />
-                    <p>With this project, we want to discover how women in power in Greek texts have been
-                        depicted through various lenses. We aim to look at themes of motherhood and percieved
-                        deception/witchcraft, descriptive language and adjectives, and dialougue to see how the
-                        women are percieved from the male perspective.</p>
+                    <div class="box-text">
+                        <p>With this project, we want to discover how women in power in Greek texts have been
+                            depicted through various lenses. We aim to look at themes of motherhood and percieved
+                            deception/witchcraft, descriptive language and adjectives, and dialougue to see how the
+                            women are percieved from the male perspective.</p>
+                    </div>
+                    <div class="box-image-container">
+                        <img src="image_0ebb24.jpg" alt="Aesthetic Mission" class="collage-img" style="transform: rotate(2deg);" />
+                    </div>
                 </div>
             </div>
             
@@ -43,15 +47,19 @@
                 <div class="box-header" onclick="toggleBox(this)">
                     <h2>The Team <span>[−]</span></h2>
                 </div>
-                <div class="box-body">
-                    <img src="image_0ebb62.jpg" alt="Team Aesthetic" class="collage-inset" style="float:left; margin: 0 15px 15px 0; transform: rotate(-2deg);" />
-                    <ul style="list-style:none; padding:0; text-align:center; font-family:'Cinzel'; color:#741b47; font-weight:bold;">
-                        <li style="margin: 10px 0;">Alivia Pierce</li>
-                        <li style="margin: 10px 0;">Elivier Russo</li>
-                        <li style="margin: 10px 0;">Audrey Weeden</li>
-                        <li style="margin: 10px 0;">Carmel Levin</li>
-                        <li style="margin: 10px 0;">Maxine Van Nortwick</li>
-                    </ul>
+                <div class="box-body reverse">
+                    <div class="box-text">
+                        <ul style="list-style:none; padding:0; text-align:center; font-family:'Cinzel'; color:#741b47; font-weight:bold;">
+                            <li style="margin: 10px 0;">Alivia Pierce</li>
+                            <li style="margin: 10px 0;">Elivier Russo</li>
+                            <li style="margin: 10px 0;">Audrey Weeden</li>
+                            <li style="margin: 10px 0;">Carmel Levin</li>
+                            <li style="margin: 10px 0;">Maxine Van Nortwick</li>
+                        </ul>
+                    </div>
+                    <div class="box-image-container">
+                        <img src="image_0ebb62.jpg" alt="Aesthetic Team" class="collage-img" style="transform: rotate(-2deg);" />
+                    </div>
                 </div>
             </div>
             
@@ -67,7 +75,7 @@
             var body = header.nextElementSibling;
             var span = header.querySelector('span');
             if (body.style.display === "none") {
-                body.style.display = "block";
+                body.style.display = "flex"; // Changed from 'block' to 'flex' to keep layout!
                 span.innerHTML = "[−]";
             } else {
                 body.style.display = "none";
