@@ -1,17 +1,38 @@
 datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
 
-element test { xsd:double }
-start = document 
-document = element document ( meta, body )
+start = TEI.2 
+TEI.2 = element TEI.2{new_text}
+new_text = element text {body, lang}
+lang = attribute lang {"en"} 
+body = element body{div1} 
+div1 = element div1 {milestone, p*, type, n, org, sample}
+milestone = element milestone {empty, ed?, unit, n?}
+n = attribute n {text} 
+ed = attribute ed {text} 
+unit = attribute unit {text}
+p = element p {mixed{(milestone, term*, placeName)}} 
+type = attribute type {text}
+term = element term {text, lang}
+org = attribute org {text}
+sample = attribute sample {text}
+placeName = element placeName 
+#lang = attribute lang {text} - I need help with this SOS
 
-    meta = element meta ( author, date of publication )
-body = element body mixed ( theme, characters, dialogue, powerstructure )
-    theme = element theme (text, type)
-        type = attribute type ( text ) #mother, evil
-    dialogue = element dialogue (text)  
-    powerstructure = element powerstructure (text, type)
-        type = attribute type ( text, "political" | "man vs woman" | "husband vs wife" | "resistance" | "gender roles" )
+
+#Circe 3, 5, have java script need to ask about before adding them
+
+
+
+
+#document = element document ( meta, body )
+
+    #meta = element meta ( author, date of publication )
+#body = element body mixed ( theme, characters, dialogue, powerstructure )
+    #theme = element theme (text, type)
+        #type = attribute type ( text ) #mother, evil
+    #dialogue = element dialogue (text)  
+    #powerstructure = element powerstructure (text, type)
+        #type = attribute type ( text, "political" | "man vs woman" | "husband vs wife" | "resistance" | "gender roles" )
             #these are some of the general power sturctures we will look at and examine how they connect to our two major themes 
-characters = element characters (text, name)
-    name = attribute name (text, "penelope"| "circe" | "medea") 
-    
+#characters = element characters (text, name)
+    #name = attribute name (text, "penelope"| "circe" | "medea") 

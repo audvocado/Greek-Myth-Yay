@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Schema.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI.2><text lang="en"><body><div1 type="Book" n="10" org="uniform" sample="complete"><milestone ed="p" unit="card" />
 <p><milestone n="307" unit="line" />"Then Hermes went back to high
 <placeName key="tgn,7011019" authname="tgn,7011019">Olympus</placeName> passing over the wooded island; but I fared onward to the

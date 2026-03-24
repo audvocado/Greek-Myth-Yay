@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Schema.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI.2><text lang="en"><body><div1 type="Book" n="10" org="uniform" sample="complete"><milestone ed="p" unit="card" />
 <p><milestone n="487" unit="line" />"And the goddess answered,
 ‘Odysseus, noble son of <placeName key="perseus,Laertes" authname="perseus,Laertes">Laertes</placeName>, you shall none of you stay here
