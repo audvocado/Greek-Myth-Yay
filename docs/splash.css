@@ -1,110 +1,96 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One&family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
 
 body {
-margin: 0;
-padding: 0;
-background-color: #f4f1ea;
-background-image: url('https://www.transparenttextures.com/patterns/white-marble.png');
-color: #3d343d;
-font-family: 'Fauna One', serif;
-line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    /* This color matches the creamy parchment in your collage */
+    background-color: #eaddca; 
+    background-image: url('https://www.transparenttextures.com/patterns/papyros.png');
+    color: #2c262c;
+    font-family: 'Fauna One', serif;
+    line-height: 1.8;
 }
 
+/* NAVIGATION - NAVY & GOLD */
 .top-bar {
-position: fixed;
-top: 0;
-width: 100%;
-background: rgba(255, 255, 255, 0.95);
-border-bottom: 2px solid #d4af37;
-z-index: 1000;
-padding: 15px 0;
-text-align: center;
-}
-
-.nav-container {
-max-width: 1000px;
-margin: 0 auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #1a2a3a; /* Deep Navy from your wave image */
+    border-bottom: 3px solid #d4af37;
+    z-index: 1000;
+    padding: 15px 0;
 }
 
 .nav-link {
-margin: 0 25px;
-text-decoration: none;
-color: #3d343d;
-font-family: 'Cinzel', serif;
-font-weight: bold;
-text-transform: uppercase;
-letter-spacing: 2px;
-font-size: 0.9rem;
+    margin: 0 25px;
+    text-decoration: none;
+    color: #f4f1ea;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    transition: 0.3s;
 }
 
+.nav-link:hover {
+    color: #d4af37;
+}
+
+/* THE HERO SECTION - MOOD BOARD STYLE */
 .hero-section {
-padding: 150px 20px 60px;
-text-align: center;
+    padding: 160px 20px 80px;
+    text-align: center;
+    /* Soft celestial glow background */
+    background: radial-gradient(circle, rgba(212,175,55,0.1) 0%, rgba(234,221,202,0) 70%);
 }
 
 .main-title {
-font-family: 'Cinzel', serif;
-font-size: 3.5rem;
-margin: 0;
-color: #2c262c;
-text-transform: uppercase;
-letter-spacing: 5px;
+    font-family: 'Cinzel', serif;
+    font-size: 4rem;
+    letter-spacing: 8px;
+    color: #1a2a3a;
 }
 
 .gold-pop {
-background: linear-gradient(to bottom, #cfaf4b 0%, #f9e9a3 50%, #b89129 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+    color: #b89129;
+    text-shadow: 1px 1px 0px #fff;
 }
 
-.greek-divider {
-width: 100px;
-height: 3px;
-background: #d4af37;
-margin: 20px auto;
-}
-
-.hero-question {
-font-style: italic;
-font-size: 1.2rem;
-color: #7a6e61;
-}
-
-.content-container {
-max-width: 900px;
-margin: 0 auto;
-padding: 20px;
-}
-
+/* CARDS - LAYERED PAPER EFFECT */
 .aesthetic-card {
-background: white;
-padding: 40px;
-margin-bottom: 40px;
-border: 1px solid #e8e2d5;
-box-shadow: 10px 10px 0px #d4af37;
+    background: #fdfbf7;
+    padding: 50px;
+    margin-bottom: 50px;
+    border: 1px solid #d1c7b7;
+    /* This creates that "stacked" collage shadow */
+    box-shadow: 5px 5px 0px #1a2a3a, 10px 10px 0px #d4af37;
+    position: relative;
 }
 
-.drop-cap-text::first-letter {
-font-family: 'Cinzel', serif;
-font-size: 4rem;
-float: left;
-margin-right: 10px;
-line-height: 1;
-background: linear-gradient(to bottom, #cfaf4b 0%, #f9e9a3 50%, #b89129 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+h2 {
+    font-family: 'Cinzel', serif;
+    font-style: italic;
+    color: #1a2a3a;
+    border-bottom: 1px double #d4af37;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+/* IMAGE STYLING - ANTIQUE BORDER */
+.gallery-item img {
+    border: 8px solid #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    filter: sepia(20%); /* Makes images feel like they belong in the collage */
 }
 
 .footer-area {
-text-align: center;
-padding: 80px 20px;
-font-family: 'Cinzel', serif;
-font-size: 0.8rem;
-letter-spacing: 3px;
-color: #7a6e61;
+    background: #1a2a3a;
+    color: #d4af37;
+    padding: 40px;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 4px;
 }
-
-
 
 
 /**{background-color: #e0ddd5}
