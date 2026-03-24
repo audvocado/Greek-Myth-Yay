@@ -1,109 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One&display=swap');
 
-/* BACKGROUND & GLOBAL COLORS */
 body {
     margin: 0;
     padding: 0;
-    background-color: #F3EFE6; /* Cream from your palette */
-    color: #2F6F7E; /* Deep Teal from your palette */
+    background-color: #efbbff; /* Your Lavender */
+    color: #330033;
     font-family: 'Fauna One', serif;
 }
 
-/* NAVIGATION BAR */
+/* NAVIGATION */
 .top-bar {
-    background: #2F6F7E; /* Deep Teal */
-    border-bottom: 4px solid #D9B98C; /* Champagne Gold */
+    background: #366f91; 
+    border-bottom: 5px solid #be29ec; 
     padding: 20px 0;
     text-align: center;
 }
 
 .nav-link {
-    color: #F3EFE6; /* Cream Text */
+    color: #efbbff;
     text-decoration: none;
     font-family: 'Cinzel', serif;
     margin: 0 20px;
-    letter-spacing: 2px;
     text-transform: uppercase;
-    transition: 0.3s;
 }
 
-.nav-link:hover {
-    color: #D9B98C; /* Gold on hover */
+/* THE MISSING TITLE HEADER SECTION */
+.hero-collage {
+    height: 300px;
+    background-color: #800080; /* Deep Purple fallback */
+    background: linear-gradient(rgba(102, 0, 102, 0.6), rgba(54, 111, 145, 0.6));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px solid #D9B98C; /* Gold Accent */
 }
 
-/* THE VAN GOGH SPLIT LAYOUT */
+.main-title {
+    font-family: 'Cinzel', serif;
+    font-size: 4rem;
+    color: #efbbff;
+    text-shadow: 3px 3px 0px #366f91;
+    margin: 0;
+}
+
+/* SPLIT LAYOUT */
 .split-container {
     display: flex;
     width: 100%;
-    min-height: 500px; /* Gives plenty of room for Circe and Medea */
+    min-height: 450px;
     background: white;
-    border-bottom: 2px solid #CFD6D8; /* Light Grey Divider */
+    border-bottom: 3px solid #800080;
 }
 
-/* Flips the order for the second section */
 .reverse {
     flex-direction: row-reverse;
 }
 
 .column-text {
     flex: 1;
-    padding: 60px;
+    padding: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #F3EFE6; /* Matches the body cream */
 }
 
 .column-image {
     flex: 1;
     overflow: hidden;
-    background-color: #CFD6D8; 
 }
 
 .column-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* This is vital: it crops Circe/Medea to fill the 50% box */
-    display: block;
+    object-fit: cover;
 }
 
-/* TYPOGRAPHY */
 h2 {
     font-family: 'Cinzel', serif;
-    color: #2F6F7E;
-    margin-top: 0;
-    text-align: center;
+    color: #800080;
     border-bottom: 2px solid #D9B98C;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
 }
 
-p {
-    line-height: 1.8;
-    font-size: 1.1rem;
-    margin: 0;
-}
-
-/* SCROLL TO TOP BUTTON */
 #scrollTopBtn {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #D9B98C;
-    color: #2F6F7E;
-    border: 2px solid #2F6F7E;
+    background: #741b47;
+    color: white;
     padding: 15px;
+    border-radius: 50%;
     font-family: 'Cinzel';
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-    z-index: 100;
+    border: 1px solid #efbbff;
 }
 
-#scrollTopBtn:hover {
-    background: #2F6F7E;
-    color: #F3EFE6;
-}
 
 /**{background-color: #e0ddd5}
 h1 {
