@@ -123,6 +123,37 @@ h2 {
     font-style: italic;
 }
 
+.team-list li {
+    margin: 15px 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* This styles the "Project Goals" box at the very bottom */
+.goals-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #efbbff; /* Your Lavender */
+    border-top: 3px solid #800080; /* Purple Divider */
+}
+
+.goals-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-style: italic; /* Makes the goal statement stand out */
+    color: #330033;
+}
+
+/* Ensure images don't get squashed on smaller screens */
+@media (max-width: 768px) {
+    .split-container, .split-container.reverse {
+        flex-direction: column;
+    }
+    .column-image {
+        height: 300px;
+    }
+}
+
 /**{background-color: #e0ddd5}
 h1 {
 text-shadow: 0 0 2px #00e9ff, 0 0 3px #0088ff;
