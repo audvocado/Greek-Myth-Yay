@@ -3,16 +3,16 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #efbbff; /* Lavender */
-    color: #330033;
+    background-color: #f2e6f2; /* Muted Lavender-Grey */
+    color: #443344;
     font-family: 'Fauna One', serif;
     scroll-behavior: smooth;
 }
 
-/* NAVIGATION */
+/* NAVIGATION - DEEP BLUE & CHAMPAGNE GOLD */
 .top-bar {
-    background: #366f91; /* Deep Blue */
-    border-bottom: 5px solid #be29ec; /* Purple Accent */
+    background: #366f91; 
+    border-bottom: 4px solid #D9B98C; /* Champagne Gold */
     padding: 20px 0;
     text-align: center;
     position: sticky;
@@ -21,34 +21,36 @@ body {
 }
 
 .nav-link {
-    color: #efbbff;
+    color: #f2e6f2;
     text-decoration: none;
     font-family: 'Cinzel', serif;
     margin: 0 20px;
     letter-spacing: 2px;
     text-transform: uppercase;
+    transition: 0.3s;
 }
+
+.nav-link:hover { color: #D9B98C; }
 
 /* HERO SECTION */
 .hero-collage {
     height: 400px;
-    /* This ensures the background color shows even if the image fails */
-    background-color: #800080; 
-    background-image: linear-gradient(rgba(102, 0, 102, 0.5), rgba(54, 111, 145, 0.5)), url('image_0ebb44.jpg');
+    background-color: #741b47;
+    background-image: linear-gradient(rgba(116, 27, 71, 0.6), rgba(54, 111, 145, 0.6)), url('image_0ebb44.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 8px double #be29ec;
+    border-bottom: 5px solid #967117; /* Bronze Accent */
 }
 
 .main-title {
     font-family: 'Cinzel', serif;
     font-size: 4rem;
-    color: #efbbff;
-    text-shadow: 4px 4px 0px #660066;
+    color: #f2e6f2;
+    text-shadow: 3px 3px 0px #741b47;
     margin: 0;
 }
 
@@ -57,46 +59,74 @@ body {
     background: #ffffff;
     max-width: 850px;
     margin: 40px auto;
-    border: 3px solid #800080;
-    box-shadow: 12px 12px 0px #d5a6bd;
+    border: 2px solid #741b47;
+    box-shadow: 12px 12px 0px #d5a6bd; /* Muted Rose Shadow */
     overflow: hidden;
 }
 
 .box-header {
-    background: #800080;
+    background: #741b47; 
     padding: 15px;
     text-align: center;
-    border-bottom: 3px solid #be29ec;
+    border-bottom: 3px solid #D9B98C; /* Gold Border */
     cursor: pointer;
+    position: relative;
 }
+
+/* Gold Stars ✧ */
+.box-header::before, .box-header::after {
+    content: '✧';
+    position: absolute;
+    color: #D9B98C;
+    top: 15px;
+    font-size: 1.2rem;
+}
+.box-header::before { left: 20px; }
+.box-header::after { right: 20px; }
 
 .box-header h2 {
     margin: 0;
-    color: #efbbff;
+    color: #f2e6f2;
     font-family: 'Cinzel', serif;
     letter-spacing: 3px;
+    font-size: 1.3rem;
 }
 
 .box-body {
     padding: 30px;
     display: block;
+    line-height: 1.8;
 }
 
-/* UP BUTTON */
+/* IMAGE ACCENTS */
+.collage-inset {
+    width: 220px;
+    float: right;
+    margin: 0 0 15px 15px;
+    border: 6px solid white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+    transform: rotate(2deg);
+}
+
+/* UP BUTTON - GOLD THEME */
 #scrollTopBtn {
     display: none;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 25px;
+    right: 25px;
     z-index: 99;
-    background: #741b47;
-    color: white;
-    border: 2px solid #efbbff;
-    padding: 12px;
+    background: #D9B98C;
+    color: #330033;
+    border: 2px solid #967117;
+    padding: 15px;
     border-radius: 50%;
     cursor: pointer;
     font-family: 'Cinzel';
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+
+
 
 /**{background-color: #e0ddd5}
 h1 {
