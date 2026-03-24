@@ -1,12 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap');
 
 :root {
-    --gold: #c6934b;
-    --deep-blue: #1e293b;
-    --marble: #f4f1ea;
-    --bronze-text: #5c3d2e;
+    --maroon-dark: #640d14;    /* Deep romantic red */
+    --magenta-deep: #800e13;   /* Rich accent red */
+    --pink-soft: #f8bbd0;      /* Gentle blush */
+    --off-white: #fff5f8;     /* Background silk white */
+    --gold-accent: #c6934b;    /* Classic Greek gold */
 }
 
+/* 2. BASE STYLES */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,94 +17,138 @@
 }
 
 body {
-    background-color: var(--marble);
-    /* Subtle texture feel */
-    background-image: radial-gradient(#dcd9d0 1px, transparent 1px);
-    background-size: 20px 20px;
-    font-family: 'Fauna One', serif; /* Neat and readable */
-    color: var(--deep-blue);
+    background-color: var(--off-white);
+    font-family: 'Poppins', sans-serif;
+    color: var(--maroon-dark);
     line-height: 1.8;
-    padding-top: 80px; /* Space for the fixed nav bar */
+    overflow-x: hidden;
 }
 
-/* --- THE TOP BAR --- */
+/* 3. TOP NAVIGATION BAR */
 .top-bar {
-    background-color: var(--deep-blue);
-    border-bottom: 3px solid var(--gold);
-    position: fixed;
+    background-color: white;
+    padding: 20px 0;
+    position: sticky;
     top: 0;
-    width: 100%;
     z-index: 1000;
-    padding: 15px 0;
+    border-bottom: 2px solid var(--pink-soft);
+    box-shadow: 0 2px 10px rgba(100, 13, 20, 0.05);
 }
 
 .nav-container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
 }
 
 .nav-link {
-    color: var(--marble);
     text-decoration: none;
-    font-family: 'Cinzel', serif;
-    font-weight: bold;
-    letter-spacing: 1px;
+    color: var(--maroon-dark);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     transition: 0.3s;
 }
 
 .nav-link:hover {
-    color: var(--gold);
-    text-shadow: 0 0 8px var(--gold);
+    color: var(--magenta-deep);
+    border-bottom: 2px solid var(--gold-accent);
 }
 
-/* --- HEADINGS --- */
-h1 {
-    font-family: 'Cinzel', serif;
+/* 4. DEDICATED TITLE SECTION (HERO) */
+.hero-title {
+    background-color: var(--maroon-dark);
+    background-image: linear-gradient(rgba(100, 13, 20, 0.8), rgba(100, 13, 20, 0.8)), 
+                      url('https://www.transparenttextures.com/patterns/marble-similar.png');
+    color: white;
+    padding: 100px 20px;
     text-align: center;
-    color: var(--deep-blue);
-    margin: 40px auto;
-    max-width: 800px;
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 0px rgba(198, 147, 75, 0.3);
+    border-bottom: 8px solid var(--gold-accent);
 }
 
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+.subtitle {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--pink-soft);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* 5. MAIN CONTENT HEADINGS */
 h2 {
-    font-family: 'Cinzel', serif;
-    color: var(--gold);
-    margin: 30px 0 15px 0;
-    border-bottom: 1px solid var(--gold);
-    display: inline-block;
+    font-family: 'Playfair Display', serif;
+    color: var(--magenta-deep);
+    text-align: center;
+    font-size: 2.2rem;
+    margin: 60px 0 20px 0;
+    position: relative;
 }
 
-/* --- CONTENT BOXES (Making info "Pop") --- */
+/* Decorative line under H2 */
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--gold-accent);
+    margin: 10px auto;
+}
+
+/* 6. INFORMATION BOXES (P and UL) */
 p, ul {
+    max-width: 800px;
+    margin: 20px auto 40px auto;
     background: white;
-    border-left: 8px solid var(--gold); /* The "Pop" accent */
-    border-radius: 4px;
-    padding: 25px;
-    margin-bottom: 30px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    max-width: 850px;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(100, 13, 20, 0.06);
+    border-top: 5px solid var(--pink-soft);
 }
 
+/* 7. LISTS AND MEMBERS */
 li {
     list-style: none;
-    padding: 8px 0;
-    border-bottom: 1px dotted #eee;
-    color: var(--bronze-text);
+    padding: 12px 0;
+    border-bottom: 1px solid #fdf2f5;
+    font-weight: 400;
+}
+
+li::before {
+    content: "◈ ";
+    color: var(--gold-accent);
+    margin-right: 10px;
 }
 
 li:last-child {
     border-bottom: none;
-    color: var(--deep-blue);
-    font-weight: bold;
+    font-weight: 600;
+    color: var(--magenta-deep);
 }
 
+/* 8. LINKS INSIDE TEXT */
+p a {
+    color: var(--magenta-deep);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px dashed var(--gold-accent);
+}
+
+p a:hover {
+    color: var(--maroon-dark);
+    background-color: var(--pink-soft);
+}
 
 
 
