@@ -1,20 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One&display=swap');
 
-/* CORE VIBE */
 body {
     margin: 0;
     padding: 0;
-    background-color: #F3EFE6;
-    background-image: url('https://www.transparenttextures.com/patterns/papyros.png');
+    background-color: #efbbff; /* Lavender */
+    color: #330033;
     font-family: 'Fauna One', serif;
-    color: #1a2a3a;
     scroll-behavior: smooth;
 }
 
-/* NAVIGATION (DEEP TEAL) */
+/* NAVIGATION */
 .top-bar {
-    background: #2F6F7E;
-    border-bottom: 5px solid #D9B98C;
+    background: #366f91; /* Deep Blue */
+    border-bottom: 5px solid #be29ec; /* Purple Accent */
     padding: 20px 0;
     text-align: center;
     position: sticky;
@@ -23,108 +21,82 @@ body {
 }
 
 .nav-link {
-    color: white;
+    color: #efbbff;
     text-decoration: none;
     font-family: 'Cinzel', serif;
     margin: 0 20px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-size: 0.9rem;
 }
 
-.nav-link:hover { color: #D9B98C; }
-
-/* PARALLAX HERO SECTION */
+/* HERO SECTION */
 .hero-collage {
-    height: 500px;
-    background: linear-gradient(rgba(47, 111, 126, 0.4), rgba(47, 111, 126, 0.4)), 
-                url('image_0ebb44.jpg');
+    height: 400px;
+    /* This ensures the background color shows even if the image fails */
+    background-color: #800080; 
+    background-image: linear-gradient(rgba(102, 0, 102, 0.5), rgba(54, 111, 145, 0.5)), url('image_0ebb44.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-bottom: 8px double #D9B98C;
+    border-bottom: 8px double #be29ec;
 }
 
 .main-title {
     font-family: 'Cinzel', serif;
     font-size: 4rem;
-    color: #F3EFE6;
-    letter-spacing: 8px;
-    text-shadow: 3px 3px 0px #2F6F7E;
-    margin-bottom: 0;
+    color: #efbbff;
+    text-shadow: 4px 4px 0px #660066;
+    margin: 0;
 }
 
-/* INTERACTIVE CONTENT BOXES */
+/* SECTION BOXES */
 .content-box {
-    background: white;
-    max-width: 900px;
-    margin: 60px auto;
-    border: 2px solid #2F6F7E;
-    box-shadow: 15px 15px 0px rgba(217, 185, 140, 0.4);
+    background: #ffffff;
+    max-width: 850px;
+    margin: 40px auto;
+    border: 3px solid #800080;
+    box-shadow: 12px 12px 0px #d5a6bd;
     overflow: hidden;
 }
 
 .box-header {
-    background: #2F6F7E;
+    background: #800080;
     padding: 15px;
     text-align: center;
-    border-bottom: 3px solid #D9B98C;
+    border-bottom: 3px solid #be29ec;
     cursor: pointer;
-    position: relative;
 }
-
-/* Star Ornaments ✧ */
-.box-header::before, .box-header::after {
-    content: '✧';
-    position: absolute;
-    color: #D9B98C;
-    top: 15px;
-}
-.box-header::before { left: 20px; }
-.box-header::after { right: 20px; }
 
 .box-header h2 {
     margin: 0;
-    color: white;
+    color: #efbbff;
     font-family: 'Cinzel', serif;
-    letter-spacing: 4px;
-    font-size: 1.4rem;
+    letter-spacing: 3px;
 }
 
 .box-body {
-    padding: 40px;
-    display: block; /* Toggled via JS */
+    padding: 30px;
+    display: block;
 }
 
-/* SCROLL TO TOP BUTTON */
+/* UP BUTTON */
 #scrollTopBtn {
     display: none;
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 20px;
+    right: 20px;
     z-index: 99;
-    background: #2F6F7E;
+    background: #741b47;
     color: white;
-    border: 2px solid #D9B98C;
-    padding: 15px;
+    border: 2px solid #efbbff;
+    padding: 12px;
     border-radius: 50%;
     cursor: pointer;
     font-family: 'Cinzel';
 }
-
-/* QUICK STATS FLEX */
-.stats-row {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
-    border-top: 1px solid #D9B98C;
-    padding-top: 20px;
-}
-
 
 /**{background-color: #e0ddd5}
 h1 {
