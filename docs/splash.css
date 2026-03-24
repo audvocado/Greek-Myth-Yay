@@ -110,6 +110,19 @@ h2 {
     cursor: pointer;
 }
 
+/* Special padding for the single-column bottom section */
+.about-footer {
+    padding: 60px 20px;
+    background-color: #efbbff;
+    text-align: center;
+}
+
+.about-footer p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-style: italic;
+}
+
 /**{background-color: #e0ddd5}
 h1 {
 text-shadow: 0 0 2px #00e9ff, 0 0 3px #0088ff;
