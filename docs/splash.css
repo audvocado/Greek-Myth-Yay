@@ -3,92 +3,71 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #f2e6f2; /* Muted Lavender-Grey */
-    color: #443344;
+    background-color: #F3EFE6; /* Palette Cream */
+    color: #2F6F7E; /* Deep Teal */
     font-family: 'Fauna One', serif;
 }
 
-/* TOP NAV */
 .top-bar {
-    background: #366f91; 
-    border-bottom: 4px solid #D9B98C; 
+    background: #2F6F7E;
+    border-bottom: 4px solid #D9B98C; /* Gold Accent */
     padding: 20px 0;
     text-align: center;
 }
 
 .nav-link {
-    color: #f2e6f2;
+    color: #F3EFE6;
     text-decoration: none;
     font-family: 'Cinzel', serif;
     margin: 0 20px;
-    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-/* HERO SECTION */
-.hero-collage {
-    height: 350px;
-    background: linear-gradient(rgba(116, 27, 71, 0.6), rgba(54, 111, 145, 0.6)), url('image_0ebb44.jpg') center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 5px solid #967117;
-}
-
-.main-title {
-    font-family: 'Cinzel', serif;
-    font-size: 4rem;
-    color: #f2e6f2;
-    text-shadow: 3px 3px 0px #741b47;
-}
-
-/* THE SPLIT LAYOUT (Van Gogh Style) */
 .split-container {
     display: flex;
-    max-width: 1100px;
-    margin: 40px auto;
+    width: 100%;
+    min-height: 400px;
     background: white;
-    border: 2px solid #741b47;
-    box-shadow: 10px 10px 0px #d5a6bd;
+    border-bottom: 2px solid #CFD6D8;
+}
+
+/* This class flips the order of text and image */
+.reverse {
+    flex-direction: row-reverse;
 }
 
 .column-text {
     flex: 1;
-    padding: 50px;
+    padding: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #F3EFE6;
 }
 
 .column-image {
     flex: 1;
-    overflow: hidden;
+    background-color: #CFD6D8;
 }
 
 .column-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* This makes the image fill the box like the Van Gogh site */
-}
-
-/* REVERSE CLASS: For flipping image to the left */
-.reverse {
-    flex-direction: row-reverse;
+    object-fit: cover; /* Fills the space perfectly */
 }
 
 h2 {
     font-family: 'Cinzel', serif;
-    color: #741b47;
-    border-bottom: 2px solid #D9B98C;
-    padding-bottom: 10px;
+    color: #2F6F7E;
     margin-top: 0;
+    text-align: center;
 }
 
 p {
     line-height: 1.8;
-    font-size: 1.1rem;
+    margin: 0;
 }
 
-/* SCROLL BUTTON */
 #scrollTopBtn {
     position: fixed;
     bottom: 20px;
@@ -96,9 +75,10 @@ p {
     background: #D9B98C;
     border: none;
     padding: 15px;
-    cursor: pointer;
     font-family: 'Cinzel';
+    cursor: pointer;
 }
+
 
 /**{background-color: #e0ddd5}
 h1 {
