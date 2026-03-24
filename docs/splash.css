@@ -154,6 +154,28 @@ h2 {
     }
 }
 
+/* --- TABLE LINK STYLING --- */
+
+.table-link {
+    color: #366f91;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.table-link:hover {
+    color: #800080; /* Changes to Purple on hover */
+}
+
+/* Ensure the table is responsive on mobile */
+@media screen and (max-width: 600px) {
+    table {
+        font-size: 0.8rem;
+    }
+    th, td {
+        padding: 8px;
+    }
+}
+
 /**{background-color: #e0ddd5}
 h1 {
 text-shadow: 0 0 2px #00e9ff, 0 0 3px #0088ff;
