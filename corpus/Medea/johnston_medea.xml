@@ -1,41 +1,41 @@
 
 <root>
     <line nu="230">Of all things with life and understanding, [230]</line>
-    <line>we women are the most unfortunate. </line>
-    <line>First, we need a husband, someone we get </line>
+    <line><patriarchy>we women are the most unfortunate.</patriarchy> </line>
+    <line><marriage><autonomy><patriarchy><family>First, we need a husband,</family> </patriarchy></autonomy></marriage> someone we get </line>
     <line>for an excessive price. He then becomes </line>
-    <line>the ruler of our bodies. And this misfortune </line>
+    <line><autonomy><patriarchy>the ruler of our bodies.</patriarchy></autonomy> And this misfortune </line>
     <line>adds still more troubles to the grief we have. </line>
-    <line>Then comes the crucial struggle: this husband </line>
-    <line>we have selected, is he good or bad? 270 </line>
-    <line>For a divorce loses women all respect, </line>
-    <line>yet we can’t refuse to take a husband. </line>
-    <line>Then, when she goes into her husband’s home, </line>
+    <line>Then comes the crucial struggle: <marriage>this husband</marriage> </line>
+    <line>we have selected, is he good or bad?  </line>
+    <line><marriage><family>For a divorce loses women all respect,</family></marriage> </line>
+    <line>yet <marriage><autonomy><patriarchy>we can’t refuse to take </patriarchy>a husband.</autonomy></marriage> </line>
+    <line>Then, <marriage>when she goes into her husband’s home,</marriage> </line>
     <line>with its new rules and different customs, </line>
-    <line>she needs a prophet’s skill to sort out the man </line>
-    <line nu="240">whose bed she shares. She can’t learn that at home. [240]</line>
+    <line><patriarchy>she needs a prophet’s skill to sort out the man </patriarchy></line>
+    <line nu="240"><autonomy>whose bed she shares.</autonomy> She can’t learn that at home. [240]</line>
     <line>Once we’ve worked hard at this, and with success, </line>
-    <line>our husband accepts the marriage yoke </line>
+    <line><marriage>our husband accepts the marriage yoke </marriage></line>
     <line>and lives in peace—an enviable life. </line>
-    <line>But if the marriage doesn’t work, then death 280 </line>
-    <line>is much to be preferred. When the man tires </line>
-    <line>of the company he keeps at home, he leaves, </line>
+    <line><marriage>But if the marriage doesn’t work,</marriage> <patriarchy>then death</patriarchy> </line>
+    <line><patriarchy>is much to be preferred.</patriarchy> <loneliness>When the man tires</loneliness> </line>
+    <line><loneliness>of the company he keeps at home, he leaves,</loneliness> </line>
     <line>seeking relief for his distress elsewhere, </line>
     <line>outside the home. He gets his satisfaction </line>
     <line>with some male friend or someone his own age. </line>
-    <line>We women have to look at just one man. </line>
-    <line>Men tell us we live safe and secure at home, </line>
-    <line>while they must go to battle with their spears. </line>
+    <line><autonomy><patriarchy><loneliness>We women have to look at just one man.</loneliness></patriarchy></autonomy> </line>
+    <line><patriarchy>Men tell us we live safe and secure at home,</patriarchy> </line>
+    <line><violence>while they must go to battle with their spears.</violence> </line>
     <line>How stupid they are! I’d rather stand there </line>
-    <line nu="250">three times in battle holding up my shield 290 [250]</line>
-    <line>than give birth once. But your story and mine </line>
-    <line>are not the same. For you have a city, </line>
-    <line>you have your father’s house, enjoy your life </line>
-    <line>with friends for company. But I’m alone. </line>
-    <line>I have no city, and I’m being abused </line>
-    <line>by my own husband. I was carried off, </line>
-    <line>a trophy from a barbarian land. </line>
-    <line>I have no mother, brother, or relation </line>
-    <line>to shelter with in this extremity. </line>
-    <line>And so I want to ask something from you. </line>
+    <line nu="250"><violence>three times in battle holding up my shield </violence> [250]</line>
+    <line><family><motherhood>than give birth once.</motherhood></family> But your story and mine </line>
+    <line>are not the same. <patriarchy>For you have a city,</patriarchy> </line>
+    <line><patriarchy><family>you have your father’s house,</family> enjoy your life</patriarchy> </line>
+    <line><patriarchy>with friends for company.</patriarchy> <patriarchy><loneliness>But I’m alone.</loneliness></patriarchy> </line>
+    <line><patriarchy><loneliness>I have no city, and <violence>I’m being abused</violence> </loneliness></patriarchy></line>
+    <line><marriage>by my own husband.</marriage> <autonomy><patriarchy>I was carried off,</patriarchy></autonomy></line>
+    <line><violence><patriarchy>a trophy from a barbarian land.</patriarchy></violence> </line>
+    <line><patriarchy><family><loneliness><motherhood>I have no mother,</motherhood> brother, or relation</loneliness></family> </patriarchy></line>
+    <line><patriarchy>to shelter with in this extremity. </patriarchy></line>
+    <line><autonomy>And so I want to ask something from you.</autonomy> </line>
 </root>
