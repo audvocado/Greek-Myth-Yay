@@ -68,6 +68,128 @@ body {
     color: #333;
 }
 
+.bookshelf {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background: #4a3728; /* Wood-like color */
+    border-bottom: 15px solid #2a1b10;
+}
+
+.book {
+    width: 60px;
+    height: 200px;
+    background-color: #d4af37; /* Gold/Yellow */
+    border: 2px solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.book:hover {
+    transform: translateY(-20px) scale(1.1); /* The "pop" effect */
+    background-color: #f1d592;
+}
+
+.book-title {
+    font-weight: bold;
+    font-size: 12px;
+    transform: rotate(90deg); /* Sideways title like a spine */
+    white-space: nowrap;
+}
+
+.bookshelf {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 40px;
+    background: #5d4037; /* Wood shelf color */
+    border-bottom: 20px solid #3e2723;
+}
+
+.book {
+    width: 50px;
+    height: 180px;
+    background-color: #d4af37;
+    border: 1px solid #000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book:hover {
+    transform: translateY(-25px) rotate(-5deg); /* Pops up and tilts */
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+    background-color: #f1d592;
+}
+
+.spine-text {
+    transform: rotate(90deg);
+    white-space: nowrap;
+    color: black;
+    font-weight: bold;
+    font-family: serif;
+}
+/* Styling for the text container */
+.translation-text {
+    background-color: #fffaf0; /* Light parchment color */
+    padding: 30px;
+    border: 1px solid #e0d0b0;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* Hover effect to show the span is interactive */
+.translation-text span:hover {
+    outline: 1px dotted #d4af37;
+}
+
+/* Layout container to hold sidebar and text */
+.split-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sidebar styling */
+.controls {
+    flex: 0 0 220px; /* Fixed width for the sidebar */
+    position: sticky;
+    top: 80px; /* Stays visible as you scroll */
+    background: #fdfaf1;
+    border: 1px solid #d4af37;
+    padding: 20px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Line number styling */
+.line-nu {
+    display: inline-block;
+    width: 30px;
+    color: #888;
+    font-size: 0.8em;
+    font-family: monospace;
+    margin-right: 10px;
+    text-align: right;
+}
+
+/* The actual text column */
+.column-text {
+    flex: 1;
+    font-family: "Garamond", serif;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
 /* TITLE HEADER */
 .hero-collage {
     height: 300px;

@@ -1,39 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <title>Analysis: Gilbert Murray</title>
         <link rel="stylesheet" type="text/css" href="splash.css" />
+        <script type="text/javascript">
+            function toggleHighlight(category) {
+                document.body.classList.toggle('show-' + category);
+            }
+
+            function clearAll() {
+                const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach(cb => cb.checked = false);
+                const categories = ['marriage', 'violence', 'autonomy', 'patriarchy', 'family', 'motherhood', 'alone'];
+                categories.forEach(cat => document.body.classList.remove('show-' + cat));
+            }
+        </script>
     </head>
     <body>
+        <div class="top-bar">
+            <a href="index.xhtml" class="nav-link">Home</a>
+            <a href="about.xhtml" class="nav-link">About</a>
+            <a href="corpus.xhtml" class="nav-link">Corpus</a>
+            <div class="dropdown">
+                <a href="analysis.xhtml" class="nav-link">Analysis</a>
+                <div class="dropdown-content">
+                    <a href="analysis-murray.xhtml">Gilbert Murray (1912)</a>
+                    <a href="analysis-trans2.xhtml">Translation 2</a>
+                    <a href="analysis-trans3.xhtml">Translation 3</a>
+                    <a href="analysis-trans4.xhtml">Translation 4</a>
+                </div>
+            </div>
+        </div>
+        
         <div class="hero-collage">
             <h1 class="main-title">Gilbert Murray Translation (1912)</h1>
         </div>
         
         <div class="split-container">
+            <aside class="controls">
+                <h3>Analysis Filters</h3>
+                <div class="control-group">
+                    <h4>Themes</h4>
+                    <label><input type="checkbox" onclick="toggleHighlight('marriage')" /> Marriage</label><br/>
+                    <label><input type="checkbox" onclick="toggleHighlight('violence')" /> Violence</label><br/>
+                    <label><input type="checkbox" onclick="toggleHighlight('autonomy')" /> Autonomy</label><br/>
+                    <label><input type="checkbox" onclick="toggleHighlight('patriarchy')" /> Patriarchy</label><br/>
+                    <label><input type="checkbox" onclick="toggleHighlight('family')" /> Family</label><br/>
+                    <label><input type="checkbox" onclick="toggleHighlight('motherhood')" /> Motherhood</label><br/>
+                    <label><input type="checkbox" onclick="toggleHighlight('alone')" /> Alone/Isolation</label>
+                </div>
+                <br/>
+                <button type="button" onclick="clearAll()">Clear Highlights</button>
+            </aside>
+            
             <div class="column-text">
                 <h2>Textual Markup</h2>
-                <p>Below is the XML-tagged version of lines 273-298, focusing on themes of autonomy and motherhood.</p>
+                <p>Click the checkboxes on the left to highlight specific thematic elements within the translation.</p>
                 
-                <div class="xml-display">
-                    <pre><code>
-&lt;line nu="273"&gt;Of all things upon earth that bleed and grow,&lt;/line&gt;
-&lt;line nu="274"&gt;
-    &lt;violence&gt;A herb most bruised is woman.&lt;/violence&gt; We must pay
-&lt;/line&gt;
-&lt;line nu="275"&gt;Our store of gold, hoarded for that one day,&lt;/line&gt;
-&lt;line nu="276"&gt;
-    &lt;patriarchy&gt;To buy us some man's love;&lt;/patriarchy&gt; and lo, they bring
-&lt;/line&gt;
-&lt;line nu="277"&gt;
-    &lt;autonomy&gt;A master of our flesh!&lt;/autonomy&gt; There comes the sting
-&lt;/line&gt;
-&lt;line nu="298"&gt;
-    &lt;motherhood&gt;Than bear one child.&lt;/motherhood&gt;
-&lt;/line&gt;
-                    </code></pre>
+                <div class="translation-text">
+                    <div class="line"><span class="line-nu">273</span> Of all things upon earth that bleed and grow,</div>
+                    <div class="line"><span class="line-nu">274</span> <span class="violence" title="Type: domestic">A herb most bruised is woman.</span> We must pay</div>
+                    <div class="line"><span class="line-nu">275</span> Our store of gold, hoarded for that one day,</div>
+                    <div class="line"><span class="line-nu">276</span> <span class="patriarchy" title="Action: purchase_woman">To buy us some man's love;</span> and lo, they bring</div>
+                    <div class="line"><span class="line-nu">277</span> <span class="autonomy" title="Status: loss">A master of our flesh!</span> There comes the sting</div>
+                    <div class="line"><span class="line-nu">278</span> Of the whole shame. And then the jeopardy,</div>
+                    <div class="line"><span class="line-nu">279</span> For good or ill, what shall that <span class="autonomy" title="Status: loss">master</span> be;</div>
+                    <div class="line"><span class="line-nu">280</span> <span class="autonomy" title="Action: loss">Reject she cannot:</span> and if he but stays</div>
+                    <div class="line"><span class="line-nu">281</span> His suit, <span class="alone" title="Status: shame">'tis shame on all that woman's days.</span></div>
+                    <div class="line"><span class="line-nu">282</span> <span class="alone" title="Status: isolated">=So thrown amid new laws, new places,</span> why,</div>
+                    <div class="line"><span class="line-nu">283</span> 'Tis magic she must have, or prophecy—</div>
+                    <div class="line"><span class="line-nu">284</span> <span class="family">Home never taught her that</span> —how best to guide</div>
+                    <div class="line"><span class="line-nu">285</span> <span class="marriage" title="Type: consensual">Toward peace this thing that sleepeth at her side.</span></div>
+                    <div class="line"><span class="line-nu">286</span> And she who, <span class="motherhood" title="Event: birth">labouring long</span>, shall find some way</div>
+                    <div class="line"><span class="line-nu">287</span> Whereby her lord may bear with her, nor fray</div>
+                    <div class="line"><span class="line-nu">288</span> <span class="violence" title="Type: domestic">His yoke too fiercely, blessed is the breath</span></div>
+                    <div class="line"><span class="line-nu">289</span> That woman draws! <span class="violence" title="Type: suicide">Else, let her pray for death.</span></div>
+                    <div class="line"><span class="line-nu">290</span> Her lord, if he be wearied of the face</div>
+                    <div class="line"><span class="line-nu">291</span> Withindoors, gets him forth; some merrier place</div>
+                    <div class="line"><span class="line-nu">292</span> Will ease his heart: but she waits on, her whole</div>
+                    <div class="line"><span class="line-nu">293</span> <span class="alone" title="Status: isolated"><span class="autonomy" title="Status: loss">Vision enchainèd on a single soul.</span></span></div>
+                    <div class="line"><span class="line-nu">294</span> And then, forsooth, 'tis they that face the call</div>
+                    <div class="line"><span class="line-nu">295</span> Of war, <span class="alone" title="Status: alienated">while we sit sheltered, hid from all</span></div>
+                    <div class="line"><span class="line-nu">296</span> Peril!—False mocking! Sooner would I stand</div>
+                    <div class="line"><span class="line-nu">297</span> Three times to face their battles, shield in hand,</div>
+                    <div class="line"><span class="line-nu">298</span> <span class="motherhood" title="Event: birth">Than bear one child.</span></div>
                 </div>
-            </div>
+            </div> 
         </div>
     </body>
 </html>
