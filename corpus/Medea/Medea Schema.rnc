@@ -1,13 +1,14 @@
 datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
 
 start = root 
-root = element root {line}
-line = element line {nu, text}
-nu = attribute nu {text} 
-marriage =  element marriage {text}
-violence = element violence {text}
-autonomy = element autonomy {text}
-patriarchy = element patriarchy {text}
-family = element family {text}
-motherhood = element motherhood {text} 
-alone = element alone {text}
+    root = element root {meta}
+        meta=element meta {mixed{line}+}
+            line = element line {mixed{(nu|marriage|violence|autonomy|patriarchy|family|motherhood|alone)*}}
+                nu = attribute nu {text} 
+            marriage =  element marriage {text}
+            violence = element violence {text}
+            autonomy = element autonomy {text}
+            patriarchy = element patriarchy {text}
+            family = element family {text}
+            motherhood = element motherhood {text} 
+            alone = element alone {text}
