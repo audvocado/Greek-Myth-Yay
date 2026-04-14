@@ -5,6 +5,8 @@ start = root
         meta=element meta {mixed{line}+}
             line = element line {mixed{(nu|marriage|violence|autonomy|patriarchy|family|motherhood|alone)*}}
                 nu = attribute nu {text} 
+                #For attribute values, use what is listed under the correct element. For attribute names, use a descriptor
+                #Such as <marriage non_consensual="coersion">. It can be whatever you want, so long as the name is recorded. 
                 marriage =  element marriage {mixed{consensual| non_consensual}}
                     consensual= attribute consensual {text}
                     non_consensual= attribute non_consensual {text}
@@ -12,7 +14,8 @@ start = root
                     suicide= attribute suicide {text}
                     domestic= attribute domestic {text}
                     sexual= attribute sexual {text}
-                autonomy = element autonomy {mixed{loss| gain}}
+                autonomy = element autonomy {mixed{loss|gain}}
+                    
                     loss= attribute loss {text}
                     gain= attribute gain {text}
                 patriarchy = element patriarchy {mixed{faithfulness|purchase_woman}}
@@ -21,7 +24,7 @@ start = root
                 family = element family {text}
                 motherhood = element motherhood {mixed{birth}}
                     birth= attribute birth {text}
-                alone = element alone {mixed{isolated|shame| alienated}}
+                alone = element alone {mixed{isolated|shame|alienated}}
                     isolated= attribute isolated {text}
                     shame=attribute shame {text}
                     alienated= attribute alienated {text}
