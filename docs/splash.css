@@ -8,61 +8,64 @@ body {
     font-family: 'Fauna One', serif;
 }
 
-/* NAVIGATION */
+/* Navigation Styles */
 .top-bar {
-    background: #366f91; 
-    border-bottom: 5px solid #be29ec; 
-    padding: 20px 0;
-    text-align: center;
+    display: flex;
+    background-color: #1a1a1a;
+    padding: 10px;
+    align-items: center;
 }
 
 .nav-link {
-    color: #efbbff;
+    color: white;
+    padding: 14px 20px;
     text-decoration: none;
-    font-family: 'Cinzel', serif;
-    margin: 0 20px;
-    text-transform: uppercase;
+    font-family: "Garamond", serif;
+    font-variant: small-caps;
 }
 
-/* Container for the dropdown */
+/* Dropdown Logic */
 .dropdown {
-    display: inline-block;
     position: relative;
+    display: inline-block;
 }
 
-/* The actual dropdown box */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #2c2c2c; /* Dark charcoal for a sophisticated look */
-    min-width: 200px;
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
-    border-top: 3px solid #d4af37; /* A "Gold" accent line at the top */
-    z-index: 100;
+    background-color: #2c2c2c;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+    z-index: 1;
+    border-top: 2px solid #d4af37; /* Gold Accent */
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
-    color: #f4f4f4; /* Off-white text */
-    padding: 12px 20px;
-    text-decoration: none;
+    color: #e0e0e0;
+    padding: 12px 16px;
     display: block;
-    /* This font stack uses elegant serif fonts */
-    font-family: "Garamond", "Georgia", serif; 
-    font-variant: small-caps;
-    letter-spacing: 1px;
-    border-bottom: 1px solid #444;
+    text-decoration: none;
+    font-family: "Garamond", serif;
 }
 
-/* Hover state for individual links */
 .dropdown-content a:hover {
-    background-color: #d4af37; /* Gold background on hover */
-    color: #000; /* Black text on gold background */
+    background-color: #d4af37;
+    color: black;
 }
 
-/* Show the menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+/* Code Display Styles */
+.xml-display {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-left: 5px solid #d4af37;
+    overflow-x: auto;
+    font-family: "Courier New", monospace;
+    font-size: 0.9em;
+    color: #333;
 }
 
 /* TITLE HEADER */
