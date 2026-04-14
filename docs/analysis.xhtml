@@ -6,56 +6,48 @@
         <link rel="stylesheet" type="text/css" href="splash.css" />
     </head>
     <body>
-        <main>
-            <h1>Analysis of Each Translation</h1>
-            <p>Analysis will happen here.</p>
-            <p><em>*Under Construction*</em></p>
-        </main>
-        
         <div class="top-bar">
             <a href="index.xhtml" class="nav-link">Home</a>
             <a href="about.xhtml" class="nav-link">About</a>
             <a href="corpus.xhtml" class="nav-link">Corpus</a>
-            <div class="dropdown">
-                <a href="analysis.xhtml" class="nav-link">Analysis</a>
-                <div class="dropdown-content">
-                    <a href="analysis-trans1.xhtml">Translation 1</a>
-                    <a href="analysis-trans2.xhtml">Translation 2</a>
-                    <a href="analysis-trans3.xhtml">Translation 3</a>
-                    <a href="analysis-trans4.xhtml">Translation 4</a>
-                </div>
-            </div>
-        </div>
-        <div class="hero-collage">
-            <h1 class="main-title">Analysis of Each Translation</h1>
+            <a href="analysis.xhtml" class="nav-link active">Analysis</a>
         </div>
         
-        <div class="split-container">
-            <div class="column-text">
-                <p>Analysis will happen here.</p>
-                <p><em>*Under Construction*</em></p>
-            </div>
+        <div class="hero-collage">
+            <h1 class="main-title">Select a Translation</h1>
         </div>
-        <div class="bookshelf">
-            <a href="analysis-murray.xhtml" class="book murray">
-                <span class="book-title">Gilbert Murray</span>
-                <span class="book-year">1912</span>
-            </a>
-            <a href="analysis-trans2.xhtml" class="book trans2">
-                <span class="book-title">Translation 2</span>
-                <span class="book-year">Year</span>
-            </a>
-        </div>
-        <div class="library-view">
-            <h2>Select a Translation to Analyze</h2>
-            <div class="bookshelf">
-                <a href="analysis-murray.xhtml" class="book book-1">
-                    <span class="spine-text">Murray (1912)</span>
+        
+        <div class="library-container">
+            <div class="bookshelf-3d">
+                <a href="analysis-trans1.xhtml" class="book-3d">
+                    <div class="spine murray-spine">Translation 1 (1912)</div>
+                    <div class="cover">
+                        <img src="trans1-cover.jpg" alt="Translation 1 Cover" />
+                    </div>
                 </a>
-                <a href="analysis-trans2.xhtml" class="book book-2">
-                    <span class="spine-text">Translation 2</span>
+                
+                <a href="analysis-trans2.xhtml" class="book-3d">
+                    <div class="spine Luschnig-spine">Translation 2</div>
+                    <div class="cover">
+                        <img src="trans2-cover.jpg" alt="Translation 2 Cover" />
+                    </div>
                 </a>
+                <a href="analysis-trans3.xhtml" class="book-3d">
+                    <div class="spine Cerrato-spine">Translation 3</div>
+                    <div class="cover">
+                        <img src="trans3-cover.jpg" alt="Translation 3 Cover" />
+                    </div>
+                </a>
+                <a href="analysis-trans4.xhtml" class="book-3d">
+                    <div class="spine Johnston-spine">Translation 3</div>
+                    <div class="cover">
+                        <img src="trans4-cover.jpg" alt="Translation 4 Cover" />
+                    </div>
+                </a>
+                
+                
             </div>
+            <div class="floor"></div>
         </div>
     </body>
 </html>

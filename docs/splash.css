@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One&display=swap');
 
+/* --- 1. YOUR ORIGINAL THEME --- */
 body {
     margin: 0;
     padding: 0;
-    background-color: #efbbff; 
+    background-color: #efbbff; /* Your Lavender */
     color: #330033;
     font-family: 'Fauna One', serif;
 }
@@ -14,6 +15,9 @@ body {
     background-color: #1a1a1a;
     padding: 10px;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .nav-link {
@@ -24,173 +28,11 @@ body {
     font-variant: small-caps;
 }
 
-/* Dropdown Logic */
-.dropdown {
-    position: relative;
-    display: inline-block;
+.nav-link:hover, .nav-link.active {
+    color: #d4af37;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #2c2c2c;
-    min-width: 220px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
-    z-index: 1;
-    border-top: 2px solid #d4af37; /* Gold Accent */
-}
-
-.dropdown-content a {
-    color: #e0e0e0;
-    padding: 12px 16px;
-    display: block;
-    text-decoration: none;
-    font-family: "Garamond", serif;
-}
-
-.dropdown-content a:hover {
-    background-color: #d4af37;
-    color: black;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Code Display Styles */
-.xml-display {
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-left: 5px solid #d4af37;
-    overflow-x: auto;
-    font-family: "Courier New", monospace;
-    font-size: 0.9em;
-    color: #333;
-}
-
-.bookshelf {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px;
-    background: #4a3728; /* Wood-like color */
-    border-bottom: 15px solid #2a1b10;
-}
-
-.book {
-    width: 60px;
-    height: 200px;
-    background-color: #d4af37; /* Gold/Yellow */
-    border: 2px solid #000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    cursor: pointer;
-}
-
-.book:hover {
-    transform: translateY(-20px) scale(1.1); /* The "pop" effect */
-    background-color: #f1d592;
-}
-
-.book-title {
-    font-weight: bold;
-    font-size: 12px;
-    transform: rotate(90deg); /* Sideways title like a spine */
-    white-space: nowrap;
-}
-
-.bookshelf {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 40px;
-    background: #5d4037; /* Wood shelf color */
-    border-bottom: 20px solid #3e2723;
-}
-
-.book {
-    width: 50px;
-    height: 180px;
-    background-color: #d4af37;
-    border: 1px solid #000;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.book:hover {
-    transform: translateY(-25px) rotate(-5deg); /* Pops up and tilts */
-    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
-    background-color: #f1d592;
-}
-
-.spine-text {
-    transform: rotate(90deg);
-    white-space: nowrap;
-    color: black;
-    font-weight: bold;
-    font-family: serif;
-}
-/* Styling for the text container */
-.translation-text {
-    background-color: #fffaf0; /* Light parchment color */
-    padding: 30px;
-    border: 1px solid #e0d0b0;
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
-}
-
-/* Hover effect to show the span is interactive */
-.translation-text span:hover {
-    outline: 1px dotted #d4af37;
-}
-
-/* Layout container to hold sidebar and text */
-.split-container {
-    display: flex;
-    align-items: flex-start;
-    gap: 30px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Sidebar styling */
-.controls {
-    flex: 0 0 220px; /* Fixed width for the sidebar */
-    position: sticky;
-    top: 80px; /* Stays visible as you scroll */
-    background: #fdfaf1;
-    border: 1px solid #d4af37;
-    padding: 20px;
-    box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
-}
-
-/* Line number styling */
-.line-nu {
-    display: inline-block;
-    width: 30px;
-    color: #888;
-    font-size: 0.8em;
-    font-family: monospace;
-    margin-right: 10px;
-    text-align: right;
-}
-
-/* The actual text column */
-.column-text {
-    flex: 1;
-    font-family: "Garamond", serif;
-    line-height: 1.6;
-    font-size: 1.1em;
-}
-
-/* TITLE HEADER */
+/* --- 2. YOUR ORIGINAL HEADERS & LAYOUT --- */
 .hero-collage {
     height: 300px;
     background: linear-gradient(rgba(102, 0, 102, 0.6), rgba(54, 111, 145, 0.6));
@@ -208,7 +50,6 @@ body {
     margin: 0;
 }
 
-/* SPLIT LAYOUT */
 .split-container {
     display: flex;
     width: 100%;
@@ -217,9 +58,7 @@ body {
     border-bottom: 3px solid #800080;
 }
 
-.reverse {
-    flex-direction: row-reverse;
-}
+.reverse { flex-direction: row-reverse; }
 
 .column-text {
     flex: 1;
@@ -230,16 +69,8 @@ body {
     text-align: center; 
 }
 
-.column-image {
-    flex: 1;
-    overflow: hidden;
-}
-
-.column-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+.column-image { flex: 1; overflow: hidden; }
+.column-image img { width: 100%; height: 100%; object-fit: cover; }
 
 h2 {
     font-family: 'Cinzel', serif;
@@ -248,7 +79,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* TEAM LIST STYLE - MIRRORS PARAGRAPH EXACTLY */
+/* --- 3. YOUR ORIGINAL TABLES & TEAM LIST --- */
 .team-list {
     list-style: none;
     padding: 0;
@@ -256,13 +87,156 @@ h2 {
     color: #330033;
     font-size: 1.1rem;
     line-height: 1.8;
-    font-weight: normal; /* Removed Bold */
 }
 
-.team-list li {
-    margin: 5px 0;
+.table-container {
+    padding: 60px 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
 }
 
+table {
+    width: 90%;
+    max-width: 1000px;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #366f91;
+    color: #efbbff;
+    font-family: 'Cinzel', serif;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #D9B98C;
+}
+
+/* --- 4. NEW 3D BOOKSHELF (FIXED) --- */
+.library-container {
+    padding: 60px 0;
+    perspective: 1000px;
+    text-align: center;
+    background-color: #efbbff;
+}
+
+.bookshelf-3d {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 15px;
+    height: 300px;
+}
+
+.book-3d {
+    position: relative;
+    width: 45px; 
+    height: 250px;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    transform-style: preserve-3d;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.spine {
+    position: absolute;
+    width: 45px;
+    height: 100%;
+    background: #330033; /* Dark Purple Spine */
+    color: #d4af37;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-family: 'Cinzel', serif;
+    font-size: 0.9em;
+    border: 1px solid #000;
+    z-index: 2;
+}
+
+.cover {
+    position: absolute;
+    left: 45px;
+    width: 170px;
+    height: 100%;
+    background: #fff;
+    transform-origin: left;
+    transform: rotateY(-90deg);
+    opacity: 0;
+    transition: all 0.6s ease;
+    z-index: 1;
+    border: 1px solid #000;
+    border-left: none;
+}
+
+.cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.book-3d:hover { width: 215px; transform: translateX(-50px); }
+.book-3d:hover .cover { opacity: 1; transform: rotateY(0deg); }
+
+.floor {
+    width: 80%;
+    height: 20px;
+    background: #2a1b10;
+    margin: 0 auto;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.murray-spine { background-color: #800000; } /* Dark Red for Murray */
+
+/* --- 5. NEW HIGHLIGHTING ENGINE (FIXED) --- */
+.controls {
+    flex: 0 0 220px;
+    position: sticky;
+    top: 80px;
+    background: #fdfaf1;
+    border: 1px solid #d4af37;
+    padding: 20px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+}
+
+.translation-text {
+    background-color: #fffaf0;
+    padding: 30px;
+    border: 1px solid #e0d0b0;
+    line-height: 2.2;
+    text-align: left; /* Poetry looks better left-aligned */
+}
+
+.line-nu {
+    display: inline-block;
+    width: 30px;
+    color: #888;
+    margin-right: 15px;
+    font-family: monospace;
+}
+
+/* Theme highlighting colors */
+.marriage, .violence, .autonomy, .patriarchy, .family, .motherhood, .alone {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+body.show-marriage .marriage { background-color: #fdfd96; border-bottom: 2px solid #e6e600; color: black; }
+body.show-violence .violence { background-color: #ffb3b3; border-bottom: 2px solid #ff0000; color: black; }
+body.show-autonomy .autonomy { background-color: #b3ffb3; border-bottom: 2px solid #00ff00; color: black; }
+body.show-patriarchy .patriarchy { background-color: #ffd1dc; border-bottom: 2px solid #ff69b4; color: black; }
+body.show-family .family { background-color: #cdecff; border-bottom: 2px solid #0077be; color: black; }
+body.show-motherhood .motherhood { background-color: #e0bbe4; border-bottom: 2px solid #957dad; color: black; }
+body.show-alone .alone { background-color: #d3d3d3; border-bottom: 2px solid #808080; color: black; }
+
+[title] { cursor: help; }
+
+/* Scroll to top button */
 #scrollTopBtn {
     position: fixed;
     bottom: 20px;
@@ -275,123 +249,3 @@ h2 {
     border: 1px solid #efbbff;
     cursor: pointer;
 }
-
-/* Special padding for the single-column bottom section */
-.about-footer {
-    padding: 60px 20px;
-    background-color: #efbbff;
-    text-align: center;
-}
-
-.about-footer p {
-    max-width: 700px;
-    margin: 0 auto;
-    font-style: italic;
-}
-
-.team-list li {
-    margin: 15px 0;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-/* This styles the "Project Goals" box at the very bottom */
-.goals-section {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #efbbff; /* Your Lavender */
-    border-top: 3px solid #800080; /* Purple Divider */
-}
-
-.goals-section p {
-    max-width: 800px;
-    margin: 0 auto;
-    font-style: italic; /* Makes the goal statement stand out */
-    color: #330033;
-}
-
-/* Ensure images don't get squashed on smaller screens */
-@media (max-width: 768px) {
-    .split-container, .split-container.reverse {
-        flex-direction: column;
-    }
-    .column-image {
-        height: 300px;
-    }
-}
-
-/* --- TABLE STYLING --- */
-.table-container {
-    padding: 60px 20px;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-}
-
-table {
-    width: 90%;
-    max-width: 1000px;
-    border-collapse: collapse;
-    font-family: 'Fauna One', serif;
-}
-
-thead {
-    background-color: #366f91; /* Your Blue */
-    color: #efbbff; /* Your Lavender */
-    font-family: 'Cinzel', serif;
-}
-
-th, td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid #D9B98C; /* Your Gold */
-}
-
-.table-link {
-    color: #366f91;
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-.table-link:hover {
-    color: #800080;
-}
-
-/**{background-color: #e0ddd5}
-h1 {
-text-shadow: 0 0 2px #00e9ff, 0 0 3px #0088ff;
-    color: #283d70;
-    font-family: Luminari, fantasy;   
-
-}
-h2 {
-    color: #2e3546;
-    font-family: Luminari, fantasy;   
-}
-p {
-  display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    padding: 10px;
-    color: #703529;
-    background-color: #c6934b;
-    border: 5px solid #283d70;
-    font-family: Georgia, serif;
-}
-ul {
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    padding: 10px;
-    color: #703529;
-    background-color: #c6934b;
-    border: 5px solid #283d70;
-    font-family: Georgia, serif;
-}
-li {
-      display: flex;
-    flex-direction: column;
-    color: #703529;
-    background-color: #c6934b;
-    font-family: Georgia, serif;
-}*/
