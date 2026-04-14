@@ -272,3 +272,18 @@ body.show-alone .alone { background-color: #d3d3d3; border-bottom: 2px solid #80
     border: 1px solid #efbbff;
     cursor: pointer;
 }
+
+
+.trans1-hero {
+    /* Replace 'header-image.jpg' with your actual image file name */
+    background: url('header-image.jpg') no-repeat center center;
+    background-size: cover;
+    border-bottom: 5px solid #d4af37; /* Gold accent border */
+}
+
+/* Ensure the text is readable over the image */
+.trans1-hero .main-title {
+    background: rgba(0, 0, 0, 0.4); /* Adds a subtle dark tint behind text */
+    padding: 20px 40px;
+    border-radius: 10px;
+}
