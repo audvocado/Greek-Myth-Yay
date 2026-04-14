@@ -10,4 +10,4 @@ autonomy = element autonomy {text}
 patriarchy = element patriarchy {text}
 family = element family {text}
 motherhood = element motherhood {text} 
-alone = element alone {text}
+loneliness = element alone {text}
