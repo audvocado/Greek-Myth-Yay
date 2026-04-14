@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One&display=swap');
 
+/* --- 1. GLOBAL THEME & NAV --- */
 body {
     margin: 0;
     padding: 0;
@@ -8,23 +9,30 @@ body {
     font-family: 'Fauna One', serif;
 }
 
-/* NAVIGATION */
 .top-bar {
-    background: #366f91; 
-    border-bottom: 5px solid #be29ec; 
-    padding: 20px 0;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #1a1a1a;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .nav-link {
-    color: #efbbff;
+    color: white;
+    padding: 14px 20px;
     text-decoration: none;
-    font-family: 'Cinzel', serif;
-    margin: 0 20px;
-    text-transform: uppercase;
+    font-family: "Garamond", serif;
+    font-variant: small-caps;
+    font-size: 1.1rem;
 }
 
-/* TITLE HEADER */
+.nav-link:hover, .nav-link.active {
+    color: #d4af37;
+}
+
+/* --- 2. HEADERS & HERO SECTIONS --- */
 .hero-collage {
     height: 300px;
     background: linear-gradient(rgba(102, 0, 102, 0.6), rgba(54, 111, 145, 0.6));
@@ -42,7 +50,135 @@ body {
     margin: 0;
 }
 
-/* SPLIT LAYOUT */
+/* --- ANALYSIS PAGE SPECIFIC HEADER --- */
+.analysis-hero {
+    background: url('analysis-header.jpg') no-repeat center center;
+    background-size: cover;
+    /* Changed from 150px to 300px to show more of the image */
+    height: 300px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.analysis-hero .main-title {
+    color: #000000; 
+    font-size: 2.5rem; /* Slightly larger to match the taller header */
+    text-shadow: none;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+/* --- TRANSLATION 1 SPECIFIC HERO --- */
+.trans1-hero {
+    background: url('header-image.jpg') no-repeat;
+    background-position: center 20%; 
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px solid #d4af37;
+}
+
+.trans1-hero .main-title {
+    color: #000000;
+    text-shadow: none;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 3rem;
+}
+
+/* --- 3. THE 3D BOOKSHELF & LIBRARY --- */
+.library-container {
+    padding: 100px 0; /* Increased padding */
+    perspective: 2000px;
+    background: url('library-main-bg.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 700px; /* Increased height to accommodate the taller page */
+}
+
+.bookshelf-3d {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 35px;
+    height: 400px;
+}
+
+.book-3d {
+    position: relative;
+    width: 60px;
+    height: 350px;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    transform-style: preserve-3d;
+    text-decoration: none;
+}
+
+.spine {
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    border: 1px solid rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+/* --- NEW SLEEVE (SPINE) COLORS --- */
+.murray-spine { background-color: #3b1020; color: #f7b7b2; }
+.luschnig-spine { background-color: #6e1e2e; color: #f7b7b2; }
+.cerrato-spine { background-color: #b24a5a; color: #ffffff; }
+.johnston-spine { background-color: #f7b7b2; color: #3b1020; }
+
+.cover {
+    position: absolute;
+    left: 60px;
+    width: 240px;
+    height: 350px;
+    background: #fff;
+    transform-origin: left;
+    transform: rotateY(-90deg);
+    opacity: 0;
+    transition: all 0.6s ease;
+    z-index: 1;
+    border: 1px solid #000;
+    border-left: none;
+    overflow: hidden;
+}
+
+.cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.book-3d:hover {
+    width: 300px;
+    transform: translateX(-50px);
+}
+
+.book-3d:hover .cover {
+    opacity: 1;
+    transform: rotateY(0deg);
+}
+
+.floor {
+    width: 90%;
+    height: 25px;
+    background: #1a050d; /* Darkened to match your new palette */
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* --- 4. LAYOUTS & TABLES --- */
 .split-container {
     display: flex;
     width: 100%;
@@ -51,9 +187,7 @@ body {
     border-bottom: 3px solid #800080;
 }
 
-.reverse {
-    flex-direction: row-reverse;
-}
+.reverse { flex-direction: row-reverse; }
 
 .column-text {
     flex: 1;
@@ -64,16 +198,8 @@ body {
     text-align: center; 
 }
 
-.column-image {
-    flex: 1;
-    overflow: hidden;
-}
-
-.column-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+.column-image { flex: 1; overflow: hidden; }
+.column-image img { width: 100%; height: 100%; object-fit: cover; }
 
 h2 {
     font-family: 'Cinzel', serif;
@@ -82,20 +208,82 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* TEAM LIST STYLE - MIRRORS PARAGRAPH EXACTLY */
 .team-list {
     list-style: none;
     padding: 0;
-    font-family: 'Fauna One', serif; 
-    color: #330033;
     font-size: 1.1rem;
     line-height: 1.8;
-    font-weight: normal; /* Removed Bold */
 }
 
-.team-list li {
-    margin: 5px 0;
+.table-container {
+    padding: 60px 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
 }
+
+table {
+    width: 90%;
+    max-width: 1000px;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #366f91;
+    color: #efbbff;
+    font-family: 'Cinzel', serif;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #D9B98C;
+}
+
+/* --- 5. INTERACTIVE ENGINE --- */
+.controls {
+    flex: 0 0 220px;
+    position: sticky;
+    top: 80px;
+    background: #fdfaf1;
+    border: 1px solid #d4af37;
+    padding: 20px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+}
+
+.translation-text {
+    background-color: #fffaf0;
+    padding: 40px;
+    border: 1px solid #e0d0b0;
+    line-height: 2.2;
+    text-align: left;
+}
+
+.line-nu {
+    display: inline-block;
+    width: 35px;
+    color: #888;
+    margin-right: 15px;
+    font-family: monospace;
+}
+
+/* Highlights */
+.marriage, .violence, .autonomy, .patriarchy, .family, .motherhood, .alone {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+body.show-marriage .marriage { background-color: #fdfd96; border-bottom: 2px solid #e6e600; color: black; }
+body.show-violence .violence { background-color: #ffb3b3; border-bottom: 2px solid #ff0000; color: black; }
+body.show-autonomy .autonomy { background-color: #b3ffb3; border-bottom: 2px solid #00ff00; color: black; }
+body.show-patriarchy .patriarchy { background-color: #ffd1dc; border-bottom: 2px solid #ff69b4; color: black; }
+body.show-family .family { background-color: #cdecff; border-bottom: 2px solid #0077be; color: black; }
+body.show-motherhood .motherhood { background-color: #e0bbe4; border-bottom: 2px solid #957dad; color: black; }
+body.show-alone .alone { background-color: #d3d3d3; border-bottom: 2px solid #808080; color: black; }
+
+[title] { cursor: help; }
 
 #scrollTopBtn {
     position: fixed;
@@ -109,123 +297,3 @@ h2 {
     border: 1px solid #efbbff;
     cursor: pointer;
 }
-
-/* Special padding for the single-column bottom section */
-.about-footer {
-    padding: 60px 20px;
-    background-color: #efbbff;
-    text-align: center;
-}
-
-.about-footer p {
-    max-width: 700px;
-    margin: 0 auto;
-    font-style: italic;
-}
-
-.team-list li {
-    margin: 15px 0;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-/* This styles the "Project Goals" box at the very bottom */
-.goals-section {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #efbbff; /* Your Lavender */
-    border-top: 3px solid #800080; /* Purple Divider */
-}
-
-.goals-section p {
-    max-width: 800px;
-    margin: 0 auto;
-    font-style: italic; /* Makes the goal statement stand out */
-    color: #330033;
-}
-
-/* Ensure images don't get squashed on smaller screens */
-@media (max-width: 768px) {
-    .split-container, .split-container.reverse {
-        flex-direction: column;
-    }
-    .column-image {
-        height: 300px;
-    }
-}
-
-/* --- TABLE STYLING --- */
-.table-container {
-    padding: 60px 20px;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-}
-
-table {
-    width: 90%;
-    max-width: 1000px;
-    border-collapse: collapse;
-    font-family: 'Fauna One', serif;
-}
-
-thead {
-    background-color: #366f91; /* Your Blue */
-    color: #efbbff; /* Your Lavender */
-    font-family: 'Cinzel', serif;
-}
-
-th, td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid #D9B98C; /* Your Gold */
-}
-
-.table-link {
-    color: #366f91;
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-.table-link:hover {
-    color: #800080;
-}
-
-/**{background-color: #e0ddd5}
-h1 {
-text-shadow: 0 0 2px #00e9ff, 0 0 3px #0088ff;
-    color: #283d70;
-    font-family: Luminari, fantasy;   
-
-}
-h2 {
-    color: #2e3546;
-    font-family: Luminari, fantasy;   
-}
-p {
-  display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    padding: 10px;
-    color: #703529;
-    background-color: #c6934b;
-    border: 5px solid #283d70;
-    font-family: Georgia, serif;
-}
-ul {
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    padding: 10px;
-    color: #703529;
-    background-color: #c6934b;
-    border: 5px solid #283d70;
-    font-family: Georgia, serif;
-}
-li {
-      display: flex;
-    flex-direction: column;
-    color: #703529;
-    background-color: #c6934b;
-    font-family: Georgia, serif;
-}*/

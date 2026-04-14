@@ -1,6 +1,7 @@
 datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
 
 start = root 
+<<<<<<< HEAD
 root = element root {line}
 line = element line {nu, text}
 nu = attribute nu {text} 
@@ -11,3 +12,32 @@ patriarchy = element patriarchy {text}
 family = element family {text}
 motherhood = element motherhood {text} 
 loneliness = element alone {text}
+=======
+    root = element root {meta}
+        meta=element meta {mixed{line}+}
+            line = element line {mixed{(nu|marriage|violence|autonomy|patriarchy|family|motherhood|alone)*}}
+                nu = attribute nu {text} 
+                #For attribute values, use what is listed under the correct element. For attribute names, use a descriptor
+                #Such as <marriage non_consensual="coersion">. It can be whatever you want, so long as the name is recorded. 
+                marriage =  element marriage {mixed{consensual| non_consensual}}
+                    consensual= attribute consensual {text}
+                    non_consensual= attribute non_consensual {text}
+                violence = element violence {mixed{suicide|domestic|sexual}}
+                    suicide= attribute suicide {text}
+                    domestic= attribute domestic {text}
+                    sexual= attribute sexual {text}
+                autonomy = element autonomy {mixed{loss|gain}}
+                    
+                    loss= attribute loss {text}
+                    gain= attribute gain {text}
+                patriarchy = element patriarchy {mixed{faithfulness|purchase_woman}}
+                    faithfulness= attribute faithfulness {text}
+                    purchase_woman= attribute purchase_woman {text}
+                family = element family {text}
+                motherhood = element motherhood {mixed{birth}}
+                    birth= attribute birth {text}
+                alone = element alone {mixed{isolated|shame|alienated}}
+                    isolated= attribute isolated {text}
+                    shame=attribute shame {text}
+                    alienated= attribute alienated {text}
+>>>>>>> refs/remotes/origin/main
