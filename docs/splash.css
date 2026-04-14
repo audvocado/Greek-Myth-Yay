@@ -24,6 +24,42 @@ body {
     text-transform: uppercase;
 }
 
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+/* Hide the dropdown menu by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff; /* Match your site's theme color */
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 100;
+    text-align: left;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: sans-serif; /* Match your site's font */
+    font-size: 14px;
+}
+
+/* Show the menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hover effect for dropdown links */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
 /* TITLE HEADER */
 .hero-collage {
     height: 300px;
