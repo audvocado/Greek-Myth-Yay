@@ -274,16 +274,25 @@ body.show-alone .alone { background-color: #d3d3d3; border-bottom: 2px solid #80
 }
 
 
+/* --- TRANSLATION 1 SPECIFIC HERO --- */
 .trans1-hero {
-    /* Replace 'header-image.jpg' with your actual image file name */
-    background: url('header-image.jpg') no-repeat center center;
+    background: url('header-image.jpg') no-repeat;
+    /* center = horizontal center | 20% = vertical position (adjust this to center the head) */
+    background-position: center 20%; 
     background-size: cover;
-    border-bottom: 5px solid #d4af37; /* Gold accent border */
+    height: 400px; /* Increased height so the image isn't as "squashed" */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px solid #d4af37;
 }
 
-/* Ensure the text is readable over the image */
+/* --- TITLE STYLING (BLACK TEXT) --- */
 .trans1-hero .main-title {
-    background: rgba(0, 0, 0, 0.4); /* Adds a subtle dark tint behind text */
-    padding: 20px 40px;
-    border-radius: 10px;
+    color: #000000; /* Text is now Black */
+    text-shadow: none; /* Removed the blue shadow for better legibility */
+    background: rgba(255, 255, 255, 0.3); /* Optional: light white tint so black text pops against dark parts of the photo */
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 3rem;
 }
