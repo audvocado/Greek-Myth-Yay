@@ -24,40 +24,45 @@ body {
     text-transform: uppercase;
 }
 
+/* Container for the dropdown */
 .dropdown {
     display: inline-block;
     position: relative;
 }
 
-/* Hide the dropdown menu by default */
+/* The actual dropdown box */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #ffffff; /* Match your site's theme color */
-    min-width: 180px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    background-color: #2c2c2c; /* Dark charcoal for a sophisticated look */
+    min-width: 200px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+    border-top: 3px solid #d4af37; /* A "Gold" accent line at the top */
     z-index: 100;
-    text-align: left;
 }
 
-/* Style the links inside the dropdown */
+/* Links inside the dropdown */
 .dropdown-content a {
-    color: #333;
-    padding: 12px 16px;
+    color: #f4f4f4; /* Off-white text */
+    padding: 12px 20px;
     text-decoration: none;
     display: block;
-    font-family: sans-serif; /* Match your site's font */
-    font-size: 14px;
+    /* This font stack uses elegant serif fonts */
+    font-family: "Garamond", "Georgia", serif; 
+    font-variant: small-caps;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #444;
+}
+
+/* Hover state for individual links */
+.dropdown-content a:hover {
+    background-color: #d4af37; /* Gold background on hover */
+    color: #000; /* Black text on gold background */
 }
 
 /* Show the menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
-}
-
-/* Hover effect for dropdown links */
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
 }
 
 /* TITLE HEADER */
