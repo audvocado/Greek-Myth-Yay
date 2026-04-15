@@ -1,6 +1,18 @@
 datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
 
 start = root 
+<<<<<<< HEAD
+root = element root {line}
+line = element line {nu, text}
+nu = attribute nu {text} 
+marriage =  element marriage {text}
+violence = element violence {text}
+autonomy = element autonomy {text}
+patriarchy = element patriarchy {text}
+family = element family {text}
+motherhood = element motherhood {text} 
+loneliness = element alone {text}
+=======
     root = element root {meta}
         meta=element meta {mixed{line}+}
             line = element line {mixed{(nu|marriage|violence|autonomy|patriarchy|family|motherhood|alone)*}}
@@ -27,3 +39,4 @@ start = root
                     isolated= attribute isolated {text}
                     shame=attribute shame {text}
                     alienated= attribute alienated {text}
+>>>>>>> refs/remotes/origin/main
