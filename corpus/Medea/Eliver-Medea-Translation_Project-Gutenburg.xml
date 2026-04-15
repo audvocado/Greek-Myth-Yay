@@ -69,54 +69,50 @@
     consistency?
     -->
         <line nu="273">Of all things upon earth that bleed and grow,</line>
-        <line nu="274"><violence>A herb most bruised is woman.</violence> We must pay </line>
+        <line nu="274"><violence sexual="">A herb most bruised is woman.</violence> We must pay </line>
         <line nu="275">Our store of gold, hoarded for that one day,</line>
-        <line nu="276"><patriarchy>To buy us some man's love;</patriarchy> and lo, they bring</line>
+        <line nu="276"><patriarchy purchase_woman="buy affection">To buy us some man's love;</patriarchy> and lo, they bring</line>
         <line nu="277">
-            <autonomy>A master of our flesh!</autonomy>
+            <autonomy loss="master">A master of our flesh!</autonomy>
             There comes the sting </line>
         <line nu="278">Of the whole shame. And then the jeopardy,</line>
-        <line nu="279">For good or ill, what shall that <autonomy>master</autonomy> be;</line>
-        <line nu="280"><autonomy>Reject she cannot:</autonomy> and if he but stays</line>
-        <line nu="281">His suit, <alone>'tis shame on all that woman's days.</alone></line>
+        <line nu="279">For good or ill, what shall that <autonomy loss="ownership">master</autonomy> be;</line>
+        <line nu="280"><autonomy loss="control">Reject she cannot:</autonomy> and if he but stays</line>
+        <line nu="281">His suit, <alone shame="shame">'tis shame on all that woman's days.</alone></line>
         <line nu="282">
-            <alone>=So thrown amid new laws, new places,</alone> 
+            <alone alienated="foreign">=So thrown amid new laws, new places,</alone> 
             why,</line>
         <line nu="283">'Tis magic she must have, or prophecy—</line>
         <line nu="284"><family>Home never taught her that</family>—how best to guide</line>
         <line nu="285">
-            <marriage>Toward peace this thing that sleepeth at her side.</marriage>
+            <family>Toward peace this thing that sleepeth at her side.</family>
         </line>
         <line nu="286">And she who, 
-            <motherhood>labouring long</motherhood>, 
+            <motherhood birth="peace_keeper">labouring long</motherhood>, 
             shall find some way</line>
         <line nu="287">Whereby her lord may bear with her, nor fray</line>
         <line nu="288">
-            <violence>His yoke too fiercely, blessed is the breath</violence>
+            <violence domestic="control">His yoke too fiercely, blessed is the breath</violence>
         </line>
         <line nu="289">That woman draws! 
-            <violence>Else, let her pray for death.</violence>
+            <violence suicide="end_life">Else, let her pray for death.</violence>
         </line>
         <!--Would love an attribute or something to mark this, as she is saying that it's acceptable for
         men to cheat on wife, but she must remain faithful-->
         <line nu="290">Her lord, if he be wearied of the face</line>
-        <line nu="291">Withindoors, gets him forth; some merrier place</line>
+        <line nu="291"><patriarchy faithfulness="cheating">Withindoors, gets him forth; some merrier place</patriarchy></line>
         <line nu="292">Will ease his heart: but she waits on, her whole</line>
         <line nu="293">
-            <!--Within the schema, how do I make it ok for two elements to exist within a line (marking
-                the same thing) at a time? -->
-            <alone>
-            <autonomy>Vision enchainèd on a single soul.</autonomy>
-            </alone>
+            <autonomy loss="imprisoned">Vision enchainèd on a single soul.</autonomy>
         </line>
         <!--How do I allow elements to span multiple lines, if it should all be contained within one further step down the tree
         not just <line>?-->
         <line nu="294">And then, forsooth, 'tis they that face the call</line>
-        <line nu="295">Of war, <alone>while we sit sheltered, hid from all</alone></line>
+        <line nu="295">Of war, <alone isolated="hidden">while we sit sheltered, hid from all</alone></line>
         <line nu="296">Peril!—False mocking! Sooner would I stand</line>
         <line nu="297">Three times to face their battles, shield in hand,</line>
         <line nu="298">
-            <motherhood>Than bear one child.</motherhood>
+            <motherhood birth="labor">Than bear one child.</motherhood>
         </line>
     
     

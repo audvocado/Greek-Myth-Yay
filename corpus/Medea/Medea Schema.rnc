@@ -15,7 +15,6 @@ start = root
                     domestic= attribute domestic {text}
                     sexual= attribute sexual {text}
                 autonomy = element autonomy {mixed{loss|gain}}
-                    
                     loss= attribute loss {text}
                     gain= attribute gain {text}
                 patriarchy = element patriarchy {mixed{faithfulness|purchase_woman}}
