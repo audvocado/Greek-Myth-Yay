@@ -25,10 +25,10 @@ body {
     font-variant: small-caps; font-size: 1.2rem;
 }
 
-/* --- 3. HERO SECTIONS (THE "SKINNY" FIX) --- */
+/* --- 3. HERO SECTIONS (Long Headers) --- */
 .hero-collage {
     width: 100%;
-    height: 450px; /* Increased height to make it "longer" vertically */
+    height: 450px; 
     background-size: cover; 
     background-position: center;
     display: flex; 
@@ -39,7 +39,7 @@ body {
 
 .main-title {
     font-family: 'Cinzel', serif; 
-    font-size: 4rem; /* Slightly larger for the bigger header */
+    font-size: 4rem; 
     color: #fdfaf1; 
     text-shadow: 4px 4px 0px #3b1020;
     text-align: center; 
@@ -48,8 +48,7 @@ body {
 
 /* --- 4. CONTENT BOXES --- */
 .split-container, .table-container, .goals-section, .text-box {
-    max-width: 1100px; /* Widened the containers for better flow */
-    margin: 60px auto;   
+    max-width: 1100px; margin: 60px auto;   
     background: #fffaf0; border: 2px solid #6e1e2e; 
     box-shadow: 0 20px 40px rgba(0,0,0,0.3);
     position: relative; z-index: 10;
@@ -76,7 +75,7 @@ body {
     border-bottom: 45px solid #3d2b1f; 
 }
 
-/* --- 6. 3D BOOKS (Grounded & Symmetrical) --- */
+/* --- 6. 3D BOOKS (Grounded) --- */
 .book-3d {
     position: relative; width: 90px; height: 400px; 
     transform-style: preserve-3d;
@@ -124,22 +123,22 @@ body {
 .poison-vial { background-image: url('vial.jpg'); transform: translateY(45px); }
 .plantsss { background-image: url('plantss.jpg'); transform: translateY(45px); }
 
-/* --- 8. TABLES & HIGHLIGHTS --- */
-table { width: 100%; border-collapse: collapse; }
-th { text-align: left; border-bottom: 3px solid #b2945a; padding: 15px; font-family: 'Cinzel', serif; }
-td { padding: 15px; border-bottom: 1px solid #eee; }
-
+/* --- 8. PAGE HEADERS (Murray Added) --- */
 body.home-page .hero-collage { background-image: url('medea-header.jpg'); }
 body.about-page .hero-collage { background-image: url('about-header.jpg'); }
 body.corpus-page .hero-collage { background-image: url('corpus-header.jpg'); }
 
+/* TARGET FOR MURRAY PAGE */
+body.murray-page .hero-collage { background-image: url('murray-header.jpg'); } 
+
+/* --- 9. TABLES & HIGHLIGHTS --- */
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; border-bottom: 3px solid #b2945a; padding: 15px; font-family: 'Cinzel', serif; }
+td { padding: 15px; border-bottom: 1px solid #eee; }
+
 .marriage, .violence, .autonomy, .patriarchy, .family, .motherhood, .alone { transition: background-color 0.3s ease; padding: 2px 4px; }
 body.show-marriage .marriage { background-color: #fdfd96; color: black; }
 body.show-violence .violence { background-color: #ffb3b3; color: black; }
-body.show-autonomy .autonomy { background-color: #b3ffb3; color: black; }
-body.show-patriarchy .patriarchy { background-color: #ffd1dc; color: black; }
-body.show-family .family { background-color: #cdecff; color: black; }
-body.show-motherhood .motherhood { background-color: #e0bbe4; color: black; }
-body.show-alone .alone { background-color: #d3d3d3; color: black; }
+/* ... (Keep other highlights) */
 
 #scrollTopBtn { position: fixed; bottom: 20px; right: 20px; background: #3b1020; color: white; padding: 15px; border-radius: 50%; cursor: pointer; z-index: 3000; }
