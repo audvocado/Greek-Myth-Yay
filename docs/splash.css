@@ -407,30 +407,32 @@ body.about-page .goals-section h2 {
 
 /* 1. Corpus Header Image */
 body.corpus-page .hero-collage {
-    height: 350px;
-    background-color: #3b1020;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('corpus-header.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 8px double #b2945a;
+    height: 350px !important;
+    background-color: #3b1020 !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('corpus-header.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-bottom: 8px double #b2945a !important;
 }
 
 /* 2. Wider Images in Corpus Box */
 body.corpus-page .split-container {
     max-width: 1100px;
+    display: flex;
 }
-
 body.corpus-page .column-text {
-    flex: 2; /* Text takes up less space */
+    flex: 2;
     padding: 50px;
 }
 
 body.corpus-page .column-image {
-    flex: 4; /* Image takes up more space */
+    flex: 4; /* Makes the photo wider */
     display: flex;
+    min-height: 450px;
 }
 
 body.corpus-page .column-image img {
@@ -439,7 +441,6 @@ body.corpus-page .column-image img {
     object-fit: cover;
     display: block;
 }
-
 /* 3. Table Container Styling (To match the rest of the site) */
 body.corpus-page .table-container {
     max-width: 1100px;
