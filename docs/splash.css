@@ -18,28 +18,33 @@ body {
     position: relative;
 }
 
-/* --- THE SIDE COLUMNS --- */
+/* --- THE COLUMNS (Proportional Scaling) --- */
 body::before, body::after {
     content: "";
     position: fixed;
     top: 0;
-    bottom: 0;      /* Pin to bottom for full length */
-    width: 160px;   
+    bottom: 0;
+    width: 180px;   /* Made slightly wider to prevent distortion */
     z-index: 2000; 
-    background-size: 100% 100%; /* Stretches image to fit length */
+    
+    /* CHANGE: 'cover' keeps the image from looking stretched/ugly */
+    background-size: cover; 
     background-repeat: no-repeat;
+    
+    /* Optional: adds a slight shadow so the column pops off the marble */
+    filter: drop-shadow(5px 0 15px rgba(0,0,0,0.3));
 }
 
 body::before {
     left: 0;
     background-image: url('column-left.png');
-    background-position: left top;
+    background-position: center top;
 }
 
 body::after {
     right: 0;
     background-image: url('column-right.png');
-    background-position: right top;
+    background-position: center top;
 }
 
 /* --- 2. NAVIGATION (Tyrian Purple & Bronze) --- */
