@@ -22,14 +22,12 @@ body {
 body::before, body::after {
     content: "";
     position: fixed;
-    top: 80px;      /* Starts right below the nav bar */
-    bottom: 0;      /* Goes all the way to the bottom */
-    width: 140px;   /* Slightly skinnier to save space */
+    top: 80px;      /* Starts under nav bar */
+    bottom: 0;      
+    width: 220px;   /* MADE WIDER: Gives that heavy, regal stone look */
     z-index: 2000; 
-    background-size: 100% 100%; /* Forces the image to stretch the full height */
+    background-size: 100% 100%; 
     background-repeat: no-repeat;
-    /* This transition makes the disappearance smooth if you switch pages */
-    transition: opacity 0.3s ease;
 }
 
 body.analysis-page::before, 
@@ -74,7 +72,7 @@ body::after {
 
 /* --- 3. HERO SECTION --- */
 .hero-collage {
-    height: 350px;
+    height: 400px; /* Slightly taller to accommodate the wider vibe */
     background: linear-gradient(rgba(59, 16, 32, 0.8), rgba(26, 54, 104, 0.7)), url('palace-bg.jpg');
     background-size: cover;
     display: flex;
@@ -95,8 +93,10 @@ body::after {
 
 /* --- 4. CONTENT TABLETS (Home, About, Corpus) --- */
 .split-container, .text-box, .goals-section, .table-container {
-    max-width: 800px;    /* Narrower so it doesn't hit the columns */
-    margin: 60px auto;   /* Centered with space above/below */
+    /* REDUCED WIDTH: This stops the text from stretching too far 
+       and keeps the box away from your wider columns */
+    max-width: 750px;    
+    margin: 80px auto;   
     background: #fffaf0; 
     border: 2px solid #6e1e2e; 
     border-radius: 4px; 
@@ -108,12 +108,12 @@ body::after {
 
 .main-title {
     font-family: 'Cinzel', serif;
-    font-size: 3.2rem;
+    font-size: 3rem;
     color: #fdfaf1;
     text-shadow: 4px 4px 0px #3b1020;
-    margin: 0;
+    margin: 0 auto;
     text-align: center;
-    padding: 0 180px; /* Pushes text away from column zones */
+    max-width: 700px; /* Constrains the title so it doesn't hit columns */
 }
 
 .split-container {
@@ -127,16 +127,14 @@ body::after {
 }
 
 .column-text {
-    flex: 1.2;
-    padding: 40px 60px; /* Increased side padding for better reading */
-    line-height: 1.9;
+    flex: 1;
+    padding: 50px; /* Generous padding so text feels "centered" in the box */
+    line-height: 1.8;
 }
 
-.column-text h2 {
-    font-family: 'Cinzel', serif;
-    color: #741b47;
-    border-bottom: 3px solid #b2945a;
-    padding-bottom: 10px;
+.column-text p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
 }
 
 .column-image img {
