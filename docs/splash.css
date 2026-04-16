@@ -197,45 +197,38 @@ body {
 
 /* --- VINTAGE ACADEMIC SPINES  --- */
 
+
 .spine {
     position: absolute;
     width: 90px; 
     height: 100%;
     
     /* 1. SYMMETRICAL ROUNDING */
-    /* This rounds both left and right sides equally for a tube-like spine */
     border-radius: 20px; 
     
-    /* 2. REMOVE TEXT STYLE */
+    /* 2. REMOVE TEXT */
     color: transparent; 
-    text-indent: -9999px; /* Extra safety to hide text */
     
-    /* 3. 3D SHADING */
+    /* 3. THE 3D & DEPTH SHADOWS */
     background-size: cover;
     background-position: center;
     transform: translateZ(5px); 
     z-index: 30;
     
-    /* High-intensity shading on BOTH sides to sell the curve */
+    /* Shadow 1 & 2 (Inset): Makes the image look like a round cylinder 
+       Shadow 3 (External): Creates that dark 'contact line' on the shelf floor
+    */
     box-shadow: 
-        inset -15px 0 20px rgba(0,0,0,0.7), 
-        inset 15px 0 20px rgba(0,0,0,0.7),
-        0 5px 15px rgba(0,0,0,0.4); 
+        inset -15px 0 20px rgba(0,0,0,0.8), 
+        inset 15px 0 20px rgba(0,0,0,0.8),
+        0 8px 15px rgba(0,0,0,0.6); 
 }
 
-/* Individual Textures */
+/* Ensure the textures are still linked */
 .murray-spine { background-image: url('spine-murray.jpg'); }
 .luschnig-spine { background-image: url('spine-luschnig.jpg'); }
 .cerrato-spine { background-image: url('spine-cerrato.jpg'); }
 .johnston-spine { background-image: url('spine-johnston.jpg'); }
-.cover {
-    position: absolute;
-    left: 90px; width: 300px; height: 100%;
-    transform-origin: left;
-    transform: rotateY(-90deg);
-    opacity: 0;
-    transition: all 0.5s ease;
-}
 
 .cover img { width: 100%; height: 100%; object-fit: cover; }
 
