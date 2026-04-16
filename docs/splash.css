@@ -287,12 +287,9 @@ td {
     z-index: 3000; 
 }
 
-/* --- HOMEPAGE EXCLUSIVE STYLES --- */
+/* --- HOMEPAGE  STYLES --- */
 
-/* --- HOMEPAGE EXCLUSIVE STYLES --- */
-
-/* --- HOMEPAGE EXCLUSIVE STYLES --- */
-
+/* 1. Header with the Original Gold Bar */
 body.home-page .hero-collage {
     height: 400px; 
     background-color: #3b1020; 
@@ -302,38 +299,50 @@ body.home-page .hero-collage {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; /* Required to pin the border to the bottom */
-    overflow: hidden;   /* Keeps the border from leaking out */
-    border-bottom: none; /* Clear old borders */
+    position: relative;
+    
+    /* The Original Gold Bar Look */
+    border-bottom: 10px double #b2945a; 
 }
 
-/* The Gold Leaf Border Layer */
-body.home-page .hero-collage::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 25px; /* Adjust height to make the leaf border thicker or thinner */
-    background-image: url('gold-leaf.jpg');
-    background-repeat: repeat-x; /* Repeats the pattern horizontally */
-    background-size: contain;    /* Ensures the pattern isn't cut off */
-    z-index: 5;
+/* Header Text (Consistent White with Shadow) */
+body.home-page .main-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 3.2rem; 
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #fdfaf1; 
+    text-shadow: 4px 4px 0px #3b1020; 
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-/* 2. Wider Photos in Text Boxes (Updated Flex) */
+/* 2. Wider Photos in Text Boxes */
 body.home-page .split-container {
-    max-width: 1050px; 
+    max-width: 1100px; /* Wider container to let images shine */
     margin: 80px auto;
+    display: flex;
 }
 
 body.home-page .column-text {
-    flex: 3; /* Takes up less space */
+    flex: 2; /* Takes up much less space now */
     padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 body.home-page .column-image {
-    flex: 5; /* Takes up significantly more space */
+    flex: 4; /* DOUBLE the width of the text side */
     display: flex;
-    min-height: 450px;
+    min-height: 500px; /* Taller boxes for a more museum-gallery feel */
+}
+
+body.home-page .column-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
 }
