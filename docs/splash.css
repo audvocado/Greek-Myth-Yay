@@ -346,3 +346,52 @@ body.home-page .column-image img {
     object-fit: cover; 
     display: block;
 }
+
+
+/* --- ABOUT PAGE EXCLUSIVE STYLES --- */
+
+/* 1. About Header Image */
+body.about-page .hero-collage {
+    height: 350px;
+    background-color: #3b1020;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('about-header.jpg');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 8px double #b2945a;
+}
+
+/* 2. Wider Images in About Boxes */
+body.about-page .split-container {
+    max-width: 1100px;
+}
+
+body.about-page .column-text {
+    flex: 2;
+    padding: 50px;
+}
+
+body.about-page .column-image {
+    flex: 4; /* Keeps that wide photo look from the home page */
+}
+
+/* 3. Project Goals Box Style Fix */
+body.about-page .goals-section, 
+body.about-page .text-box {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 50px;
+    background: #fffaf0; /* Parchment white */
+    border: 2px solid #6e1e2e; /* Maroon border */
+    font-family: 'Fauna One', serif; /* Matching the rest of the page */
+    line-height: 1.9;
+    color: #1a1a1a;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+body.about-page .goals-section h2 {
+    font-family: 'Cinzel', serif;
+    color: #741b47;
+    border-bottom: 3px solid #b2945a;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
