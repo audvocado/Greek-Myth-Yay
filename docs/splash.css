@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One&display=swap');
 
-/* --- 1. GLOBAL THEME & NAV --- */
+/* --- 1. GLOBAL THEME & NAV (Applies to all pages) --- */
 body {
     margin: 0;
     padding: 0;
@@ -32,166 +32,7 @@ body {
     color: #d4af37;
 }
 
-/* --- 2. THE MINI HEADER --- */
-.mini-header {
-    background: #1a1a1a;
-    padding: 35px;
-    text-align: center;
-    border-bottom: 2px solid rgba(255,255,255,0.1);
-}
-
-.mini-header p {
-    color: #ffffff; 
-    font-family: 'Cinzel', serif;
-    font-weight: 400;
-    font-size: 1.2rem;
-    letter-spacing: 4px;
-    margin: 0;
-    text-transform: uppercase;
-}
-
-/* --- 3. THE GRAND LIBRARY CABINET --- */
-.grand-library {
-    background-color: #d1e3f0; 
-    padding: 80px 0;
-    display: flex;
-    justify-content: center;
-}
-
-.bookshelf-frame {
-    width: 95%;
-    max-width: 1400px;
-    background: #4e342e; 
-    border-left: 65px solid #3d2b1f;  
-    border-right: 65px solid #3d2b1f; 
-    border-top: 55px solid #3d2b1f;   
-    box-shadow: 0 60px 120px rgba(0,0,0,0.6);
-    margin: 0 auto;
-}
-
-.shelf-row {
-    display: flex;
-    align-items: flex-end; 
-    justify-content: space-around; 
-    gap: 20px; 
-    padding: 20px 40px 0px 40px; 
-    min-height: 480px;
-    position: relative;
-    perspective: 2500px;
-    background: #e1e8ed; 
-    border-bottom: 45px solid #3d2b1f; 
-}
-
-.shelf-row::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 35px;
-    background: #5d4037; 
-    transform: rotateX(60deg);
-    transform-origin: bottom;
-    box-shadow: inset 0 10px 20px rgba(0,0,0,0.3);
-    z-index: 1;
-}/* --- 4. DECOR ITEMS (Grounded & Pushed Back) --- */
-.decor-item {
-    width: 210px;  
-    height: 400px; 
-    background-color: transparent !important;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    filter: drop-shadow(8px 10px 12px rgba(0,0,0,0.4));
-    flex-shrink: 0;
-    /* Pushes them back so they sit ON the ledge, not in front of it */
-    transform: translateY(15px) translateZ(-10px); 
-    z-index: 5;
-}
-
-.statue-head { background-image: url('statue.jpg'); background-size: 70%; }
-.plant { background-image: url('plant.jpg'); }
-.plantsss { background-image: url('plantss.jpg'); }
-.dagger { background-image: url('dagger.jpg'); }
-.greek-vase { background-image: url('vase.jpg'); }
-.poison-vial { background-image: url('vial.jpg'); }
-
-/* --- 5. THE 3D BOOKS --- */
-.book-3d {
-    position: relative;
-    width: 90px;   
-    height: 400px; 
-    transform-style: preserve-3d;
-    transform: translateY(15px) translateZ(-10px);
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-    z-index: 20;
-    display: block;
-}
-
-.spine {
-    position: absolute;
-    top: 0; left: 0;
-    width: 90px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    writing-mode: vertical-rl;
-    font-family: 'Cinzel', serif;
-    font-weight: bold;
-    font-size: 1.2rem;
-    box-shadow: inset -5px 0 10px rgba(0,0,0,0.3);
-    /* Forces spine to the front of the 3D object */
-    transform: translateZ(1px); 
-    z-index: 10;
-}
-
-.cover {
-    position: absolute;
-    top: 0;
-    left: 90px; 
-    width: 300px; 
-    height: 100%;
-    transform-origin: left;
-    transform: rotateY(-90deg);
-    opacity: 0;
-    transition: all 0.5s ease;
-    box-shadow: 15px 10px 25px rgba(0,0,0,0.5);
-    z-index: 5;
-}
-
-.cover img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center; 
-}
-
-/* LUSCHNIG IMAGE ADJUSTMENT */
-/* This ensures the Luschnig photo centers better on the cover */
-.luschnig-spine + .cover img {
-    object-position: 50% 15% !important;
-}
-
-.book-3d:hover {
-    width: 390px; 
-    transform: translateY(15px) translateZ(80px);
-    z-index: 100;
-}
-
-.book-3d:hover .cover {
-    opacity: 1;
-    transform: rotateY(0deg);
-}
-
-/* --- 6. SPINE COLORS (RE-ESTABLISHED) --- */
-/* We add !important to ensure these colors "win" over the 3D settings */
-.murray-spine { background-color: #3b1020 !important; color: #f7b7b2 !important; }
-.luschnig-spine { background-color: #6e1e2e !important; color: #f7b7b2 !important; }
-.cerrato-spine { background-color: #b24a5a !important; color: #ffffff !important; }
-.johnston-spine { background-color: #f7b7b2 !important; color: #3b1020 !important; }
-
-/* --- 6. PAGE HEADERS & TEXT ENGINE (Keep these same) --- */
+/* --- 2. PAGE HEADERS (Home, About, Corpus) --- */
 .hero-collage {
     height: 300px;
     background: linear-gradient(rgba(102, 0, 102, 0.6), rgba(54, 111, 145, 0.6));
@@ -209,13 +50,146 @@ body {
     margin: 0;
 }
 
+/* --- 3. STANDARD CONTENT BOXES (Fixes your text layout) --- */
+/* This ensures your Home/About text stays in nice clean boxes */
+.content-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    line-height: 1.8;
+}
+
+/* --- 4. THE GRAND LIBRARY (Analysis Page Only) --- */
+/* Everything inside here is protected so it won't mess up other pages */
+
+.mini-header {
+    background: #1a1a1a;
+    padding: 35px;
+    text-align: center;
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+}
+
+.mini-header p {
+    color: #ffffff; 
+    font-family: 'Cinzel', serif;
+    letter-spacing: 4px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.grand-library {
+    background-color: #d1e3f0; 
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.bookshelf-frame {
+    width: 95%;
+    max-width: 1400px;
+    background: #4e342e; 
+    border-left: 65px solid #3d2b1f;  
+    border-right: 65px solid #3d2b1f; 
+    border-top: 55px solid #3d2b1f;   
+    box-shadow: 0 60px 120px rgba(0,0,0,0.6);
+}
+
+.shelf-row {
+    display: flex;
+    align-items: flex-end; 
+    justify-content: space-around; 
+    gap: 20px; 
+    padding: 0 40px; 
+    min-height: 480px;
+    position: relative;
+    perspective: 2500px;
+    background: #e1e8ed; 
+    border-bottom: 45px solid #3d2b1f; 
+}
+
+.shelf-row::before {
+    content: "";
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 35px;
+    background: #5d4037; 
+    transform: rotateX(60deg);
+    transform-origin: bottom;
+    z-index: 1;
+}
+
+/* --- 5. LIBRARY ITEMS (Grounded & Colors) --- */
+
+.decor-item {
+    width: 210px; height: 400px; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    filter: drop-shadow(8px 10px 12px rgba(0,0,0,0.4));
+    transform: translateY(15px) translateZ(-10px); 
+    z-index: 5;
+}
+
+.statue-head { background-image: url('statue.jpg'); background-size: 70%; }
+.plant { background-image: url('plant.jpg'); }
+.plantsss { background-image: url('plantss.jpg'); }
+.dagger { background-image: url('dagger.jpg'); }
+.greek-vase { background-image: url('vase.jpg'); }
+.poison-vial { background-image: url('vial.jpg'); }
+
+.book-3d {
+    position: relative;
+    width: 90px; height: 400px; 
+    transform-style: preserve-3d;
+    transform: translateY(15px) translateZ(-10px);
+    transition: all 0.6s ease;
+    display: block;
+}
+
+.spine {
+    position: absolute;
+    width: 90px; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    writing-mode: vertical-rl;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    transform: translateZ(1px); 
+    z-index: 10;
+}
+
+.cover {
+    position: absolute;
+    left: 90px; width: 300px; height: 100%;
+    transform-origin: left;
+    transform: rotateY(-90deg);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.cover img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Spine Colors (Forces them back on) */
+.murray-spine { background-color: #3b1020 !important; color: #f7b7b2 !important; }
+.luschnig-spine { background-color: #6e1e2e !important; color: #f7b7b2 !important; }
+.cerrato-spine { background-color: #b24a5a !important; color: #ffffff !important; }
+.johnston-spine { background-color: #f7b7b2 !important; color: #3b1020 !important; }
+
+.book-3d:hover {
+    width: 390px; 
+    transform: translateY(15px) translateZ(80px);
+    z-index: 100;
+}
+.book-3d:hover .cover { opacity: 1; transform: rotateY(0deg); }
+
+/* --- 6. INTERACTIVE TEXT ENGINE (Corpus/Analysis pages) --- */
 .controls {
-    flex: 0 0 220px;
-    position: sticky;
-    top: 80px;
     background: #fdfaf1;
     border: 1px solid #d4af37;
     padding: 20px;
+    margin-bottom: 20px;
 }
 
 .translation-text {
@@ -225,9 +199,8 @@ body {
     line-height: 2.2;
 }
 
-/* Theme highlight colors stay the same... */
+/* Highlight behaviors */
 .marriage, .violence, .autonomy, .patriarchy, .family, .motherhood, .alone {
-    background-color: transparent;
     transition: background-color 0.3s ease;
     padding: 2px 4px;
     border-radius: 3px;
@@ -243,8 +216,7 @@ body.show-alone .alone { background-color: #d3d3d3; border-bottom: 2px solid #80
 
 #scrollTopBtn {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 20px; right: 20px;
     background: #741b47;
     color: white;
     padding: 15px;
