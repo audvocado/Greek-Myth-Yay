@@ -92,43 +92,37 @@ body {
 
 /* --- 3. THE 3D BOOKSHELF & LIBRARY --- */
 .library-container {
-    padding: 100px 0; /* Increased padding */
-    perspective: 2000px;
-    background: url('library-main-bg.jpg') no-repeat center center;
+    padding: 120px 0;
+    perspective: 3000px; /* Increased for huge books */
+    text-align: center;
+    /* Use a "parchment" or "dark library" image here */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('library-main-bg.jpg') no-repeat center center;
     background-size: cover;
-    min-height: 700px; /* Increased height to accommodate the taller page */
+    min-height: 850px;
+    border-top: 8px solid #d4af37; /* Gold "Greek" border */
 }
-
 .bookshelf-3d {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    gap: 35px;
-    height: 400px;
+    gap: 45px; /* More space for huge covers */
+    height: 600px;
 }
 
 .book-3d {
     position: relative;
-    width: 60px;
-    height: 350px;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    width: 80px;   /* Massive Spine */
+    height: 500px; /* Massive Height */
+    transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
     transform-style: preserve-3d;
-    text-decoration: none;
 }
 
 .spine {
-    position: absolute;
-    width: 60px;
+    width: 80px;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    font-family: 'Cinzel', serif;
-    font-size: 0.9rem;
-    border: 1px solid rgba(0,0,0,0.2);
-    z-index: 2;
+    font-size: 1.3rem; /* Larger text on spine */
+    border: 2px solid rgba(212, 175, 55, 0.3); /* Gold tint on edges */
+    box-shadow: inset 5px 0 15px rgba(0,0,0,0.5); /* Shadow makes it look curved */
 }
 
 /* --- NEW SLEEVE (SPINE) COLORS --- */
@@ -138,21 +132,11 @@ body {
 .johnston-spine { background-color: #f7b7b2; color: #3b1020; }
 
 .cover {
-    position: absolute;
-    left: 60px;
-    width: 240px;
-    height: 350px;
-    background: #fff;
-    transform-origin: left;
-    transform: rotateY(-90deg);
-    opacity: 0;
-    transition: all 0.6s ease;
-    z-index: 1;
-    border: 1px solid #000;
-    border-left: none;
-    overflow: hidden;
+    left: 80px;
+    width: 350px; /* Huge Cover Width */
+    height: 500px;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.5);
 }
-
 .cover img {
     width: 100%;
     height: 100%;
@@ -161,23 +145,30 @@ body {
 }
 
 .book-3d:hover {
-    width: 300px;
-    transform: translateX(-50px);
+    width: 430px; /* Spine(80) + Cover(350) */
+    transform: translateX(-80px) rotateY(-5deg);
 }
-
 .book-3d:hover .cover {
     opacity: 1;
     transform: rotateY(0deg);
 }
 
 .floor {
-    width: 90%;
-    height: 25px;
-    background: #1a050d; /* Darkened to match your new palette */
+    width: 95%;
+    height: 60px;
+    /* This creates a "Marble Tile" look */
+    background: linear-gradient(45deg, #e0e0e0 25%, #ffffff 25%, #ffffff 50%, #e0e0e0 50%, #e0e0e0 75%, #ffffff 75%, #ffffff 100%);
+    background-size: 100px 100px;
     margin: 0 auto;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    border-top: 4px solid #d4af37;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.9);
+    
 }
 
+
+.analysis-hero {
+    border-bottom: 10px double #d4af37; /* Classic double gold line */
+}
 /* --- 4. LAYOUTS & TABLES --- */
 .split-container {
     display: flex;
