@@ -96,7 +96,7 @@ body {
     z-index: 1;
 }
 
-/* --- 4. DECOR ITEMS (Plants and Statue) --- */
+/* --- 4. DECOR ITEMS (Pushed back onto the shelf) --- */
 .decor-item {
     width: 210px;  
     height: 400px; 
@@ -107,7 +107,8 @@ body {
     filter: drop-shadow(8px 10px 12px rgba(0,0,0,0.4));
     flex-shrink: 0;
     z-index: 5;
-    transform: translateY(15px); 
+    /* translateY(15px) sits them on the ledge, translateZ(-20px) pushes them BACK into the shelf */
+    transform: translateY(15px) translateZ(-20px); 
 }
 
 .statue-head { 
@@ -115,40 +116,23 @@ body {
     background-size: 70%; 
 }
 
-/* Removed scrolls styling */
-
 .plant { background-image: url('plant.jpg'); }
 .plantsss { background-image: url('plantss.jpg'); }
 .dagger { background-image: url('dagger.jpg'); }
 .greek-vase { background-image: url('vase.jpg'); }
 .poison-vial { background-image: url('vial.jpg'); }
 
-/* --- 5. THE 3D BOOKS --- */
+/* --- 5. THE 3D BOOKS (Pushed back & Centered Images) --- */
 .book-3d {
     position: relative;
     width: 90px;   
     height: 400px; 
     transform-style: preserve-3d;
-    transform: translateY(15px) rotateY(0deg);
+    /* Pushed back to match the decor items */
+    transform: translateY(15px) rotateY(0deg) translateZ(-20px);
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     z-index: 20;
     display: block;
-}
-
-.spine {
-    position: absolute;
-    top: 0; left: 0;
-    width: 90px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    writing-mode: vertical-rl;
-    font-family: 'Cinzel', serif;
-    font-weight: bold;
-    font-size: 1.2rem;
-    box-shadow: inset -5px 0 10px rgba(0,0,0,0.3);
-    z-index: 2;
 }
 
 .cover {
@@ -162,16 +146,27 @@ body {
     opacity: 0;
     transition: all 0.5s ease;
     box-shadow: 15px 10px 25px rgba(0,0,0,0.5);
+    overflow: hidden; /* Keeps the image inside the cover bounds */
 }
 
 .cover img {
     width: 100%;
     height: 100%;
+    /* 'cover' fills the space, '50% 50%' ensures it stays centered */
     object-fit: cover;
+    object-position: center; 
+    display: block;
+}
+
+/* Specific fix for Luschnig if the image itself is awkward */
+.luschnig-spine + .cover img {
+    object-fit: cover; 
+    object-position: top center; /* Adjusts the crop to the top/center of the file */
 }
 
 .book-3d:hover {
     width: 390px; 
+    /* When hovering, it pulls FORWARD to translateZ(50px) */
     transform: translateY(15px) translateZ(50px);
     z-index: 100;
 }
@@ -180,12 +175,6 @@ body {
     opacity: 1;
     transform: rotateY(0deg);
 }
-
-/* --- SPINE COLORS --- */
-.murray-spine { background-color: #3b1020; color: #f7b7b2; }
-.luschnig-spine { background-color: #6e1e2e; color: #f7b7b2; }
-.cerrato-spine { background-color: #b24a5a; color: #ffffff; }
-.johnston-spine { background-color: #f7b7b2; color: #3b1020; }
 
 /* --- 6. PAGE HEADERS & TEXT ENGINE (Keep these same) --- */
 .hero-collage {
