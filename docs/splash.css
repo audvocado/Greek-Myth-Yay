@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One&display=swap');
 
-/* --- 1. GLOBAL THEME & NAV --- */
+/* --- 1. GLOBAL THEME & NAV (Restored Lavender) --- */
 body {
     margin: 0;
     padding: 0;
-    background-color: #1a0f08; /* Dark wood base */
+    background-color: #efbbff; /* Original Lavender */
     color: #330033;
     font-family: 'Fauna One', serif;
 }
@@ -32,50 +32,51 @@ body {
     color: #d4af37;
 }
 
-/* --- 2. THE GRAND LIBRARY (SHELVES) --- */
+/* --- 2. THE GRAND LIBRARY (Analysis Page Only) --- */
 .grand-library {
-    background: #1a0f08; 
-    background-image: url('dark-wood-grain.jpg'); /* Optional texture */
-    padding: 20px 0;
+    background: #1a0f08; /* Wood background moved here */
+    background-image: url('dark-wood-grain.jpg'); 
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .mini-header {
     background: #1a1a1a;
     color: #d4af37;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     font-family: 'Cinzel', serif;
-    border-bottom: 2px solid #3d2b1f;
-    font-size: 1.1rem;
+    border-bottom: 5px double #3d2b1f;
+    font-size: 1.2rem;
     letter-spacing: 1px;
 }
 
 .shelf-row {
     display: flex;
     align-items: flex-end; 
-    justify-content: space-evenly; /* Evenly spaces decor and books */
-    gap: 30px; 
+    justify-content: space-evenly; 
+    gap: 20px; 
     padding: 40px 5%;
-    min-height: 520px;
+    min-height: 500px;
     border-bottom: 40px solid #2d1e15; 
     position: relative;
     box-shadow: inset 0 -20px 30px rgba(0,0,0,0.8);
     perspective: 2500px;
 }
 
-/* --- 3. DECOR ITEMS --- */
+/* --- 3. DECOR ITEMS (Fixed & Still) --- */
 .decor-item {
-    background-color: rgba(255, 255, 255, 0.05); /* Very faint box to show size */
+    background-color: transparent !important; /* Fixed: Removed brown boxes */
     flex: 0 0 auto;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
     filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.8));
+    /* Hover transform removed so they stay still */
 }
 
-.decor-item:hover { transform: translateY(-10px) scale(1.05); }
-
-/* Specific Item Slots */
+/* Items - Check filenames: .jpg vs .png matters! */
 .statue-head { width: 180px; height: 300px; background-image: url('statue.jpg'); }
 .gold-coin { width: 80px; height: 80px; background-image: url('lyre.jpg'); }
 .hanging-plant { width: 220px; height: 450px; background-image: url('plant.jpg'); }
@@ -85,15 +86,11 @@ body {
 .scroll-stack { width: 180px; height: 200px; background-image: url('scrolls.jpg'); }
 .laurel-wreath { width: 150px; height: 150px; background-image: url('plantss.jpg'); }
 
-.book-3d:hover {
-    z-index: 100;
-}
-
-/* --- 4. THE 3D BOOKS (FIXED POSITIONING) --- */
+/* --- 4. THE 3D BOOKS --- */
 .book-3d {
     position: relative;
-    width: 80px;   /* Spine Width */
-    height: 450px; /* Book Height */
+    width: 80px;   
+    height: 450px; 
     transform-style: preserve-3d;
     transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
     text-decoration: none;
@@ -119,7 +116,7 @@ body {
 .cover {
     position: absolute;
     top: 0;
-    left: 80px; /* Matches Spine Width */
+    left: 80px; 
     width: 320px;
     height: 100%;
     transform-origin: left;
@@ -138,10 +135,10 @@ body {
     object-position: top center;
 }
 
-/* Hover Effect: Slide and Swing */
 .book-3d:hover {
     width: 400px; 
     transform: translateX(-50px);
+    z-index: 100; /* Stays on top of decor when open */
 }
 
 .book-3d:hover .cover {
@@ -155,7 +152,7 @@ body {
 .cerrato-spine { background-color: #b24a5a; color: #ffffff; }
 .johnston-spine { background-color: #f7b7b2; color: #3b1020; }
 
-/* --- 5. PAGE HEADERS (FOR OTHER PAGES) --- */
+/* --- 5. PAGE HEADERS (Home/About/Corpus) --- */
 .hero-collage {
     height: 300px;
     background: linear-gradient(rgba(102, 0, 102, 0.6), rgba(54, 111, 145, 0.6));
