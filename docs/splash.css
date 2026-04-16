@@ -39,40 +39,55 @@ body {
     padding: 20px 0;
 }
 
+.mini-header {
+    background: #1a1a1a;
+    color: #d4af37;
+    text-align: center;
+    padding: 15px;
+    font-family: 'Cinzel', serif;
+    border-bottom: 2px solid #3d2b1f;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
 .shelf-row {
     display: flex;
     align-items: flex-end; 
-    justify-content: center; 
-    gap: 60px; 
-    padding: 20px 5%;
+    justify-content: space-evenly; /* Evenly spaces decor and books */
+    gap: 30px; 
+    padding: 40px 5%;
     min-height: 520px;
-    border-bottom: 40px solid #2d1e15; /* Wooden Ledge */
+    border-bottom: 40px solid #2d1e15; 
     position: relative;
-    box-shadow: inset 0 -20px 30px rgba(0,0,0,0.8), 0 10px 20px rgba(0,0,0,0.5);
-    perspective: 2000px;
+    box-shadow: inset 0 -20px 30px rgba(0,0,0,0.8);
+    perspective: 2500px;
 }
 
 /* --- 3. DECOR ITEMS --- */
 .decor-item {
+    background-color: rgba(255, 255, 255, 0.05); /* Very faint box to show size */
     flex: 0 0 auto;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
     filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.8));
-    transition: transform 0.3s ease;
 }
 
 .decor-item:hover { transform: translateY(-10px) scale(1.05); }
 
 /* Specific Item Slots */
-.statue-head { width: 180px; height: 300px; background-image: url('statue.png'); }
-.gold-coin { width: 80px; height: 80px; background-image: url('coin.png'); }
-.hanging-plant { width: 220px; height: 450px; background-image: url('plant.png'); }
-.greek-vase { width: 150px; height: 280px; background-image: url('vase.png'); }
-.poison-vial { width: 100px; height: 150px; background-image: url('vial.png'); }
-.dagger { width: 250px; height: 100px; background-image: url('dagger.png'); }
-.scroll-stack { width: 180px; height: 200px; background-image: url('scrolls.png'); }
-.laurel-wreath { width: 150px; height: 150px; background-image: url('wreath.png'); }
+.statue-head { width: 180px; height: 300px; background-image: url('statue.jpg'); }
+.gold-coin { width: 80px; height: 80px; background-image: url('lyre.jpg'); }
+.hanging-plant { width: 220px; height: 450px; background-image: url('plant.jpg'); }
+.greek-vase { width: 150px; height: 280px; background-image: url('vase.jpg'); }
+.poison-vial { width: 100px; height: 150px; background-image: url('vial.jpg'); }
+.dagger { width: 250px; height: 100px; background-image: url('dagger.jpg'); }
+.scroll-stack { width: 180px; height: 200px; background-image: url('scrolls.jpg'); }
+.laurel-wreath { width: 150px; height: 150px; background-image: url('plantss.jpg'); }
+
+.book-3d:hover {
+    z-index: 100;
+}
 
 /* --- 4. THE 3D BOOKS (FIXED POSITIONING) --- */
 .book-3d {
