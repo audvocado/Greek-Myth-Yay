@@ -195,16 +195,48 @@ body {
     display: block;
 }
 
+/* --- VINTAGE ACADEMIC SPINES WITH TEXT --- */
+
 .spine {
     position: absolute;
-    width: 90px; height: 100%;
-    display: flex; align-items: center; justify-content: center;
+    width: 90px; 
+    height: 100%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    
+    /* Vertical text for the translator names */
     writing-mode: vertical-rl;
     font-family: 'Cinzel', serif;
-    font-weight: bold;
-    transform: translateZ(2px); 
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+    /* Layering the text on top of the image */
+    transform: translateZ(5px); 
     z-index: 30;
+    
+    /* TEXT STYLE: Gold Leaf / Embossed effect */
+    color: #d4af37; 
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1), /* Slight "glint" */
+                 -1px -1px 2px rgba(0, 0, 0, 0.8);    /* Deep shadow for depth */
+
+    /* THE TEXTURE: Make sure background-size is 'cover' */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* SHADING: Adds a "rounded" look to the book spine */
+    box-shadow: inset -8px 0 15px rgba(0,0,0,0.6), 
+                inset 8px 0 15px rgba(0,0,0,0.2);
 }
+
+/* Assign your images to each translator's spine */
+.murray-spine { background-image: url('spine-murray.jpg'); }
+.luschnig-spine { background-image: url('spine-luschnig.jpg'); }
+.cerrato-spine { background-image: url('spine-cerrato.jpg'); }
+.johnston-spine { background-image: url('spine-johnston.jpg'); }
 
 .cover {
     position: absolute;
