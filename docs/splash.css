@@ -1,102 +1,144 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One&display=swap');
 
-/* --- 1. GLOBAL THEME & NAV (Applies to all pages) --- */
+/* --- 1. GLOBAL REGAL THEME --- */
 * {
     box-sizing: border-box;
 }
 
 body {
-    display: block !important; /* Forces normal page flow */
-    overflow-x: hidden;
-}
-body {
     margin: 0;
     padding: 0;
-    background-color: #efbbff; 
-    color: #330033;
+    /* Marble background - replace with your image name if different */
+    background-color: #fdfaf1; 
+    background-image: url('marble-texture.jpg'); 
+    background-attachment: fixed;
+    color: #1a1a1a;
     font-family: 'Fauna One', serif;
+    display: block !important;
+    overflow-x: hidden;
+    position: relative;
 }
 
+/* --- THE SIDE COLUMNS --- */
+body::before, body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    width: 150px; 
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2000; 
+}
+
+body::before {
+    left: 0;
+    background-image: url('column-left.png');
+}
+
+body::after {
+    right: 0;
+    background-image: url('column-right.png');
+}
+
+/* --- 2. NAVIGATION (Tyrian Purple & Bronze) --- */
 .top-bar {
     display: flex;
     justify-content: center;
-    background-color: #1a1a1a;
-    padding: 10px;
+    background-color: #3b1020; 
+    padding: 15px;
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 4px solid #b2945a; 
 }
 
 .nav-link {
-    color: white;
+    color: #fdfaf1;
     padding: 14px 20px;
     text-decoration: none;
-    font-family: "Garamond", serif;
+    font-family: "Cinzel", serif;
     font-variant: small-caps;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
 }
 
 .nav-link:hover, .nav-link.active {
     color: #d4af37;
 }
 
-/* --- NEW: STANDARD TEXT BOX (For Home, About, Corpus) --- */
-.text-box {
-    max-width: 850px;           /* Keeps the lines of text from getting too long */
-    margin: 50px auto;          /* Centers the box and gives space from the top/bottom */
-    background: rgba(255, 255, 255, 0.9); /* White with 90% opacity (slight see-through) */
-    padding: 40px;              /* Space between the text and the box edges */
-    border: 1px solid #d4af37;  /* Gold border to match your theme */
-    border-radius: 4px;         /* Slightly rounded corners */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Soft shadow to make it pop */
-    line-height: 1.8;           /* Makes the text easier to read */
-    color: #1a1a1a;             /* Dark text for high contrast */
+/* --- 3. HERO SECTION --- */
+.hero-collage {
+    height: 350px;
+    background: linear-gradient(rgba(59, 16, 32, 0.8), rgba(26, 54, 104, 0.7)), url('palace-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 10px double #b2945a; 
 }
 
-.text-box h2 {
+.main-title {
     font-family: 'Cinzel', serif;
-    color: #741b47;             /* Matching your purple/gold theme */
-    border-bottom: 2px solid #d4af37;
-    padding-bottom: 10px;
-    margin-top: 0;
+    font-size: 3.5rem;
+    color: #fdfaf1;
+    text-shadow: 4px 4px 0px #3b1020;
+    margin: 0;
+    text-align: center;
+    padding: 0 160px; /* Offset for the columns */
+}
+
+/* --- 4. CONTENT TABLETS (Home, About, Corpus) --- */
+.split-container, .text-box, .goals-section, .table-container {
+    max-width: 900px;
+    margin: 80px auto;
+    background: #fffaf0; 
+    border: 2px solid #6e1e2e; 
+    border-radius: 4px; 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    overflow: hidden;
 }
 
 .split-container {
     display: flex;
-    flex-direction: row; /* Ensures side-by-side layout */
-    align-items: stretch; 
-    justify-content: center;
-    max-width: 1000px;
-    margin: 60px auto;    /* This creates the vertical "separation" */
-    background: white;    /* The white box background */
-    border-radius: 12px;
-    overflow: hidden; 
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-    min-height: 450px;
-    }
-
+    flex-direction: row;
+    align-items: stretch;
+    min-height: 480px;
+}
 
 .split-container.reverse {
-    flex-direction: row-reverse; /* Flips image and text */
+    flex-direction: row-reverse;
 }
 
 .column-text {
-    flex: 1.2; /* Text gets slightly more room */
+    flex: 1.2;
     padding: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers text vertically in the box */
+    justify-content: center;
+    line-height: 1.9;
+}
+
+.column-text h2 {
+    font-family: 'Cinzel', serif;
+    color: #741b47;
+    border-bottom: 3px solid #b2945a;
+    padding-bottom: 10px;
+    margin-top: 0;
 }
 
 .column-image {
     flex: 0.8;
     overflow: hidden;
+    border-left: 2px solid #6e1e2e;
 }
 
 .column-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Keeps images from squishing */
+    object-fit: cover;
     display: block;
 }
 
@@ -106,57 +148,15 @@ body {
 }
 
 .team-list li {
-    padding: 5px 0;
-    border-bottom: 1px solid #eee;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
 }
 
-
-/* --- 2. PAGE HEADERS (Home, About, Corpus) --- */
-.hero-collage {
-    height: 300px;
-    background: linear-gradient(rgba(102, 0, 102, 0.6), rgba(54, 111, 145, 0.6));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 10px double #d4af37; 
-}
-
-.main-title {
-    font-family: 'Cinzel', serif;
-    font-size: 4rem;
-    color: #efbbff;
-    text-shadow: 3px 3px 0px #366f91;
-    margin: 0;
-}
-
-/* --- 3. STANDARD CONTENT BOXES (Fixes your text layout) --- */
-/* This ensures your Home/About text stays in nice clean boxes */
-.content-container {
-    max-width: 900px;
-    margin: 40px auto;
-    background: white;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    line-height: 1.8;
-}
-
-/* --- 4. THE GRAND LIBRARY (Analysis Page Only) --- */
-/* Everything inside here is protected so it won't mess up other pages */
-
+/* --- 5. THE GRAND LIBRARY (Analysis Page) --- */
 .mini-header {
     background: #1a1a1a;
     padding: 35px;
     text-align: center;
-    border-bottom: 2px solid rgba(255,255,255,0.1);
-}
-
-.mini-header p {
-    color: #ffffff; 
-    font-family: 'Cinzel', serif;
-    letter-spacing: 4px;
-    margin: 0;
-    text-transform: uppercase;
 }
 
 .grand-library {
@@ -167,12 +167,10 @@ body {
 }
 
 .bookshelf-frame {
-    width: 95%;
-    max-width: 1400px;
+    width: 90%;
+    max-width: 1200px;
     background: #4e342e; 
-    border-left: 65px solid #3d2b1f;  
-    border-right: 65px solid #3d2b1f; 
-    border-top: 55px solid #3d2b1f;   
+    border: 40px solid #3d2b1f;   
     box-shadow: 0 60px 120px rgba(0,0,0,0.6);
 }
 
@@ -192,30 +190,23 @@ body {
 .shelf-row::before {
     z-index: 1; 
 }
-/* --- 5. LIBRARY ITEMS (Grounded & Colors) --- */
 
+/* --- 6. LIBRARY ITEMS & 3D BOOKS --- */
 .decor-item {
-    width: 210px; 
-    height: 400px; 
+    width: 210px; height: 400px; 
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom center;
     filter: drop-shadow(8px 10px 12px rgba(0,0,0,0.4));
     flex-shrink: 0;
-    /* Increased Z to 5px to keep it in front of the shelf background/lines */
     transform: translateY(15px) translateZ(5px); 
     z-index: 10;
 }
 
 .lyre { 
     background-image: url('lyre.jpg'); 
-    /* 1. Increase the container width (default was 210px) */
     width: 280px !important; 
-    
-    /* 2. Scale the image up (default was 80%) */
     background-size: 100% !important; 
-    
-    /* 3. Optional: Nudge it if it's hitting the shelf too hard */
     transform: translateY(15px) translateZ(5px) scale(1.1);
 }
 
@@ -228,10 +219,8 @@ body {
 
 .book-3d {
     position: relative;
-    width: 90px;   
-    height: 400px; 
+    width: 90px; height: 400px; 
     transform-style: preserve-3d;
-    /* Changed translateZ to 10px so they sit IN FRONT of the shelf lines */
     transform: translateY(15px) translateZ(10px);
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     z-index: 20;
@@ -245,12 +234,6 @@ body {
     writing-mode: vertical-rl;
     font-family: 'Cinzel', serif;
     font-weight: bold;
-    transform: translateZ(1px); 
-    z-index: 10;
-}
-
-.spine {
-    /* Force the spine to be the absolute top layer of the book */
     transform: translateZ(2px); 
     z-index: 30;
 }
@@ -266,7 +249,7 @@ body {
 
 .cover img { width: 100%; height: 100%; object-fit: cover; }
 
-/* Spine Colors (Forces them back on) */
+/* Spine Colors */
 .murray-spine { background-color: #3b1020 !important; color: #f7b7b2 !important; }
 .luschnig-spine { background-color: #6e1e2e !important; color: #f7b7b2 !important; }
 .cerrato-spine { background-color: #b24a5a !important; color: #ffffff !important; }
@@ -279,7 +262,7 @@ body {
 }
 .book-3d:hover .cover { opacity: 1; transform: rotateY(0deg); }
 
-/* --- 6. INTERACTIVE TEXT ENGINE (Corpus/Analysis pages) --- */
+/* --- 7. ANALYSIS HIGHLIGHT ENGINE --- */
 .controls {
     background: #fdfaf1;
     border: 1px solid #d4af37;
@@ -294,53 +277,28 @@ body {
     line-height: 2.2;
 }
 
-/* Highlight behaviors */
 .marriage, .violence, .autonomy, .patriarchy, .family, .motherhood, .alone {
     transition: background-color 0.3s ease;
     padding: 2px 4px;
-    border-radius: 3px;
 }
 
-body.show-marriage .marriage { background-color: #fdfd96; border-bottom: 2px solid #e6e600; color: black; }
-body.show-violence .violence { background-color: #ffb3b3; border-bottom: 2px solid #ff0000; color: black; }
-body.show-autonomy .autonomy { background-color: #b3ffb3; border-bottom: 2px solid #00ff00; color: black; }
-body.show-patriarchy .patriarchy { background-color: #ffd1dc; border-bottom: 2px solid #ff69b4; color: black; }
-body.show-family .family { background-color: #cdecff; border-bottom: 2px solid #0077be; color: black; }
-body.show-motherhood .motherhood { background-color: #e0bbe4; border-bottom: 2px solid #957dad; color: black; }
-body.show-alone .alone { background-color: #d3d3d3; border-bottom: 2px solid #808080; color: black; }
+body.show-marriage .marriage { background-color: #fdfd96; color: black; }
+body.show-violence .violence { background-color: #ffb3b3; color: black; }
+body.show-autonomy .autonomy { background-color: #b3ffb3; color: black; }
+body.show-patriarchy .patriarchy { background-color: #ffd1dc; color: black; }
+body.show-family .family { background-color: #cdecff; color: black; }
+body.show-motherhood .motherhood { background-color: #e0bbe4; color: black; }
+body.show-alone .alone { background-color: #d3d3d3; color: black; }
 
-#scrollTopBtn {
-    position: fixed;
-    bottom: 20px; right: 20px;
-    background: #741b47;
-    color: white;
-    padding: 15px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-
-/* --- 7. ADDITIONAL CONTENT BOXES (About & Corpus Pages) --- */
-
-.goals-section, .table-container {
-    max-width: 1000px;
-    margin: 60px auto;     /* Adds the gap between this and the boxes above it */
-    background: white;     /* Creates the "Van Gogh" white box effect */
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-}
-
-/* This makes the table inside the Corpus box look professional */
+/* --- 8. TABLES & BUTTONS --- */
 table {
     width: 100%;
     border-collapse: collapse;
-    font-family: 'Fauna One', serif;
 }
 
 th {
     text-align: left;
-    border-bottom: 2px solid #d4af37;
+    border-bottom: 3px solid #b2945a;
     padding: 10px;
     font-family: 'Cinzel', serif;
 }
@@ -350,8 +308,13 @@ td {
     border-bottom: 1px solid #eee;
 }
 
-.table-link {
-    color: #741b47;
-    text-decoration: none;
-    font-weight: bold;
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px; right: 20px;
+    background: #3b1020;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 3000; 
 }
