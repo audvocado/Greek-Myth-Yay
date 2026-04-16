@@ -1,458 +1,164 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One&display=swap');
 
-/* --- 1. GLOBAL REGAL THEME --- */
-* {
-    box-sizing: border-box;
-}
+/* --- 1. GLOBAL THEME --- */
+* { box-sizing: border-box; }
 
 body {
-    margin: 0;
-    padding: 0;
-    /* Rich Stone Background */
+    margin: 0; padding: 0;
     background-color: #fdfaf1; 
     background-image: url('marble-texture.jpg'); 
     background-attachment: fixed;
     color: #1a1a1a;
     font-family: 'Fauna One', serif;
-    display: block !important;
     overflow-x: hidden;
-    position: relative;
 }
 
-/* --- 2. NAVIGATION (Tyrian Purple & Bronze) --- */
+/* --- 2. NAVIGATION --- */
 .top-bar {
-    display: flex;
-    justify-content: center;
+    display: flex; justify-content: center;
     background-color: #3b1020; 
     padding: 15px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    position: sticky; top: 0; z-index: 1000;
     border-bottom: 4px solid #b2945a; 
 }
 
 .nav-link {
-    color: #fdfaf1;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-family: "Cinzel", serif;
-    font-variant: small-caps;
-    font-size: 1.2rem;
+    color: #fdfaf1; padding: 14px 20px;
+    text-decoration: none; font-family: "Cinzel", serif;
+    font-variant: small-caps; font-size: 1.2rem;
 }
 
-.nav-link:hover, .nav-link.active {
-    color: #d4af37;
-}
+.nav-link:hover, .nav-link.active { color: #d4af37; }
 
-/* --- 3. HERO SECTION --- */
+/* --- 3. HERO SECTIONS --- */
 .hero-collage {
     height: 400px;
-    background: linear-gradient(rgba(59, 16, 32, 0.8), rgba(26, 54, 104, 0.7)), url('palace-bg.jpg');
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-size: cover; background-position: center;
+    display: flex; align-items: center; justify-content: center;
     border-bottom: 10px double #b2945a; 
 }
 
 .main-title {
-    font-family: 'Cinzel', serif;
-    font-size: 3.5rem;
-    color: #fdfaf1;
-    text-shadow: 4px 4px 0px #3b1020;
-    margin: 0 auto;
-    text-align: center;
-    max-width: 900px; /* Centered nicely */
+    font-family: 'Cinzel', serif; font-size: 3.5rem;
+    color: #fdfaf1; text-shadow: 4px 4px 0px #3b1020;
+    text-align: center; margin: 0;
 }
 
-/* --- 4. CONTENT TABLETS (Home, About, Corpus) --- */
-.split-container, .text-box, .goals-section, .table-container {
-    /* BACK TO NORMAL WIDTH: Text won't be smooshed anymore */
-    max-width: 950px;    
-    margin: 60px auto;   
-    background: #fffaf0; /* Parchment Color */
-    border: 2px solid #6e1e2e; 
-    border-radius: 4px; 
+/* --- 4. SHARED CONTENT BOXES --- */
+.split-container, .table-container {
+    max-width: 950px; margin: 60px auto;   
+    background: #fffaf0; border: 2px solid #6e1e2e; 
     box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-    overflow: hidden;
-    position: relative;
-    z-index: 10;
+    overflow: hidden; position: relative; z-index: 10;
 }
 
-.split-container {
-    display: flex;
-    flex-direction: row;
-    min-height: 480px;
-}
+.split-container { display: flex; min-height: 480px; }
 
-.split-container.reverse {
-    flex-direction: row-reverse;
-}
+.column-text { flex: 1.2; padding: 50px; line-height: 1.8; }
+.column-text h2 { font-family: 'Cinzel', serif; color: #741b47; border-bottom: 3px solid #b2945a; padding-bottom: 10px; }
 
-.column-text {
-    flex: 1.2;
-    padding: 50px; 
-    line-height: 1.8;
-}
-
-.column-text h2 {
-    font-family: 'Cinzel', serif;
-    color: #741b47;
-    border-bottom: 3px solid #b2945a;
-    padding-bottom: 10px;
-    margin-top: 0;
-}
-
-.column-text p {
-    margin-bottom: 20px;
-    font-size: 1.1rem;
-}
-
-.column-image {
-    flex: 0.8;
-}
-
-.column-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
+.column-image { flex: 0.8; }
+.column-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* --- 5. THE GRAND LIBRARY (Analysis Page) --- */
-.mini-header {
-    background: #1a1a1a;
-    padding: 35px;
-    text-align: center;
-}
+.mini-header { background: #1a1a1a; padding: 35px; text-align: center; color: white; }
 
 .grand-library {
-    background-color: #d1e3f0; 
-    padding: 80px 0;
-    display: flex;
-    justify-content: center;
+    background-color: #d1e3f0; padding: 80px 0;
+    display: flex; justify-content: center;
 }
 
 .bookshelf-frame {
-    width: 90%;
-    max-width: 1200px;
-    background: #4e342e; 
-    border: 40px solid #3d2b1f;   
+    width: 90%; max-width: 1200px;
+    background: #4e342e; border: 40px solid #3d2b1f;   
 }
 
 .shelf-row {
-    display: flex;
-    align-items: flex-end; 
-    justify-content: space-around; 
-    padding: 0 40px; 
-    min-height: 480px;
-    position: relative;
-    perspective: 2500px;
-    background: #e1e8ed; 
+    display: flex; align-items: flex-end; justify-content: space-around; 
+    padding: 0 40px; min-height: 480px; position: relative;
+    perspective: 2500px; background: #e1e8ed; 
     border-bottom: 45px solid #3d2b1f; 
 }
 
 .shelf-row::before {
-    content: "";
-    position: absolute;
-    bottom: 0; left: 0;
-    width: 100%; height: 45px;
-    background: #3d2b1f;
-    z-index: 1;
+    content: ""; position: absolute; bottom: 0; left: 0;
+    width: 100%; height: 45px; background: #3d2b1f; z-index: 1;
 }
 
-/* --- 6. LIBRARY ITEMS & 3D BOOKS --- */
-.decor-item {
-    width: 210px; height: 400px; 
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    transform: translateY(15px) translateZ(5px); 
-    z-index: 10;
-}
-
-.lyre { 
-    background-image: url('lyre.jpg'); 
-    width: 280px !important; 
-    background-size: 100% !important; 
-    transform: translateY(15px) translateZ(5px) scale(1.1);
-}
-
-.statue-head { background-image: url('statue.jpg'); background-size: 70%; }
-.plant { background-image: url('plant.jpg'); }
-.plantsss { background-image: url('plantss.jpg'); }
-.dagger { background-image: url('dagger.jpg'); }
-.greek-vase { background-image: url('vase.jpg'); }
-.poison-vial { background-image: url('vial.jpg'); }
-
+/* --- 6. 3D BOOKS & SPINES --- */
 .book-3d {
-    position: relative;
-    width: 90px; height: 400px; 
+    position: relative; width: 90px; height: 400px; 
     transform-style: preserve-3d;
     transform: translateY(15px) translateZ(10px);
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-    z-index: 20;
-    display: block;
+    z-index: 20; display: block;
 }
-
-/* --- VINTAGE ACADEMIC SPINES (Symmetrical & Rounded) --- */
-
-/* --- VINTAGE ACADEMIC SPINES (Symmetrical & No Text) --- */
 
 .spine {
-    position: absolute;
-    width: 90px; 
-    height: 100%;
+    position: absolute; width: 90px; height: 100%;
+    border-radius: 25px !important; /* SYMMETRICAL ROUNDING */
+    overflow: hidden;
+    background-size: cover; background-position: center;
+    transform: translateZ(5px); z-index: 30;
     
-    /* 1. SYMMETRICAL ROUNDING */
-    /* This rounds both left and right sides equally for a tube-like spine */
-    border-radius: 20px; 
-    
-    /* 2. REMOVE TEXT STYLE */
-    color: transparent; 
-    text-indent: -9999px; /* Extra safety to hide text */
-    
-    /* 3. 3D SHADING */
-    background-size: cover;
-    background-position: center;
-    transform: translateZ(5px); 
-    z-index: 30;
-    
-    /* High-intensity shading on BOTH sides to sell the curve */
+    /* SHADOWS: Internal rounding + Bottom shelf dimension line */
     box-shadow: 
-        inset -15px 0 20px rgba(0,0,0,0.7), 
-        inset 15px 0 20px rgba(0,0,0,0.7),
-        0 5px 15px rgba(0,0,0,0.4); 
+        inset 15px 0 15px rgba(0,0,0,0.6), 
+        inset -15px 0 15px rgba(0,0,0,0.6),
+        0 10px 10px rgba(0,0,0,0.5); 
 }
 
-/* Individual Textures */
+.cover {
+    position: absolute; left: 90px; width: 300px; height: 100%;
+    transform-origin: left; transform: rotateY(-90deg); 
+    opacity: 0; visibility: hidden;
+    transition: all 0.5s ease; z-index: 10;
+}
+
+.cover img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Hover States */
+.book-3d:hover { width: 390px; transform: translateY(15px) translateZ(80px); z-index: 100; }
+.book-3d:hover .cover { opacity: 1; visibility: visible; transform: rotateY(0deg); }
+
+/* Assign Textures */
 .murray-spine { background-image: url('spine-murray.jpg'); }
 .luschnig-spine { background-image: url('spine-luschnig.jpg'); }
 .cerrato-spine { background-image: url('spine-cerrato.jpg'); }
 .johnston-spine { background-image: url('spine-johnston.jpg'); }
 
-.book-3d:hover {
-    width: 390px; 
-    transform: translateY(15px) translateZ(80px);
-    z-index: 100;
-}
-.book-3d:hover .cover { opacity: 1; transform: rotateY(0deg); }
+/* Decor Items */
+.decor-item { width: 210px; height: 400px; background-size: contain; background-repeat: no-repeat; background-position: bottom center; transform: translateY(15px) translateZ(5px); z-index: 10; }
+.lyre { background-image: url('lyre.jpg'); width: 280px !important; transform: translateY(15px) translateZ(5px) scale(1.1); }
+.statue-head { background-image: url('statue.jpg'); background-size: 70%; }
+.greek-vase { background-image: url('vase.jpg'); }
+.dagger { background-image: url('dagger.jpg'); }
+.poison-vial { background-image: url('vial.jpg'); }
+.plantsss { background-image: url('plantss.jpg'); }
 
-/* --- 7. ANALYSIS HIGHLIGHT ENGINE --- */
-.controls {
-    background: #fdfaf1;
-    border: 1px solid #d4af37;
-    padding: 20px;
-    margin-bottom: 20px;
-}
+/* --- 7. PAGE EXCLUSIVES --- */
 
-.translation-text {
-    background-color: #fffaf0;
-    padding: 40px;
-    border: 1px solid #e0d0b0;
-    line-height: 2.2;
-}
+/* Home Page */
+body.home-page .hero-collage { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('medea-header.jpg'); }
+body.home-page .split-container { max-width: 1100px; }
+body.home-page .column-text { flex: 2; }
+body.home-page .column-image { flex: 4; min-height: 500px; }
 
-.marriage, .violence, .autonomy, .patriarchy, .family, .motherhood, .alone {
-    transition: background-color 0.3s ease;
-    padding: 2px 4px;
-}
+/* About Page */
+body.about-page .hero-collage { height: 350px; background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('about-header.jpg'); }
+body.about-page .split-container { max-width: 1100px; }
+body.about-page .column-text { flex: 2; }
+body.about-page .column-image { flex: 4; }
 
-body.show-marriage .marriage { background-color: #fdfd96; color: black; }
-body.show-violence .violence { background-color: #ffb3b3; color: black; }
-body.show-autonomy .autonomy { background-color: #b3ffb3; color: black; }
-body.show-patriarchy .patriarchy { background-color: #ffd1dc; color: black; }
-body.show-family .family { background-color: #cdecff; color: black; }
-body.show-motherhood .motherhood { background-color: #e0bbe4; color: black; }
-body.show-alone .alone { background-color: #d3d3d3; color: black; }
+/* Corpus Page */
+body.corpus-page .hero-collage { height: 350px; background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('corpus-header.jpg'); }
+body.corpus-page .split-container { max-width: 1100px; }
+body.corpus-page .column-text { flex: 2; }
+body.corpus-page .column-image { flex: 4; min-height: 450px; }
+body.corpus-page .table-container { max-width: 1100px; }
 
-/* --- 8. TABLES & BUTTONS --- */
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th {
-    text-align: left;
-    border-bottom: 3px solid #b2945a;
-    padding: 10px;
-    font-family: 'Cinzel', serif;
-}
-
-td {
-    padding: 15px 10px;
-    border-bottom: 1px solid #eee;
-}
-
-#scrollTopBtn {
-    position: fixed;
-    bottom: 20px; right: 20px;
-    background: #3b1020;
-    color: white;
-    padding: 15px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 3000; 
-}
-
-/* --- HOMEPAGE  STYLES --- */
-
-/* 1. Header with the Original Gold Bar */
-body.home-page .hero-collage {
-    height: 400px; 
-    background-color: #3b1020; 
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('medea-header.jpg'); 
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    
-    /* The Original Gold Bar Look */
-    border-bottom: 10px double #b2945a; 
-}
-
-/* Header Text (Consistent White with Shadow) */
-body.home-page .main-title {
-    font-family: 'Cinzel', serif;
-    font-weight: 700;
-    font-size: 3.2rem; 
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    color: #fdfaf1; 
-    text-shadow: 4px 4px 0px #3b1020; 
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-/* 2. Wider Photos in Text Boxes */
-body.home-page .split-container {
-    max-width: 1100px; /* Wider container to let images shine */
-    margin: 80px auto;
-    display: flex;
-}
-
-body.home-page .column-text {
-    flex: 2; /* Takes up much less space now */
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-body.home-page .column-image {
-    flex: 4; /* DOUBLE the width of the text side */
-    display: flex;
-    min-height: 500px; /* Taller boxes for a more museum-gallery feel */
-}
-
-body.home-page .column-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    display: block;
-}
-
-
-/* --- ABOUT PAGE EXCLUSIVE STYLES --- */
-
-/* 1. About Header Image */
-body.about-page .hero-collage {
-    height: 350px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    position: relative !important;
-    
-    /* Background properties broken out to stop the doubling */
-    background-color: #3b1020 !important;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('about-header.jpg') !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-attachment: scroll !important; /* Forces it to stay put */
-    
-    border-bottom: 8px double #b2945a !important;
-}
-/* 2. Wider Images in About Boxes */
-body.about-page .split-container {
-    max-width: 1100px;
-}
-
-body.about-page .column-text {
-    flex: 2;
-    padding: 50px;
-}
-
-body.about-page .column-image {
-    flex: 4; /* Keeps that wide photo look from the home page */
-}
-
-/* 3. Project Goals Box Style Fix */
-body.about-page .goals-section {
-    max-width: 1100px;
-    margin: 60px auto;
-    padding: 50px;
-    background: #fffaf0 !important; /* Parchment white */
-    border: 2px solid #6e1e2e !important; 
-    font-family: 'Fauna One', serif !important; 
-    line-height: 1.9;
-    color: #1a1a1a;
-}
-
-body.about-page .goals-section h2 {
-    font-family: 'Cinzel', serif;
-    color: #741b47;
-    border-bottom: 3px solid #b2945a;
-    padding-bottom: 10px;
-    margin-top: 0;
-}
-
-
-/* --- CORPUS PAGE EXCLUSIVE STYLES --- */
-
-/* 1. Corpus Header Image */
-body.corpus-page .hero-collage {
-    height: 350px !important;
-    background-color: #3b1020 !important;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('corpus-header.jpg') !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    border-bottom: 8px double #b2945a !important;
-}
-
-/* 2. Wider Images in Corpus Box */
-body.corpus-page .split-container {
-    max-width: 1100px;
-    display: flex;
-}
-body.corpus-page .column-text {
-    flex: 2;
-    padding: 50px;
-}
-
-body.corpus-page .column-image {
-    flex: 4; /* Makes the photo wider */
-    display: flex;
-    min-height: 450px;
-}
-
-body.corpus-page .column-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-/* 3. Table Container Styling (To match the rest of the site) */
-body.corpus-page .table-container {
-    max-width: 1100px;
-    margin: 60px auto;
-    background: #fffaf0;
-    border: 2px solid #6e1e2e;
-}
+/* --- 8. MISC --- */
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; border-bottom: 3px solid #b2945a; padding: 10px; font-family: 'Cinzel', serif; }
+td { padding: 15px 10px; border-bottom: 1px solid #eee; }
+#scrollTopBtn { position: fixed; bottom: 20px; right: 20px; background: #3b1020; color: white; padding: 15px; border-radius: 50%; cursor: pointer; z-index: 3000; }
