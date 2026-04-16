@@ -99,25 +99,25 @@ body {
     width: 90px; 
     height: 100%;
     
-    /* Perfect Tube Shape */
-    border-radius: 25px !important; 
+    /* FORCED ROUNDING: Makes the top and bottom look like a cylinder */
+    border-radius: 30px !important; 
     overflow: hidden;
     
-    /* Texture */
+    /* TEXTURE */
     background-size: cover;
     background-position: center;
     transform: translateZ(5px); 
     z-index: 30;
     
-    /* Just Internal Shading to make the image look curved */
+    /* 3D EFFECT: Shading on the left and right edges */
     box-shadow: 
-        inset 15px 0 20px rgba(0,0,0,0.6), 
-        inset -15px 0 20px rgba(0,0,0,0.6);
+        inset 18px 0 15px rgba(0,0,0,0.6), 
+        inset -18px 0 15px rgba(0,0,0,0.6);
         
-    /* Removes any leftover text coloring */
-    color: transparent;
+    /* REMOVE TEXT: Hides the translator names even if they are in the HTML */
+    color: transparent !important;
+    font-size: 0 !important;
 }
-
 
 /* Ensure the shelf row itself allows the shadow to show */
 .shelf-row {
@@ -129,16 +129,19 @@ body {
     position: relative;
     perspective: 2500px;
     
-    /* This creates the shelf floor texture + a dark dimension line at the bottom */
-    background: linear-gradient(
-        to bottom, 
-        #e1e8ed 0%, 
-        #e1e8ed 92%, 
-        rgba(0,0,0,0.3) 92%, 
-        rgba(0,0,0,0.5) 100%
-    ); 
+    /* The Light Blue Wall */
+    background: #e1e8ed; 
     
-    border-bottom: 45px solid #3d2b1f; /* The wooden edge */
+    /* THE DIMENSION FIX: 
+       1. The first shadow creates a dark "recess" at the bottom of the wall.
+       2. The second shadow adds a slight glow/highlight to the top of the wood.
+    */
+    box-shadow: 
+        inset 0 -30px 40px -15px rgba(0,0,0,0.5),
+        0 4px 10px rgba(0,0,0,0.2);
+
+    /* This is the wooden floor edge */
+    border-bottom: 45px solid #3d2b1f; 
 }
 .cover {
     position: absolute; left: 90px; width: 300px; height: 100%;
