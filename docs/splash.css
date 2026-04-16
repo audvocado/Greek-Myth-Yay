@@ -190,26 +190,26 @@ body {
 }
 
 .shelf-row::before {
-    content: "";
-    position: absolute;
-    bottom: 0; left: 0;
-    width: 100%; height: 35px;
-    background: #5d4037; 
-    transform: rotateX(60deg);
-    transform-origin: bottom;
-    z-index: 1;
+    z-index: 1; 
 }
-
 /* --- 5. LIBRARY ITEMS (Grounded & Colors) --- */
 
 .decor-item {
-    width: 210px; height: 400px; 
+    width: 210px; 
+    height: 400px; 
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom center;
     filter: drop-shadow(8px 10px 12px rgba(0,0,0,0.4));
-    transform: translateY(15px) translateZ(-10px); 
-    z-index: 5;
+    flex-shrink: 0;
+    /* Increased Z to 5px to keep it in front of the shelf background/lines */
+    transform: translateY(15px) translateZ(5px); 
+    z-index: 10;
+}
+
+.lyre { 
+    background-image: url('lyre.jpg'); 
+    background-size: 80%; /* Adjust if the lyre looks too big/small */
 }
 
 .statue-head { background-image: url('statue.jpg'); background-size: 70%; }
@@ -221,10 +221,13 @@ body {
 
 .book-3d {
     position: relative;
-    width: 90px; height: 400px; 
+    width: 90px;   
+    height: 400px; 
     transform-style: preserve-3d;
-    transform: translateY(15px) translateZ(-10px);
-    transition: all 0.6s ease;
+    /* Changed translateZ to 10px so they sit IN FRONT of the shelf lines */
+    transform: translateY(15px) translateZ(10px);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 20;
     display: block;
 }
 
@@ -237,6 +240,12 @@ body {
     font-weight: bold;
     transform: translateZ(1px); 
     z-index: 10;
+}
+
+.spine {
+    /* Force the spine to be the absolute top layer of the book */
+    transform: translateZ(2px); 
+    z-index: 30;
 }
 
 .cover {
