@@ -195,52 +195,39 @@ body {
     display: block;
 }
 
-/* --- VINTAGE ACADEMIC SPINES WITH TEXT --- */
+/* --- VINTAGE ACADEMIC SPINES  --- */
 
 .spine {
     position: absolute;
     width: 90px; 
     height: 100%;
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
-    writing-mode: vertical-rl;
     
-    /* 1. ROUNDED EDGES (Spine side is more rounded) */
-    border-radius: 20px 4px 4px 20px; 
+    /* 1. SYMMETRICAL ROUNDING */
+    /* This rounds both left and right sides equally for a tube-like spine */
+    border-radius: 20px; 
     
-    /* 2. GOLD LEAF TYPOGRAPHY */
-    font-family: 'Cinzel', serif;
-    font-weight: 700;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #d4af37; /* Metallic Gold */
+    /* 2. REMOVE TEXT STYLE */
+    color: transparent; 
+    text-indent: -9999px; /* Extra safety to hide text */
     
-    /* This shadow creates the "stamped into leather" look */
-    text-shadow: 
-        1px 1px 0px rgba(255, 255, 255, 0.2), 
-        -1px -1px 2px rgba(0, 0, 0, 0.8);
-    
-    /* 3. 3D TEXTURE & SHADING */
+    /* 3. 3D SHADING */
     background-size: cover;
     background-position: center;
     transform: translateZ(5px); 
     z-index: 30;
     
-    /* This gradient makes the flat image look like a curved cylinder */
+    /* High-intensity shading on BOTH sides to sell the curve */
     box-shadow: 
-        inset -12px 0 20px rgba(0,0,0,0.7), 
-        inset 12px 0 15px rgba(0,0,0,0.3),
-        3px 0 10px rgba(0,0,0,0.4); 
+        inset -15px 0 20px rgba(0,0,0,0.7), 
+        inset 15px 0 20px rgba(0,0,0,0.7),
+        0 5px 15px rgba(0,0,0,0.4); 
 }
 
-/* Individual Textures - NO COLORS HERE, let the .spine class */
+/* Individual Textures */
 .murray-spine { background-image: url('spine-murray.jpg'); }
 .luschnig-spine { background-image: url('spine-luschnig.jpg'); }
 .cerrato-spine { background-image: url('spine-cerrato.jpg'); }
 .johnston-spine { background-image: url('spine-johnston.jpg'); }
-
 .cover {
     position: absolute;
     left: 90px; width: 300px; height: 100%;
