@@ -73,17 +73,7 @@ body {
     background: #4e342e; border: 40px solid #3d2b1f;   
 }
 
-.shelf-row {
-    display: flex; align-items: flex-end; justify-content: space-around; 
-    padding: 0 40px; min-height: 480px; position: relative;
-    perspective: 2500px; background: #e1e8ed; 
-    border-bottom: 45px solid #3d2b1f; 
-}
 
-.shelf-row::before {
-    content: ""; position: absolute; bottom: 0; left: 0;
-    width: 100%; height: 45px; background: #3d2b1f; z-index: 1;
-}
 
 /* --- 6. 3D BOOKS & SPINES --- */
 .book-3d {
@@ -117,9 +107,17 @@ body {
     /* REMOVE TEXT: Hides the translator names even if they are in the HTML */
     color: transparent !important;
     font-size: 0 !important;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent !important;
+    font-size: 0 !important;
 }
 
 /* Ensure the shelf row itself allows the shadow to show */
+/* --- UPDATED SHELF ROWS (Top and Bottom) --- */
+
 .shelf-row {
     display: flex;
     align-items: flex-end; 
@@ -128,20 +126,22 @@ body {
     min-height: 480px;
     position: relative;
     perspective: 2500px;
+    background: #e1e8ed; /* The back wall color */
     
-    /* The Light Blue Wall */
-    background: #e1e8ed; 
-    
-    /* THE DIMENSION FIX: 
-       1. The first shadow creates a dark "recess" at the bottom of the wall.
-       2. The second shadow adds a slight glow/highlight to the top of the wood.
+    /* THE DIMENSION LINE: 
+       This adds a dark 'groove' at the bottom of every shelf row.
+       The 'inset 0 -20px' forces the shadow to the bottom of the wall.
     */
-    box-shadow: 
-        inset 0 -30px 40px -15px rgba(0,0,0,0.5),
-        0 4px 10px rgba(0,0,0,0.2);
-
-    /* This is the wooden floor edge */
+    box-shadow: inset 0 -25px 30px -10px rgba(0,0,0,0.5);
+    
+    /* This creates the wooden floor edge for every row */
     border-bottom: 45px solid #3d2b1f; 
+    margin-bottom: 0; 
+}
+
+/* This removes the extra floor layer that might be blocking the top shelf shadow */
+.shelf-row::before {
+    display: none; 
 }
 .cover {
     position: absolute; left: 90px; width: 300px; height: 100%;
