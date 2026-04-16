@@ -22,29 +22,29 @@ body {
 body::before, body::after {
     content: "";
     position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 180px;   /* Made slightly wider to prevent distortion */
+    top: 80px;      /* Starts right below the nav bar */
+    bottom: 0;      /* Goes all the way to the bottom */
+    width: 140px;   /* Slightly skinnier to save space */
     z-index: 2000; 
-    
-    /* CHANGE: 'cover' keeps the image from looking stretched/ugly */
-    background-size: cover; 
+    background-size: 100% 100%; /* Forces the image to stretch the full height */
     background-repeat: no-repeat;
-    
-    /* Optional: adds a slight shadow so the column pops off the marble */
-    filter: drop-shadow(5px 0 15px rgba(0,0,0,0.3));
+    /* This transition makes the disappearance smooth if you switch pages */
+    transition: opacity 0.3s ease;
+}
+
+body.analysis-page::before, 
+body.analysis-page::after {
+    display: none !important;
 }
 
 body::before {
     left: 0;
     background-image: url('column-left.png');
-    background-position: center top;
 }
 
 body::after {
     right: 0;
     background-image: url('column-right.png');
-    background-position: center top;
 }
 
 /* --- 2. NAVIGATION (Tyrian Purple & Bronze) --- */
@@ -95,8 +95,8 @@ body::after {
 
 /* --- 4. CONTENT TABLETS (Home, About, Corpus) --- */
 .split-container, .text-box, .goals-section, .table-container {
-    max-width: 900px;
-    margin: 80px auto;
+    max-width: 800px;    /* Narrower so it doesn't hit the columns */
+    margin: 60px auto;   /* Centered with space above/below */
     background: #fffaf0; 
     border: 2px solid #6e1e2e; 
     border-radius: 4px; 
@@ -104,6 +104,16 @@ body::after {
     overflow: hidden;
     position: relative;
     z-index: 10;
+}
+
+.main-title {
+    font-family: 'Cinzel', serif;
+    font-size: 3.2rem;
+    color: #fdfaf1;
+    text-shadow: 4px 4px 0px #3b1020;
+    margin: 0;
+    text-align: center;
+    padding: 0 180px; /* Pushes text away from column zones */
 }
 
 .split-container {
@@ -118,10 +128,8 @@ body::after {
 
 .column-text {
     flex: 1.2;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 40px 60px; /* Increased side padding for better reading */
+    line-height: 1.9;
 }
 
 .column-text h2 {
