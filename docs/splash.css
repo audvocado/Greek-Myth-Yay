@@ -291,7 +291,8 @@ td {
 
 /* --- HOMEPAGE EXCLUSIVE STYLES --- */
 
-/* 1. Header with Gold Leaf Border Image */
+/* --- HOMEPAGE EXCLUSIVE STYLES --- */
+
 body.home-page .hero-collage {
     height: 400px; 
     background-color: #3b1020; 
@@ -301,48 +302,38 @@ body.home-page .hero-collage {
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    /* This sets up your gold leaf image as the bottom border */
-    border-bottom: 15px solid transparent; /* Space for the border */
-    border-image-source: url('gold-leaf.png'); 
-    border-image-slice: 30; /* Adjust this number if the image looks squished */
-    border-image-repeat: round;
+    position: relative; /* Required to pin the border to the bottom */
+    overflow: hidden;   /* Keeps the border from leaking out */
+    border-bottom: none; /* Clear old borders */
 }
 
-/* Header Text (Consistent White with Shadow) */
-body.home-page .main-title {
-    font-family: 'Cinzel', serif;
-    font-weight: 700;
-    font-size: 3.2rem; 
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    color: #fdfaf1; 
-    text-shadow: 4px 4px 0px #3b1020; 
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
+/* The Gold Leaf Border Layer */
+body.home-page .hero-collage::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25px; /* Adjust height to make the leaf border thicker or thinner */
+    background-image: url('gold-leaf.jpg');
+    background-repeat: repeat-x; /* Repeats the pattern horizontally */
+    background-size: contain;    /* Ensures the pattern isn't cut off */
+    z-index: 5;
 }
 
-/* 2. Wider Photos in Text Boxes */
+/* 2. Wider Photos in Text Boxes (Updated Flex) */
 body.home-page .split-container {
-    max-width: 1000px; /* Slightly wider overall container */
-    display: flex;
+    max-width: 1050px; 
+    margin: 80px auto;
 }
 
 body.home-page .column-text {
-    flex: 0.8; /* Shrunk the text side slightly */
+    flex: 3; /* Takes up less space */
     padding: 50px;
 }
 
 body.home-page .column-image {
-    flex: 1.2; /* Made the image side wider */
+    flex: 5; /* Takes up significantly more space */
     display: flex;
     min-height: 450px;
-}
-
-body.home-page .column-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
 }
