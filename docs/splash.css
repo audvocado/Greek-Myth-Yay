@@ -96,9 +96,9 @@ body {
     z-index: 1;
 }
 
-/* --- 4. DECOR ITEMS (Grounded & Adjusted) --- */
+/* --- 4. DECOR ITEMS (Sizing & Grounding) --- */
 .decor-item {
-    width: 210px;  /* 3/4 Size */
+    width: 210px;  
     height: 400px; 
     background-color: transparent !important;
     background-size: contain;
@@ -107,29 +107,31 @@ body {
     filter: drop-shadow(8px 10px 12px rgba(0,0,0,0.4));
     flex-shrink: 0;
     z-index: 5;
-    /* Sits items on the 3D ledge */
     transform: translateY(15px); 
 }
 
 .statue-head { 
     background-image: url('statue.jpg'); 
-    background-size: 55%; /* Smaller statue as requested */
+    background-size: 70%; /* Slightly Larger */
+}
+
+.scrolls { 
+    background-image: url('scrolls.jpg'); 
+    background-size: 50%; /* Slightly Smaller */
 }
 
 .plant { background-image: url('plant.jpg'); }
-.scrolls { background-image: url('scrolls.jpg'); }
 .dagger { background-image: url('dagger.jpg'); }
 .greek-vase { background-image: url('vase.jpg'); }
 .poison-vial { background-image: url('vial.jpg'); }
 .plantsss { background-image: url('plantss.jpg'); }
 
-/* --- 5. THE 3D BOOKS (Grounded & Fixed Visibility) --- */
+/* --- 5. THE 3D BOOKS (Slightly Wider) --- */
 .book-3d {
     position: relative;
-    width: 70px;   
+    width: 90px;   /* Beefier Spine */
     height: 400px; 
     transform-style: preserve-3d;
-    /* Grounding (15px) + Initial 3D state */
     transform: translateY(15px) rotateY(0deg);
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     z-index: 20;
@@ -139,7 +141,7 @@ body {
 .spine {
     position: absolute;
     top: 0; left: 0;
-    width: 70px;
+    width: 90px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -147,7 +149,7 @@ body {
     writing-mode: vertical-rl;
     font-family: 'Cinzel', serif;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     box-shadow: inset -5px 0 10px rgba(0,0,0,0.3);
     z-index: 2;
 }
@@ -155,8 +157,8 @@ body {
 .cover {
     position: absolute;
     top: 0;
-    left: 70px; 
-    width: 280px; 
+    left: 90px; 
+    width: 300px; 
     height: 100%;
     transform-origin: left;
     transform: rotateY(-90deg);
@@ -172,8 +174,7 @@ body {
 }
 
 .book-3d:hover {
-    width: 350px; 
-    /* Maintains grounding (15px) while moving forward (50px) */
+    width: 390px; 
     transform: translateY(15px) translateZ(50px);
     z-index: 100;
 }
@@ -183,7 +184,7 @@ body {
     transform: rotateY(0deg);
 }
 
-/* SPINE COLORS */
+/* --- SPINE COLORS (Re-Added) --- */
 .murray-spine { background-color: #3b1020; color: #f7b7b2; }
 .luschnig-spine { background-color: #6e1e2e; color: #f7b7b2; }
 .cerrato-spine { background-color: #b24a5a; color: #ffffff; }
