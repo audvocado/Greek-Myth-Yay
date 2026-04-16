@@ -117,7 +117,7 @@ body {
 
 .scrolls { 
     background-image: url('scrolls.jpg'); 
-    background-size: 50%; /* Slightly Smaller */
+    background-size: 65%; /* Increased from 50% to be visible but not huge */
 }
 
 .plant { background-image: url('plant.jpg'); }
