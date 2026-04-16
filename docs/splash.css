@@ -289,56 +289,60 @@ td {
 
 /* --- HOMEPAGE EXCLUSIVE STYLES --- */
 
-/* 1. Header Image (The Hero Section) */
+/* --- HOMEPAGE EXCLUSIVE STYLES --- */
+
+/* 1. Header with Gold Leaf Border Image */
 body.home-page .hero-collage {
     height: 400px; 
     background-color: #3b1020; 
-    /* Ensure this filename matches your image exactly! */
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('medea-header.jpg'); 
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 8px double #b2945a;
+    
+    /* This sets up your gold leaf image as the bottom border */
+    border-bottom: 15px solid transparent; /* Space for the border */
+    border-image-source: url('gold-leaf.png'); 
+    border-image-slice: 30; /* Adjust this number if the image looks squished */
+    border-image-repeat: round;
 }
 
-/* 2. Greek Style Header Text */
+/* Header Text (Consistent White with Shadow) */
 body.home-page .main-title {
     font-family: 'Cinzel', serif;
     font-weight: 700;
     font-size: 3.2rem; 
     text-transform: uppercase;
     letter-spacing: 4px;
-    line-height: 1.2;
-    text-align: center;
-    max-width: 900px;
-    padding: 0 40px;
-    
-    /* White with the signature Tyrian Purple shadow */
     color: #fdfaf1; 
     text-shadow: 4px 4px 0px #3b1020; 
-    
+    text-align: center;
+    max-width: 900px;
     margin: 0 auto;
 }
-/* 3. The Text Boxes (The 'Tablets') */
+
+/* 2. Wider Photos in Text Boxes */
 body.home-page .split-container {
-    max-width: 900px;
-    margin: 100px auto;
-    background: #fffaf0;
-    border: 1px solid #b2945a;
-    box-shadow: 0 0 50px rgba(178, 148, 90, 0.2); /* Soft gold glow */
+    max-width: 1000px; /* Slightly wider overall container */
+    display: flex;
 }
 
-/* 4. Column Images sizing */
+body.home-page .column-text {
+    flex: 0.8; /* Shrunk the text side slightly */
+    padding: 50px;
+}
+
 body.home-page .column-image {
-    min-height: 400px;
+    flex: 1.2; /* Made the image side wider */
     display: flex;
+    min-height: 450px;
 }
 
 body.home-page .column-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
     display: block;
 }
