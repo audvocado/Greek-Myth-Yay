@@ -197,42 +197,39 @@ body {
 
 /* --- VINTAGE ACADEMIC SPINES (Symmetrical & Rounded) --- */
 
+/* --- VINTAGE ACADEMIC SPINES (Symmetrical & No Text) --- */
+
 .spine {
     position: absolute;
     width: 90px; 
     height: 100%;
     
-    /* 1. FORCED ROUNDING */
-    /* This ensures top-left, top-right, bottom-right, and bottom-left are all 25px */
-    border-radius: 25px 25px 25px 25px !important; 
-    overflow: hidden; /* This "clips" the image to the rounded shape */
+    /* 1. SYMMETRICAL ROUNDING */
+    /* This rounds both left and right sides equally for a tube-like spine */
+    border-radius: 20px; 
     
-    /* 2. TEXTURE SETTINGS */
+    /* 2. REMOVE TEXT STYLE */
+    color: transparent; 
+    text-indent: -9999px; /* Extra safety to hide text */
+    
+    /* 3. 3D SHADING */
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    
-    /* 3. DEPTH & DIMENSION */
     transform: translateZ(5px); 
     z-index: 30;
     
-    /* Shadow 1 (Far Left Inset): Rounding effect
-       Shadow 2 (Far Right Inset): Rounding effect
-       Shadow 3 (Bottom External): This is your shelf dimension line
-    */
+    /* High-intensity shading on BOTH sides to sell the curve */
     box-shadow: 
-        inset 15px 0 15px rgba(0,0,0,0.5), 
-        inset -15px 0 15px rgba(0,0,0,0.5),
-        0 10px 10px rgba(0,0,0,0.5); 
+        inset -15px 0 20px rgba(0,0,0,0.7), 
+        inset 15px 0 20px rgba(0,0,0,0.7),
+        0 5px 15px rgba(0,0,0,0.4); 
 }
 
-/* Make sure these are clean */
+/* Individual Textures */
 .murray-spine { background-image: url('spine-murray.jpg'); }
 .luschnig-spine { background-image: url('spine-luschnig.jpg'); }
 .cerrato-spine { background-image: url('spine-cerrato.jpg'); }
 .johnston-spine { background-image: url('spine-johnston.jpg'); }
-.cover img { width: 100%; height: 100%; object-fit: cover; }
-
 
 .book-3d:hover {
     width: 390px; 
