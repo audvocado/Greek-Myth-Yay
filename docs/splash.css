@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One&display=swap');
 
 /* --- 1. GLOBAL THEME & NAV (Applies to all pages) --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: block !important; /* Forces normal page flow */
+    overflow-x: hidden;
+}
 body {
     margin: 0;
     padding: 0;
@@ -31,6 +39,77 @@ body {
 .nav-link:hover, .nav-link.active {
     color: #d4af37;
 }
+
+/* --- NEW: STANDARD TEXT BOX (For Home, About, Corpus) --- */
+.text-box {
+    max-width: 850px;           /* Keeps the lines of text from getting too long */
+    margin: 50px auto;          /* Centers the box and gives space from the top/bottom */
+    background: rgba(255, 255, 255, 0.9); /* White with 90% opacity (slight see-through) */
+    padding: 40px;              /* Space between the text and the box edges */
+    border: 1px solid #d4af37;  /* Gold border to match your theme */
+    border-radius: 4px;         /* Slightly rounded corners */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Soft shadow to make it pop */
+    line-height: 1.8;           /* Makes the text easier to read */
+    color: #1a1a1a;             /* Dark text for high contrast */
+}
+
+.text-box h2 {
+    font-family: 'Cinzel', serif;
+    color: #741b47;             /* Matching your purple/gold theme */
+    border-bottom: 2px solid #d4af37;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.split-container {
+    display: flex;
+    flex-direction: row; /* Ensures side-by-side layout */
+    align-items: stretch; 
+    justify-content: center;
+    max-width: 1000px;
+    margin: 60px auto;    /* This creates the vertical "separation" */
+    background: white;    /* The white box background */
+    border-radius: 12px;
+    overflow: hidden; 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    min-height: 450px;
+    }
+
+
+.split-container.reverse {
+    flex-direction: row-reverse; /* Flips image and text */
+}
+
+.column-text {
+    flex: 1.2; /* Text gets slightly more room */
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers text vertically in the box */
+}
+
+.column-image {
+    flex: 0.8;
+    overflow: hidden;
+}
+
+.column-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps images from squishing */
+    display: block;
+}
+
+.team-list {
+    list-style: none;
+    padding: 0;
+}
+
+.team-list li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
 
 /* --- 2. PAGE HEADERS (Home, About, Corpus) --- */
 .hero-collage {
@@ -222,4 +301,41 @@ body.show-alone .alone { background-color: #d3d3d3; border-bottom: 2px solid #80
     padding: 15px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+
+/* --- 7. ADDITIONAL CONTENT BOXES (About & Corpus Pages) --- */
+
+.goals-section, .table-container {
+    max-width: 1000px;
+    margin: 60px auto;     /* Adds the gap between this and the boxes above it */
+    background: white;     /* Creates the "Van Gogh" white box effect */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* This makes the table inside the Corpus box look professional */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Fauna One', serif;
+}
+
+th {
+    text-align: left;
+    border-bottom: 2px solid #d4af37;
+    padding: 10px;
+    font-family: 'Cinzel', serif;
+}
+
+td {
+    padding: 15px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.table-link {
+    color: #741b47;
+    text-decoration: none;
+    font-weight: bold;
 }
