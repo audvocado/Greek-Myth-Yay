@@ -96,7 +96,7 @@ body {
     z-index: 1;
 }
 
-/* --- 4. DECOR ITEMS (Pushed back onto the shelf) --- */
+/* --- 4. DECOR ITEMS (Pushed back & Grounded) --- */
 .decor-item {
     width: 210px;  
     height: 400px; 
@@ -106,9 +106,10 @@ body {
     background-position: bottom center;
     filter: drop-shadow(8px 10px 12px rgba(0,0,0,0.4));
     flex-shrink: 0;
+    /* This pushes them back into the shelf space */
+    transform: translateY(15px) translateZ(-10px) !important; 
     z-index: 5;
-    /* translateY(15px) sits them on the ledge, translateZ(-20px) pushes them BACK into the shelf */
-    transform: translateY(15px) translateZ(-20px); 
+    position: relative;
 }
 
 .statue-head { 
@@ -122,17 +123,37 @@ body {
 .greek-vase { background-image: url('vase.jpg'); }
 .poison-vial { background-image: url('vial.jpg'); }
 
-/* --- 5. THE 3D BOOKS (Pushed back & Centered Images) --- */
+/* --- 5. THE 3D BOOKS (Total Visibility Overhaul) --- */
 .book-3d {
     position: relative;
     width: 90px;   
     height: 400px; 
     transform-style: preserve-3d;
-    /* Pushed back to match the decor items */
-    transform: translateY(15px) rotateY(0deg) translateZ(-20px);
+    /* Pushes the base of the book back onto the ledge */
+    transform: translateY(15px) translateZ(-10px);
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     z-index: 20;
     display: block;
+}
+
+.spine {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 90px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    writing-mode: vertical-rl;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: inset -5px 0 10px rgba(0,0,0,0.3);
+    /* This forces the spine to stay in front of the book's own internal layers */
+    transform: translateZ(5px); 
+    z-index: 10;
+    background-color: inherit; /* Ensure it takes the class color */
 }
 
 .cover {
@@ -146,28 +167,26 @@ body {
     opacity: 0;
     transition: all 0.5s ease;
     box-shadow: 15px 10px 25px rgba(0,0,0,0.5);
-    overflow: hidden; /* Keeps the image inside the cover bounds */
+    z-index: 1;
 }
 
 .cover img {
     width: 100%;
     height: 100%;
-    /* 'cover' fills the space, '50% 50%' ensures it stays centered */
     object-fit: cover;
     object-position: center; 
-    display: block;
 }
 
-/* Specific fix for Luschnig if the image itself is awkward */
+/* LUSCHNIG PHOTO FIX: Specifically targeting the second book to center it */
 .luschnig-spine + .cover img {
-    object-fit: cover; 
-    object-position: top center; /* Adjusts the crop to the top/center of the file */
+    object-fit: cover !important;
+    object-position: 50% 20% !important; /* Adjusts the crop to show the important part */
 }
 
+/* Hover pulls the book forward and unfolds the cover */
 .book-3d:hover {
     width: 390px; 
-    /* When hovering, it pulls FORWARD to translateZ(50px) */
-    transform: translateY(15px) translateZ(50px);
+    transform: translateY(15px) translateZ(60px);
     z-index: 100;
 }
 
@@ -175,7 +194,6 @@ body {
     opacity: 1;
     transform: rotateY(0deg);
 }
-
 /* --- 6. PAGE HEADERS & TEXT ENGINE (Keep these same) --- */
 .hero-collage {
     height: 300px;
