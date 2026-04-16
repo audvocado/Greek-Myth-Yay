@@ -38,7 +38,7 @@ body {
 .column-image { flex: 0.8; }
 .column-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-/* --- 4. THE GRAND LIBRARY (Dimension Fix) --- */
+/* --- 4. THE GRAND LIBRARY --- */
 .grand-library {
     background-color: #d1e3f0; padding: 80px 0;
     display: flex; justify-content: center;
@@ -51,34 +51,25 @@ body {
     display: flex; align-items: flex-end; justify-content: space-around; 
     padding: 0 40px; min-height: 480px; position: relative;
     perspective: 2500px; background: #e1e8ed; 
-    border-bottom: 45px solid #3d2b1f; /* THE BROWN WOOD LINE */
+    border-bottom: 45px solid #3d2b1f; 
 }
 
-/* THE DIMENSION LINE: This adds a dark 'recess' line directly on the wood edge */
-.shelf-row::after {
-    content: ""; position: absolute; bottom: 0; left: 0;
-    width: 100%; height: 8px; /* The line thickness */
-    background: rgba(0,0,0,0.4); /* Dark shadow line */
-    z-index: 2;
-}
-
-/* --- 5. 3D BOOKS (Images Restored & Symmetrical) --- */
+/* --- 5. 3D BOOKS (Grounded & Symmetrical) --- */
 .book-3d {
     position: relative; width: 90px; height: 400px; 
     transform-style: preserve-3d;
-    transform: translateY(15px) translateZ(10px);
+    /* Pushed down 45px to sit on the wood floor */
+    transform: translateY(45px) translateZ(10px);
     transition: all 0.6s ease; z-index: 20;
 }
 .spine {
     position: absolute; width: 100%; height: 100%;
     border-radius: 30px !important; 
     overflow: hidden; 
-    background-size: cover !important; /* RESTORES YOUR IMAGES */
+    background-size: cover !important; 
     background-position: center !important;
     transform: translateZ(5px); z-index: 30;
     box-shadow: inset 18px 0 15px rgba(0,0,0,0.6), inset -18px 0 15px rgba(0,0,0,0.6);
-    
-    /* Hide Text */
     color: transparent !important; font-size: 0 !important;
 }
 
@@ -89,30 +80,36 @@ body {
 }
 .cover img { width: 100%; height: 100%; object-fit: cover; }
 
-.book-3d:hover { transform: translateY(15px) translateZ(80px); z-index: 100; }
+.book-3d:hover { transform: translateY(45px) translateZ(80px); z-index: 100; }
 .book-3d:hover .cover { opacity: 1; visibility: visible; transform: rotateY(0deg); }
 
-/* IMAGES ARE HERE - DO NOT DELETE */
 .murray-spine { background-image: url('spine-murray.jpg') !important; }
 .luschnig-spine { background-image: url('spine-luschnig.jpg') !important; }
 .cerrato-spine { background-image: url('spine-cerrato.jpg') !important; }
 .johnston-spine { background-image: url('spine-johnston.jpg') !important; }
 
-/* Decor Items */
-.decor-item { width: 210px; height: 400px; background-size: contain; background-repeat: no-repeat; background-position: bottom; transform: translateY(15px); }
-.lyre { background-image: url('lyre.jpg'); width: 280px !important; }
-.statue-head { background-image: url('statue.jpg'); background-size: 70%; }
-.greek-vase { background-image: url('vase.jpg'); }
-.dagger { background-image: url('dagger.jpg'); }
-.poison-vial { background-image: url('vial.jpg'); }
-.plantsss { background-image: url('plantss.jpg'); }
+/* --- 6. DECOR ITEMS (Grounded at 45px) --- */
+.decor-item { 
+    width: 210px; height: 400px; 
+    background-size: contain; background-repeat: no-repeat; 
+    background-position: bottom; 
+    transform: translateY(45px); /* Matches wood thickness */
+    z-index: 10; 
+}
 
-/* --- 6. TABLES --- */
+.lyre { background-image: url('lyre.jpg'); width: 280px !important; transform: translateY(45px) scale(1.1); }
+.statue-head { background-image: url('statue.jpg'); background-size: 70%; transform: translateY(45px); }
+.greek-vase { background-image: url('vase.jpg'); transform: translateY(45px); }
+.dagger { background-image: url('dagger.jpg'); transform: translateY(45px); }
+.poison-vial { background-image: url('vial.jpg'); transform: translateY(45px); }
+.plantsss { background-image: url('plantss.jpg'); transform: translateY(45px); }
+
+/* --- 7. TABLES --- */
 table { width: 100%; border-collapse: collapse; }
 th { text-align: left; border-bottom: 3px solid #b2945a; padding: 15px; font-family: 'Cinzel', serif; }
 td { padding: 15px; border-bottom: 1px solid #eee; }
 
-/* --- 7. PAGE HEADERS & HIGHLIGHTS --- */
+/* --- 8. PAGE HEADERS & HIGHLIGHTS --- */
 body.home-page .hero-collage { background-image: url('medea-header.jpg'); }
 body.about-page .hero-collage { background-image: url('about-header.jpg'); }
 body.corpus-page .hero-collage { background-image: url('corpus-header.jpg'); }
@@ -120,4 +117,10 @@ body.corpus-page .hero-collage { background-image: url('corpus-header.jpg'); }
 .marriage, .violence, .autonomy, .patriarchy, .family, .motherhood, .alone { transition: background-color 0.3s ease; padding: 2px 4px; }
 body.show-marriage .marriage { background-color: #fdfd96; color: black; }
 body.show-violence .violence { background-color: #ffb3b3; color: black; }
-/* ... other highlight colors ... */
+body.show-autonomy .autonomy { background-color: #b3ffb3; color: black; }
+body.show-patriarchy .patriarchy { background-color: #ffd1dc; color: black; }
+body.show-family .family { background-color: #cdecff; color: black; }
+body.show-motherhood .motherhood { background-color: #e0bbe4; color: black; }
+body.show-alone .alone { background-color: #d3d3d3; color: black; }
+
+#scrollTopBtn { position: fixed; bottom: 20px; right: 20px; background: #3b1020; color: white; padding: 15px; border-radius: 50%; cursor: pointer; z-index: 3000; }
