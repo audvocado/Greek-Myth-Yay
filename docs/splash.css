@@ -195,41 +195,42 @@ body {
     display: block;
 }
 
-/* --- VINTAGE ACADEMIC SPINES  --- */
-
+/* --- VINTAGE ACADEMIC SPINES (Symmetrical & Rounded) --- */
 
 .spine {
     position: absolute;
     width: 90px; 
     height: 100%;
     
-    /* 1. SYMMETRICAL ROUNDING */
-    border-radius: 20px; 
+    /* 1. FORCED ROUNDING */
+    /* This ensures top-left, top-right, bottom-right, and bottom-left are all 25px */
+    border-radius: 25px 25px 25px 25px !important; 
+    overflow: hidden; /* This "clips" the image to the rounded shape */
     
-    /* 2. REMOVE TEXT */
-    color: transparent; 
-    
-    /* 3. THE 3D & DEPTH SHADOWS */
+    /* 2. TEXTURE SETTINGS */
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    
+    /* 3. DEPTH & DIMENSION */
     transform: translateZ(5px); 
     z-index: 30;
     
-    /* Shadow 1 & 2 (Inset): Makes the image look like a round cylinder 
-       Shadow 3 (External): Creates that dark 'contact line' on the shelf floor
+    /* Shadow 1 (Far Left Inset): Rounding effect
+       Shadow 2 (Far Right Inset): Rounding effect
+       Shadow 3 (Bottom External): This is your shelf dimension line
     */
     box-shadow: 
-        inset -15px 0 20px rgba(0,0,0,0.8), 
-        inset 15px 0 20px rgba(0,0,0,0.8),
-        0 8px 15px rgba(0,0,0,0.6); 
+        inset 15px 0 15px rgba(0,0,0,0.5), 
+        inset -15px 0 15px rgba(0,0,0,0.5),
+        0 10px 10px rgba(0,0,0,0.5); 
 }
 
-/* Ensure the textures are still linked */
+/* Make sure these are clean */
 .murray-spine { background-image: url('spine-murray.jpg'); }
 .luschnig-spine { background-image: url('spine-luschnig.jpg'); }
 .cerrato-spine { background-image: url('spine-cerrato.jpg'); }
 .johnston-spine { background-image: url('spine-johnston.jpg'); }
-
 .cover img { width: 100%; height: 100%; object-fit: cover; }
 
 
