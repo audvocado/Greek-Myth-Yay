@@ -8,6 +8,7 @@
 body {
     margin: 0;
     padding: 0;
+    /* Rich Stone Background */
     background-color: #fdfaf1; 
     background-image: url('marble-texture.jpg'); 
     background-attachment: fixed;
@@ -16,33 +17,6 @@ body {
     display: block !important;
     overflow-x: hidden;
     position: relative;
-}
-
-/* --- THE COLUMNS (Proportional Scaling) --- */
-body::before, body::after {
-    content: "";
-    position: fixed;
-    top: 80px;      /* Starts under nav bar */
-    bottom: 0;      
-    width: 220px;   /* MADE WIDER: Gives that heavy, regal stone look */
-    z-index: 2000; 
-    background-size: 100% 100%; 
-    background-repeat: no-repeat;
-}
-
-body.analysis-page::before, 
-body.analysis-page::after {
-    display: none !important;
-}
-
-body::before {
-    left: 0;
-    background-image: url('column-left.png');
-}
-
-body::after {
-    right: 0;
-    background-image: url('column-right.png');
 }
 
 /* --- 2. NAVIGATION (Tyrian Purple & Bronze) --- */
@@ -72,7 +46,7 @@ body::after {
 
 /* --- 3. HERO SECTION --- */
 .hero-collage {
-    height: 400px; /* Slightly taller to accommodate the wider vibe */
+    height: 400px;
     background: linear-gradient(rgba(59, 16, 32, 0.8), rgba(26, 54, 104, 0.7)), url('palace-bg.jpg');
     background-size: cover;
     display: flex;
@@ -86,34 +60,23 @@ body::after {
     font-size: 3.5rem;
     color: #fdfaf1;
     text-shadow: 4px 4px 0px #3b1020;
-    margin: 0;
+    margin: 0 auto;
     text-align: center;
-    padding: 0 160px; /* Space so text doesn't hit columns */
+    max-width: 900px; /* Centered nicely */
 }
 
 /* --- 4. CONTENT TABLETS (Home, About, Corpus) --- */
 .split-container, .text-box, .goals-section, .table-container {
-    /* REDUCED WIDTH: This stops the text from stretching too far 
-       and keeps the box away from your wider columns */
-    max-width: 750px;    
-    margin: 80px auto;   
-    background: #fffaf0; 
+    /* BACK TO NORMAL WIDTH: Text won't be smooshed anymore */
+    max-width: 950px;    
+    margin: 60px auto;   
+    background: #fffaf0; /* Parchment Color */
     border: 2px solid #6e1e2e; 
     border-radius: 4px; 
     box-shadow: 0 20px 40px rgba(0,0,0,0.3);
     overflow: hidden;
     position: relative;
     z-index: 10;
-}
-
-.main-title {
-    font-family: 'Cinzel', serif;
-    font-size: 3rem;
-    color: #fdfaf1;
-    text-shadow: 4px 4px 0px #3b1020;
-    margin: 0 auto;
-    text-align: center;
-    max-width: 700px; /* Constrains the title so it doesn't hit columns */
 }
 
 .split-container {
@@ -127,9 +90,17 @@ body::after {
 }
 
 .column-text {
-    flex: 1;
-    padding: 50px; /* Generous padding so text feels "centered" in the box */
+    flex: 1.2;
+    padding: 50px; 
     line-height: 1.8;
+}
+
+.column-text h2 {
+    font-family: 'Cinzel', serif;
+    color: #741b47;
+    border-bottom: 3px solid #b2945a;
+    padding-bottom: 10px;
+    margin-top: 0;
 }
 
 .column-text p {
@@ -137,11 +108,8 @@ body::after {
     font-size: 1.1rem;
 }
 
-.column-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+.column-image {
+    flex: 0.8;
 }
 
 .column-image img {
@@ -149,16 +117,6 @@ body::after {
     height: 100%;
     object-fit: cover;
     display: block;
-}
-
-.team-list {
-    list-style: none;
-    padding: 0;
-}
-
-.team-list li {
-    padding: 8px 0;
-    border-bottom: 1px solid #ddd;
 }
 
 /* --- 5. THE GRAND LIBRARY (Analysis Page) --- */
@@ -200,7 +158,7 @@ body::after {
     bottom: 0; left: 0;
     width: 100%; height: 45px;
     background: #3d2b1f;
-    z-index: 1; /* Ledge stays behind items */
+    z-index: 1;
 }
 
 /* --- 6. LIBRARY ITEMS & 3D BOOKS --- */
