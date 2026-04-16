@@ -352,21 +352,22 @@ body.home-page .column-image img {
 
 /* 1. About Header Image */
 body.about-page .hero-collage {
-    height: 350px;
-    background-color: #3b1020;
+    height: 350px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
     
-    /* Updated background properties to prevent doubling */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('about-header.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    /* Background properties broken out to stop the doubling */
+    background-color: #3b1020 !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('about-header.jpg') !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-attachment: scroll !important; /* Forces it to stay put */
     
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 8px double #b2945a;
+    border-bottom: 8px double #b2945a !important;
 }
-
 /* 2. Wider Images in About Boxes */
 body.about-page .split-container {
     max-width: 1100px;
@@ -382,17 +383,15 @@ body.about-page .column-image {
 }
 
 /* 3. Project Goals Box Style Fix */
-body.about-page .goals-section, 
-body.about-page .text-box {
+body.about-page .goals-section {
     max-width: 1100px;
     margin: 60px auto;
     padding: 50px;
-    background: #fffaf0; /* Parchment white */
-    border: 2px solid #6e1e2e; /* Maroon border */
-    font-family: 'Fauna One', serif; /* Matching the rest of the page */
+    background: #fffaf0 !important; /* Parchment white */
+    border: 2px solid #6e1e2e !important; 
+    font-family: 'Fauna One', serif !important; 
     line-height: 1.9;
     color: #1a1a1a;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
 body.about-page .goals-section h2 {
