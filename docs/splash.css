@@ -8,7 +8,6 @@
 body {
     margin: 0;
     padding: 0;
-    /* Marble background - replace with your image name if different */
     background-color: #fdfaf1; 
     background-image: url('marble-texture.jpg'); 
     background-attachment: fixed;
@@ -24,22 +23,23 @@ body::before, body::after {
     content: "";
     position: fixed;
     top: 0;
-    width: 150px; 
-    height: 100vh;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    bottom: 0;      /* Pin to bottom for full length */
+    width: 160px;   
     z-index: 2000; 
+    background-size: 100% 100%; /* Stretches image to fit length */
+    background-repeat: no-repeat;
 }
 
 body::before {
     left: 0;
     background-image: url('column-left.png');
+    background-position: left top;
 }
 
 body::after {
     right: 0;
     background-image: url('column-right.png');
+    background-position: right top;
 }
 
 /* --- 2. NAVIGATION (Tyrian Purple & Bronze) --- */
@@ -61,7 +61,6 @@ body::after {
     font-family: "Cinzel", serif;
     font-variant: small-caps;
     font-size: 1.2rem;
-    letter-spacing: 1px;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -73,7 +72,6 @@ body::after {
     height: 350px;
     background: linear-gradient(rgba(59, 16, 32, 0.8), rgba(26, 54, 104, 0.7)), url('palace-bg.jpg');
     background-size: cover;
-    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,7 +85,7 @@ body::after {
     text-shadow: 4px 4px 0px #3b1020;
     margin: 0;
     text-align: center;
-    padding: 0 160px; /* Offset for the columns */
+    padding: 0 160px; /* Space so text doesn't hit columns */
 }
 
 /* --- 4. CONTENT TABLETS (Home, About, Corpus) --- */
@@ -99,12 +97,13 @@ body::after {
     border-radius: 4px; 
     box-shadow: 0 20px 40px rgba(0,0,0,0.3);
     overflow: hidden;
+    position: relative;
+    z-index: 10;
 }
 
 .split-container {
     display: flex;
     flex-direction: row;
-    align-items: stretch;
     min-height: 480px;
 }
 
@@ -118,7 +117,6 @@ body::after {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    line-height: 1.9;
 }
 
 .column-text h2 {
@@ -126,13 +124,13 @@ body::after {
     color: #741b47;
     border-bottom: 3px solid #b2945a;
     padding-bottom: 10px;
-    margin-top: 0;
 }
 
-.column-image {
-    flex: 0.8;
-    overflow: hidden;
-    border-left: 2px solid #6e1e2e;
+.column-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .column-image img {
@@ -171,14 +169,12 @@ body::after {
     max-width: 1200px;
     background: #4e342e; 
     border: 40px solid #3d2b1f;   
-    box-shadow: 0 60px 120px rgba(0,0,0,0.6);
 }
 
 .shelf-row {
     display: flex;
     align-items: flex-end; 
     justify-content: space-around; 
-    gap: 20px; 
     padding: 0 40px; 
     min-height: 480px;
     position: relative;
@@ -188,7 +184,12 @@ body::after {
 }
 
 .shelf-row::before {
-    z-index: 1; 
+    content: "";
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 45px;
+    background: #3d2b1f;
+    z-index: 1; /* Ledge stays behind items */
 }
 
 /* --- 6. LIBRARY ITEMS & 3D BOOKS --- */
@@ -197,8 +198,6 @@ body::after {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom center;
-    filter: drop-shadow(8px 10px 12px rgba(0,0,0,0.4));
-    flex-shrink: 0;
     transform: translateY(15px) translateZ(5px); 
     z-index: 10;
 }
