@@ -34,8 +34,8 @@ body {
 
 /* --- 2. THE GRAND LIBRARY (Analysis Page Only) --- */
 .grand-library {
-    background-color: #f4f1ea; /* Background wall behind the cabinet */
-    padding: 60px 0;
+    background-color: #f4f1ea; 
+    padding: 80px 0;
     display: flex;
     justify-content: center;
 }
@@ -43,44 +43,42 @@ body {
 /* THE CABINET FRAME (Walls and Top) */
 .bookshelf-frame {
     width: 95%;
-    max-width: 1300px;
-    background: #4e342e; /* Internal wood color */
-    border-left: 25px solid #3d2b1f;  /* Left Wall */
-    border-right: 25px solid #3d2b1f; /* Right Wall */
-    border-top: 30px solid #3d2b1f;   /* Top Wall */
-    box-shadow: 0 50px 100px rgba(0,0,0,0.5);
+    max-width: 1400px;
+    background: #4e342e; 
+    /* THICKER SIDE WALLS */
+    border-left: 60px solid #3d2b1f;  
+    border-right: 60px solid #3d2b1f; 
+    border-top: 50px solid #3d2b1f;   
+    box-shadow: 0 60px 120px rgba(0,0,0,0.6);
     margin: 0 auto;
 }
-
 .mini-header {
     background: #1a1a1a;
-    padding: 30px;
+    padding: 35px;
     text-align: center;
-    border-bottom: 4px solid #d4af37;
+    border-bottom: 2px solid rgba(255,255,255,0.1);
 }
 
 .mini-header p {
-    color: #d4af37; /* Academic Gold */
+    color: #ffffff; /* Explicitly White */
     font-family: 'Cinzel', serif;
-    font-weight: 700;
-    font-size: 1.4rem;
-    letter-spacing: 3px;
+    font-weight: 400; /* Cleaner weight */
+    font-size: 1.2rem;
+    letter-spacing: 4px;
     margin: 0;
     text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
-
 .shelf-row {
     display: flex;
     align-items: flex-end; 
     justify-content: center; 
-    gap: 30px; 
+    gap: 40px; 
     padding: 20px 40px 0px 40px; 
-    min-height: 460px;
+    min-height: 480px;
     position: relative;
     perspective: 2500px;
-    background: #fdfaf1; /* Inner shelf back-wall */
-    border-bottom: 35px solid #3d2b1f; /* The Wood Ledge */
+    background: #fdfaf1; 
+    border-bottom: 40px solid #3d2b1f; /* Thicker Ledge */
 }
 
 /* The Ledge Depth Effect */
@@ -100,8 +98,8 @@ body {
 
 /* --- 3. DECOR ITEMS (Uniform Size) --- */
 .decor-item {
-    width: 120px; 
-    height: 400px; /* Matched to Book Height */
+    width: 70px;  /* Matched to spine width */
+    height: 400px; /* Matched to book height */
     background-color: transparent !important;
     background-size: contain;
     background-repeat: no-repeat;
@@ -117,7 +115,7 @@ body {
 .dagger { background-image: url('dagger.jpg'); }
 .greek-vase { background-image: url('vase.jpg'); }
 .poison-vial { background-image: url('vial.jpg'); }
-.plantsss { background-image: url('plantss.jpg'); }
+.plantsss { background-image: url('plantss.jpg');}
 
 /* --- 4. THE 3D BOOKS --- */
 .book-3d {
@@ -142,7 +140,6 @@ body {
     font-weight: bold;
     font-size: 1.1rem;
     box-shadow: inset -5px 0 10px rgba(0,0,0,0.3);
-    border: 1px solid rgba(0,0,0,0.1);
 }
 
 .cover {
@@ -155,7 +152,7 @@ body {
     transform: rotateY(-90deg);
     opacity: 0;
     transition: all 0.5s ease;
-    box-shadow: 10px 10px 20px rgba(0,0,0,0.4);
+    box-shadow: 15px 10px 25px rgba(0,0,0,0.5);
 }
 
 .cover img {
