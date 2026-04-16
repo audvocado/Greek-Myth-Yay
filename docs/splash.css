@@ -354,9 +354,16 @@ body.home-page .column-image img {
 body.about-page .hero-collage {
     height: 350px;
     background-color: #3b1020;
+    
+    /* Updated background properties to prevent doubling */
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('about-header.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-bottom: 8px double #b2945a;
 }
 
