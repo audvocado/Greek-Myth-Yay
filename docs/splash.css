@@ -204,35 +204,38 @@ body {
     display: flex; 
     align-items: center; 
     justify-content: center;
-    
-    /* Vertical text for the translator names */
     writing-mode: vertical-rl;
+    
+    /* 1. ROUNDED EDGES (Spine side is more rounded) */
+    border-radius: 20px 4px 4px 20px; 
+    
+    /* 2. GOLD LEAF TYPOGRAPHY */
     font-family: 'Cinzel', serif;
     font-weight: 700;
     font-size: 1.1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+    color: #d4af37; /* Metallic Gold */
     
-    /* Layering the text on top of the image */
+    /* This shadow creates the "stamped into leather" look */
+    text-shadow: 
+        1px 1px 0px rgba(255, 255, 255, 0.2), 
+        -1px -1px 2px rgba(0, 0, 0, 0.8);
+    
+    /* 3. 3D TEXTURE & SHADING */
+    background-size: cover;
+    background-position: center;
     transform: translateZ(5px); 
     z-index: 30;
     
-    /* TEXT STYLE: Gold Leaf / Embossed effect */
-    color: #d4af37; 
-    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1), /* Slight "glint" */
-                 -1px -1px 2px rgba(0, 0, 0, 0.8);    /* Deep shadow for depth */
-
-    /* THE TEXTURE: Make sure background-size is 'cover' */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    /* SHADING: Adds a "rounded" look to the book spine */
-    box-shadow: inset -8px 0 15px rgba(0,0,0,0.6), 
-                inset 8px 0 15px rgba(0,0,0,0.2);
+    /* This gradient makes the flat image look like a curved cylinder */
+    box-shadow: 
+        inset -12px 0 20px rgba(0,0,0,0.7), 
+        inset 12px 0 15px rgba(0,0,0,0.3),
+        3px 0 10px rgba(0,0,0,0.4); 
 }
 
-/* Assign your images to each translator's spine */
+/* Individual Textures - NO COLORS HERE, let the .spine class */
 .murray-spine { background-image: url('spine-murray.jpg'); }
 .luschnig-spine { background-image: url('spine-luschnig.jpg'); }
 .cerrato-spine { background-image: url('spine-cerrato.jpg'); }
@@ -249,11 +252,6 @@ body {
 
 .cover img { width: 100%; height: 100%; object-fit: cover; }
 
-/* Spine Colors */
-.murray-spine { background-color: #3b1020 !important; color: #f7b7b2 !important; }
-.luschnig-spine { background-color: #6e1e2e !important; color: #f7b7b2 !important; }
-.cerrato-spine { background-color: #b24a5a !important; color: #ffffff !important; }
-.johnston-spine { background-color: #f7b7b2 !important; color: #3b1020 !important; }
 
 .book-3d:hover {
     width: 390px; 
