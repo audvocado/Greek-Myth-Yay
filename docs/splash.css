@@ -291,33 +291,36 @@ td {
 
 /* 1. Header Image (The Hero Section) */
 body.home-page .hero-collage {
-    height: 450px; /* Taller for a more grand entrance */
-    background-image: 
-        linear-gradient(rgba(59, 16, 32, 0.4), rgba(59, 16, 32, 0.4)), 
-        url('medea-header.jpg'); /* Replace with your grand header image */
+    height: 350px; 
+    background-color: #3b1020; 
+    background-image: url('medea-header.jpg'); 
     background-size: cover;
-    background-position: center 20%; /* Adjusts focus of the photo */
-    border-bottom: 8px ridge #b2945a;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 6px solid #b2945a;
 }
 
 /* 2. Greek Style Header Text */
 body.home-page .main-title {
     font-family: 'Cinzel', serif;
     font-weight: 700;
-    font-size: 5rem;
+    font-size: 2.8rem; /* Scaled down for better fit */
     text-transform: uppercase;
-    letter-spacing: 8px;
+    letter-spacing: 3px;
+    line-height: 1.2;
+    text-align: center;
+    max-width: 850px;
+    padding: 0 20px;
     
-    /* Gold Leaf Gradient Effect */
-    background: linear-gradient(to bottom, #fdfaf1 0%, #d4af37 50%, #b2945a 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /* The Gold Outline Effect */
+    color: #000000; 
+    -webkit-text-stroke: 1.2px #d4af37; 
     
-    /* Deep Shadow for readability against the image */
-    filter: drop-shadow(4px 4px 2px rgba(0,0,0,0.8));
-    margin: 0;
-}
-
+    /* Adds a little "lift" so the black doesn't get lost */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5); 
+} 
 /* 3. The Text Boxes (The 'Tablets') */
 body.home-page .split-container {
     max-width: 900px;
@@ -329,10 +332,14 @@ body.home-page .split-container {
 
 /* 4. Column Images sizing */
 body.home-page .column-image {
-    flex: 1; /* Gives the new images more room */
-    border: 10px solid #fffaf0; /* Creates a 'framed' look */
+    background-color: #eee; /* Light grey placeholder while loading */
+    min-height: 300px;
+    display: flex;
 }
 
 body.home-page .column-image img {
-    filter: sepia(0.2) contrast(1.1); /* Gives them a slightly aged, classic look */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills the box without stretching */
+    display: block;
 }
