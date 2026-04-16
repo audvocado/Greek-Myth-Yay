@@ -25,26 +25,48 @@ body {
     font-variant: small-caps; font-size: 1.2rem;
 }
 
-/* --- 3. CONTENT BOXES (Goals, Tables, Split Containers) --- */
+/* --- 3. HERO SECTIONS (THE "SKINNY" FIX) --- */
+.hero-collage {
+    width: 100%;
+    height: 450px; /* Increased height to make it "longer" vertically */
+    background-size: cover; 
+    background-position: center;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    border-bottom: 10px double #b2945a; 
+}
+
+.main-title {
+    font-family: 'Cinzel', serif; 
+    font-size: 4rem; /* Slightly larger for the bigger header */
+    color: #fdfaf1; 
+    text-shadow: 4px 4px 0px #3b1020;
+    text-align: center; 
+    margin: 0;
+}
+
+/* --- 4. CONTENT BOXES --- */
 .split-container, .table-container, .goals-section, .text-box {
-    max-width: 950px; margin: 60px auto;   
+    max-width: 1100px; /* Widened the containers for better flow */
+    margin: 60px auto;   
     background: #fffaf0; border: 2px solid #6e1e2e; 
     box-shadow: 0 20px 40px rgba(0,0,0,0.3);
     position: relative; z-index: 10;
 }
 .goals-section, .text-box { padding: 50px; line-height: 1.9; }
-.split-container { display: flex; min-height: 480px; }
+.split-container { display: flex; min-height: 500px; }
 .column-text { flex: 1.2; padding: 50px; line-height: 1.8; }
 .column-image { flex: 0.8; }
 .column-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-/* --- 4. THE GRAND LIBRARY --- */
+/* --- 5. THE GRAND LIBRARY --- */
 .grand-library {
     background-color: #d1e3f0; padding: 80px 0;
     display: flex; justify-content: center;
 }
 .bookshelf-frame {
-    width: 90%; max-width: 1200px;
+    width: 95%; max-width: 1300px;
     background: #4e342e; border: 40px solid #3d2b1f;    
 }
 .shelf-row {
@@ -54,11 +76,10 @@ body {
     border-bottom: 45px solid #3d2b1f; 
 }
 
-/* --- 5. 3D BOOKS (Grounded & Symmetrical) --- */
+/* --- 6. 3D BOOKS (Grounded & Symmetrical) --- */
 .book-3d {
     position: relative; width: 90px; height: 400px; 
     transform-style: preserve-3d;
-    /* Pushed down 45px to sit on the wood floor */
     transform: translateY(45px) translateZ(10px);
     transition: all 0.6s ease; z-index: 20;
 }
@@ -88,15 +109,14 @@ body {
 .cerrato-spine { background-image: url('spine-cerrato.jpg') !important; }
 .johnston-spine { background-image: url('spine-johnston.jpg') !important; }
 
-/* --- 6. DECOR ITEMS (Grounded at 45px) --- */
+/* --- 7. DECOR ITEMS (Grounded) --- */
 .decor-item { 
     width: 210px; height: 400px; 
     background-size: contain; background-repeat: no-repeat; 
     background-position: bottom; 
-    transform: translateY(45px); /* Matches wood thickness */
+    transform: translateY(45px); 
     z-index: 10; 
 }
-
 .lyre { background-image: url('lyre.jpg'); width: 280px !important; transform: translateY(45px) scale(1.1); }
 .statue-head { background-image: url('statue.jpg'); background-size: 70%; transform: translateY(45px); }
 .greek-vase { background-image: url('vase.jpg'); transform: translateY(45px); }
@@ -104,12 +124,11 @@ body {
 .poison-vial { background-image: url('vial.jpg'); transform: translateY(45px); }
 .plantsss { background-image: url('plantss.jpg'); transform: translateY(45px); }
 
-/* --- 7. TABLES --- */
+/* --- 8. TABLES & HIGHLIGHTS --- */
 table { width: 100%; border-collapse: collapse; }
 th { text-align: left; border-bottom: 3px solid #b2945a; padding: 15px; font-family: 'Cinzel', serif; }
 td { padding: 15px; border-bottom: 1px solid #eee; }
 
-/* --- 8. PAGE HEADERS & HIGHLIGHTS --- */
 body.home-page .hero-collage { background-image: url('medea-header.jpg'); }
 body.about-page .hero-collage { background-image: url('about-header.jpg'); }
 body.corpus-page .hero-collage { background-image: url('corpus-header.jpg'); }
