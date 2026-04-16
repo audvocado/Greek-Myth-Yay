@@ -209,7 +209,14 @@ body {
 
 .lyre { 
     background-image: url('lyre.jpg'); 
-    background-size: 80%; /* Adjust if the lyre looks too big/small */
+    /* 1. Increase the container width (default was 210px) */
+    width: 280px !important; 
+    
+    /* 2. Scale the image up (default was 80%) */
+    background-size: 100% !important; 
+    
+    /* 3. Optional: Nudge it if it's hitting the shelf too hard */
+    transform: translateY(15px) translateZ(5px) scale(1.1);
 }
 
 .statue-head { background-image: url('statue.jpg'); background-size: 70%; }
