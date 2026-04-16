@@ -100,8 +100,8 @@ body {
 
 /* --- 4. DECOR ITEMS (3/4 Size of Book Cover) --- */
 .decor-item {
-    width: 210px;  /* 3/4 of the 280px book cover */
-    height: 400px; /* Kept at same height for shelf alignment */
+    width: 210px;  
+    height: 400px; 
     background-color: transparent !important;
     background-size: contain;
     background-repeat: no-repeat;
@@ -109,10 +109,16 @@ body {
     filter: drop-shadow(8px 10px 12px rgba(0,0,0,0.4));
     flex-shrink: 0;
     z-index: 5;
+    /* MOVE ITEMS DOWN: This shifts them onto the wood ledge so they don't float */
+    transform: translateY(15px); 
+}
+
+.statue-head { 
+    background-image: url('statue.jpg'); 
+    background-size: 60%; /* Shrinks the statue specifically */
 }
 
 .plant { background-image: url('plant.jpg'); }
-.statue-head { background-image: url('statue.jpg'); }
 .scrolls { background-image: url('scrolls.jpg'); }
 .dagger { background-image: url('dagger.jpg'); }
 .greek-vase { background-image: url('vase.jpg'); }
@@ -121,12 +127,13 @@ body {
 
 /* --- 5. THE 3D BOOKS (4/4 Size) --- */
 .book-3d {
-    position: relative;
-    width: 70px;   /* Spine width */
-    height: 400px; 
-    transform-style: preserve-3d;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-    z-index: 20;
+    /* Shifts books down onto the ledge as well */
+    transform: translateY(15px);
+}
+
+.book-3d:hover {
+    /* Adjust hover to keep them grounded while expanding */
+    transform: translateY(15px) translateZ(50px);
 }
 
 .spine {
