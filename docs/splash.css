@@ -4,7 +4,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #efbbff; /* Original Lavender for general pages */
+    background-color: #efbbff; /* Original Lavender */
     color: #330033;
     font-family: 'Fauna One', serif;
 }
@@ -50,7 +50,7 @@ body {
     text-transform: uppercase;
 }
 
-/* --- 3. THE GRAND LIBRARY (Analysis Page Only) --- */
+/* --- 3. THE GRAND LIBRARY (Analysis Page) --- */
 .grand-library {
     background-color: #d1e3f0; /* Soft Light Blue Wall */
     padding: 80px 0;
@@ -98,10 +98,10 @@ body {
     z-index: 1;
 }
 
-/* --- 4. DECOR ITEMS (Matched to Book Size) --- */
+/* --- 4. DECOR ITEMS (3/4 Size of Book Cover) --- */
 .decor-item {
-    width: 280px;  /* Now matched to the width of an open book cover */
-    height: 400px; /* Uniform height with books */
+    width: 210px;  /* 3/4 of the 280px book cover */
+    height: 400px; /* Kept at same height for shelf alignment */
     background-color: transparent !important;
     background-size: contain;
     background-repeat: no-repeat;
@@ -119,10 +119,10 @@ body {
 .poison-vial { background-image: url('vial.jpg'); }
 .plantsss { background-image: url('plantss.jpg'); }
 
-/* --- 5. THE 3D BOOKS --- */
+/* --- 5. THE 3D BOOKS (4/4 Size) --- */
 .book-3d {
     position: relative;
-    width: 70px;   /* Closed width (spine only) */
+    width: 70px;   /* Spine width */
     height: 400px; 
     transform-style: preserve-3d;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
@@ -148,7 +148,7 @@ body {
     position: absolute;
     top: 0;
     left: 70px; 
-    width: 280px;
+    width: 280px; /* 4/4 Base width */
     height: 100%;
     transform-origin: left;
     transform: rotateY(-90deg);
@@ -164,7 +164,7 @@ body {
 }
 
 .book-3d:hover {
-    width: 350px; /* Expands to Spine + Cover width */
+    width: 350px; /* Spine (70) + Cover (280) */
     transform: translateZ(50px);
     z-index: 100;
 }
