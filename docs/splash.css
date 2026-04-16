@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Fauna+One&display=swap');
 
-/* --- 1. GLOBAL THEME & NAV (Restored Lavender) --- */
+/* --- 1. GLOBAL THEME & NAV --- */
 body {
     margin: 0;
     padding: 0;
@@ -34,39 +34,56 @@ body {
 
 /* --- 2. THE GRAND LIBRARY (Analysis Page Only) --- */
 .grand-library {
-    background-color: #f4f1ea; /* Light, neutral parchment wall */
-    background-image: radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(0,0,0,0.05) 100%);
+    background-color: #f4f1ea; /* Background wall behind the cabinet */
     padding: 60px 0;
     display: flex;
-    flex-direction: column;
-    gap: 0;
+    justify-content: center;
+}
+
+/* THE CABINET FRAME (Walls and Top) */
+.bookshelf-frame {
+    width: 95%;
+    max-width: 1300px;
+    background: #4e342e; /* Internal wood color */
+    border-left: 25px solid #3d2b1f;  /* Left Wall */
+    border-right: 25px solid #3d2b1f; /* Right Wall */
+    border-top: 30px solid #3d2b1f;   /* Top Wall */
+    box-shadow: 0 50px 100px rgba(0,0,0,0.5);
+    margin: 0 auto;
 }
 
 .mini-header {
     background: #1a1a1a;
-    color: #d4af37;
+    padding: 30px;
     text-align: center;
-    padding: 20px;
+    border-bottom: 4px solid #d4af37;
+}
+
+.mini-header p {
+    color: #d4af37; /* Academic Gold */
     font-family: 'Cinzel', serif;
-    border-bottom: 5px double #3d2b1f;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    margin: 0;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .shelf-row {
     display: flex;
     align-items: flex-end; 
     justify-content: center; 
-    gap: 100px; /* Space for books to "open" without hitting decor */
-    padding: 20px 5% 0px 5%; /* Bottom padding is 0 so items touch the wood */
-    min-height: 480px;
+    gap: 30px; 
+    padding: 20px 40px 0px 40px; 
+    min-height: 460px;
     position: relative;
     perspective: 2500px;
-    /* The Realistic Wood Ledge from your image */
-    border-bottom: 25px solid #5d4037; 
-    box-shadow: 0 15px 15px rgba(0,0,0,0.2); /* Shadow under the shelf */
+    background: #fdfaf1; /* Inner shelf back-wall */
+    border-bottom: 35px solid #3d2b1f; /* The Wood Ledge */
 }
 
+/* The Ledge Depth Effect */
 .shelf-row::before {
     content: "";
     position: absolute;
@@ -74,36 +91,38 @@ body {
     left: 0;
     width: 100%;
     height: 35px;
-    background: #795548; /* Lighter wood for the top surface */
+    background: #5d4037; 
     transform: rotateX(60deg);
     transform-origin: bottom;
     box-shadow: inset 0 10px 20px rgba(0,0,0,0.3);
+    z-index: 1;
 }
 
-/* --- 3. DECOR ITEMS (Fixed & Still) --- */
+/* --- 3. DECOR ITEMS (Uniform Size) --- */
 .decor-item {
-    z-index: 10;
-    filter: drop-shadow(2px 5px 5px rgba(0,0,0,0.4));
+    width: 120px; 
+    height: 400px; /* Matched to Book Height */
     background-color: transparent !important;
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: bottom center;
+    filter: drop-shadow(4px 6px 8px rgba(0,0,0,0.4));
+    flex-shrink: 0;
+    z-index: 5;
 }
 
-/* Items - Check filenames: .jpg vs .png matters! */
-.statue-head { width: 180px; height: 300px; background-image: url('statue.jpg'); }
-.gold-coin { width: 80px; height: 80px; background-image: url('lyre.jpg'); }
-.hanging-plant { width: 220px; height: 450px; background-image: url('plant.jpg'); }
-.greek-vase { width: 150px; height: 280px; background-image: url('vase.jpg'); }
-.poison-vial { width: 100px; height: 150px; background-image: url('vial.jpg'); }
-.dagger { width: 250px; height: 100px; background-image: url('dagger.jpg'); }
-.scroll-stack { width: 180px; height: 200px; background-image: url('scrolls.jpg'); }
-.laurel-wreath { width: 150px; height: 150px; background-image: url('plantss.jpg'); }
+.plant { background-image: url('plant.jpg'); }
+.statue-head { background-image: url('statue.jpg'); }
+.scrolls { background-image: url('scrolls.jpg'); }
+.dagger { background-image: url('dagger.jpg'); }
+.greek-vase { background-image: url('vase.jpg'); }
+.poison-vial { background-image: url('vial.jpg'); }
+.plantsss { background-image: url('plantss.jpg'); }
 
 /* --- 4. THE 3D BOOKS --- */
 .book-3d {
     position: relative;
-    width: 60px;   
+    width: 70px;   
     height: 400px; 
     transform-style: preserve-3d;
     transition: all 0.6s ease-in-out;
@@ -113,7 +132,7 @@ body {
 .spine {
     position: absolute;
     top: 0; left: 0;
-    width: 60px;
+    width: 70px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -121,33 +140,34 @@ body {
     writing-mode: vertical-rl;
     font-family: 'Cinzel', serif;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.1rem;
     box-shadow: inset -5px 0 10px rgba(0,0,0,0.3);
+    border: 1px solid rgba(0,0,0,0.1);
 }
 
 .cover {
     position: absolute;
     top: 0;
-    left: 60px; 
+    left: 70px; 
     width: 280px;
     height: 100%;
     transform-origin: left;
     transform: rotateY(-90deg);
     opacity: 0;
     transition: all 0.5s ease;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.4);
 }
 
 .cover img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top center;
 }
 
 .book-3d:hover {
-    width: 340px; 
-    transform: translateZ(20px);
+    width: 350px; 
+    transform: translateZ(30px);
+    z-index: 100;
 }
 
 .book-3d:hover .cover {
@@ -177,23 +197,6 @@ body {
     color: #efbbff;
     text-shadow: 3px 3px 0px #366f91;
     margin: 0;
-}
-
-.trans1-hero {
-    background: url('header-image.jpg') no-repeat center 20%;
-    background-size: cover;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 5px solid #d4af37;
-}
-
-.trans1-hero .main-title {
-    color: #000000;
-    background: rgba(255, 255, 255, 0.3);
-    padding: 15px 30px;
-    border-radius: 5px;
 }
 
 /* --- 6. INTERACTIVE TEXT ENGINE --- */
