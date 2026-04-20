@@ -240,9 +240,10 @@ body.cerrato-page .hero-collage {
 /* --- 12. JOHNSTON SPECIFIC STYLES --- */
 
 .trans4-hero {
+    /* 1. MOVE IMAGE DOWN: Changed 'center' to '50% 80%' to push the view down */
     background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('johnston-header.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: 50% 80%; 
 }
 
 
