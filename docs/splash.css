@@ -139,6 +139,11 @@ td { padding: 15px; border-bottom: 1px solid #eee; }
 .marriage, .violence, .autonomy, .patriarchy, .family, .motherhood, .alone { transition: background-color 0.3s ease; padding: 2px 4px; }
 body.show-marriage .marriage { background-color: #fdfd96; color: black; }
 body.show-violence .violence { background-color: #ffb3b3; color: black; }
-/* ... (Keep other highlights) */
+body.show-autonomy .autonomy { background-color: #b3ffb3; color: black; }
+body.show-patriarchy .patriarchy { background-color: #ffd1dc; color: black; }
+body.show-family .family { background-color: #cdecff; color: black; }
+body.show-motherhood .motherhood { background-color: #e0bbe4; color: black; }
+body.show-alone .alone { background-color: #d3d3d3; color: black; }
+
 
 #scrollTopBtn { position: fixed; bottom: 20px; right: 20px; background: #3b1020; color: white; padding: 15px; border-radius: 50%; cursor: pointer; z-index: 3000; }
