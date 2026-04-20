@@ -1,31 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- I am using "true" as a way of citing clear 'loss of autonomy' or 'isolation'.-->
 <root>
-    <line>Of all creatures that have life and reason</line>
-    <line>we women are the sorriest lot:</line>
-    <line>first we must at a great expenditure of money</line>
-    <line>buy a husband and even take on a master</line>
-    <line>over our body: this evil is more galling than the first.</line>
-    <line>Here is the most challenging contest, whether we will get a bad man</line>
-    <line>or a good one. Besides, divorce is unsavory</line>
-    <line>for a woman and it is not possible to say no to one's husband.</line>
-    <line>And when she comes into new customs and rules</line>
-    <line>a woman must be a prophet of what she could never learn at home:</line>
-    <line>how best to deal with her marriage partner;</line>
-    <line>and if we get it worked out well and a husband shares</line>
-    <line>our life with us, and he bears the yoke without violence,</line>
-    <line>life is to be envied. Otherwise we are better off dead.</line>
-    <line>But the man, when he is bored with things at home</line>
-    <line>he can go out to ease the weariness of his heart.[13]</line>
-    <line>But we have just one person to look to.</line>
-    <line>They say that we live a life free of danger</line>
-    <line>at home while they face battle with the spear.</line>
-    <line>How wrong they are. I would rather stand three times</line>
-    <line>in the line of battle than once bear a child.</line>
-    <line>But the same story does not apply to you and me.</line>
-    <line>You have this city and your father's home,</line>
-    <line>enjoyment of life, and the companionship of friends,</line>
-    <line>but, alone and without a city, I am abused</line>
-    <line>by my husband, carried off as plunder from a foreign land,</line>
-    <line>I have no mother, no brother, no relative</line>
-    <line>to offer me a safe haven from this disaster.</line>
+    <meta>
+    <line nu="230">Of all creatures that have life and reason</line>
+    <line nu="231"><shame>we women are the sorriest lot</shame></line>
+    <line nu="232">first we must at a great expenditure of money</line>
+    <line nu="233"><autonomy loss="true">buy a husband and even take on a master</autonomy></line>
+    <line nu="234">over our body: this evil is more galling than the first.</line>
+    <line nu="235"><patriarchy purchase_woman="true">Here is the most challenging contest, whether we will get a bad man</patriarchy></line>
+    <line nu="236">or a good one.<marriage non_consensual="implied">Besides, divorce is unsavory</marriage></line>
+    <line nu="237"><autonomy los="true">for a woman and it is not possible to say no to one's husband.</autonomy></line>
+    <line nu="238">And when she comes into new customs and rules</line>
+    <line nu="239"><family>a woman must be a prophet of what she could never learn at home:</family></line>
+    <line nu="240"><motherhood birth="implied">how best to deal with her marriage partner;</motherhood></line>
+    <line nu="241">and if we get it worked out well and a husband shares</line>
+    <line nu="242">our life with us, and<violence domestic="avoided">he bears the yoke without violence,</violence></line>
+    <line nu="243"><autonomy gain="conditional">life is to be envied. Otherwise we are better off dead.</autonomy></line>
+    <line nu="244"><patriarchy faithfulnes="double-standard">But the man, when he is bored with things at home</patriarchy></line>
+    <line nu="245">he can go out to ease the weariness of his heart.</line>
+    <line nu="246"><alone isolated="true">But we have just one person to look to.</alone></line>
+    <line nu="247"><motherhood birth="idealized">They say that we live a life free of danger</motherhood></line>
+    <line nu="248">at home while they face battle with the spear.</line>
+    <line nu="249"><autonomy gain="defiant">How wrong they are. I would rather stand three times</autonomy></line>
+    <line nu="250"><motherhood birth="burdensome">in the line of battle than once bear a child.</motherhood></line>
+<!-- The translator of this text extends Medea's rich monologue further. 
+     This is important to include! -->
+    <line nu="251"><autonomy loss="contrast">But the same story does not apply to you and me.</autonomy></line>
+    <line nu="252"><patriarchy privilege="male">You have this city and your father's home,</patriarchy></line>
+    <line nu="253">enjoyment of life, and the companionship of friends,</line>
+    <line nu="254"><alone isolated="true" alienated="true">but, alone and without a city,</alone> I am abused</line>
+    <line nu="255"><violence domestic="true">by my husband, carried off as plunder from a foreign land,</violence></line>
+    <line nu="256"><alone isolated="true">I have no mother, no brother, no relative</alone></line>
+    <line nu="257"><alone alienated="true">to offer me a safe haven from this disaster.</alone></line>
+  
+<!-- Copyright -->
+  This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 2.5 License.
+    </meta>
 </root>
