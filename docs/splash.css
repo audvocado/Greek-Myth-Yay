@@ -252,4 +252,33 @@ body.cerrato-page .hero-collage {
     padding: 0;
 }
 
+
+.viz-container {
+    max-width: 1100px;
+    margin: 40px auto; /* Centers it and adds space from the text box */
+    padding: 0 20px;
+}
+
+.viz-placeholder {
+    width: 100%;
+    height: 300px; /* Gives it a "boxy" feel for charts */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 250, 240, 0.6); /* Slight transparency */
+    border: 3px double #b2945a; /* The double gold border */
+    border-radius: 8px;
+    box-shadow: inset 0 0 20px rgba(178, 148, 90, 0.1);
+}
+
+.viz-placeholder p {
+    font-family: 'Cinzel', serif;
+    color: #b2945a;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0.7;
+}
+
 #scrollTopBtn { position: fixed; bottom: 20px; right: 20px; background: #3b1020; color: white; padding: 15px; border-radius: 50%; cursor: pointer; z-index: 3000; }
