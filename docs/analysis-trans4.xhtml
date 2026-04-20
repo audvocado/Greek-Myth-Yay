@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>Analysis: Ian Johnston</title>
+        <link rel="stylesheet" type="text/css" href="splash.css" />
+        <script type="text/javascript">
+            function toggleHighlight(category) {
+                document.body.classList.toggle('show-' + category);
+            }
+
+            function clearAll() {
+                const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach(cb => cb.checked = false);
+                const categories = ['marriage', 'violence', 'autonomy', 'patriarchy', 'family', 'motherhood', 'alone'];
+                categories.forEach(cat => document.body.classList.remove('show-' + cat));
+            }
+        </script>
+    </head>
+    <body class="johnston-page">
+        <div class="top-bar">
+            <a href="index.xhtml" class="nav-link">Home</a>
+            <a href="about.xhtml" class="nav-link">About</a>
+            <a href="corpus.xhtml" class="nav-link">Corpus</a>
+            <a href="analysis.xhtml" class="nav-link">Analysis</a>
+        </div>
+        
+        <div class="hero-collage trans4-hero">
+            <h1 class="main-title">Ian Johnston Translation</h1>
+        </div>
+        
+        <div class="split-container">
+            <aside class="controls">
+                <h3>Analysis Filters</h3>
+                <div class="control-group">
+                    <h4>Themes</h4>
+                    <label><input type="checkbox" onclick="toggleHighlight('marriage')" /> Marriage</label><br/>
+                    <label><input type="checkbox" onclick="toggleHighlight('violence')" /> Violence</label><br/>
+                    <label><input type="checkbox" onclick="toggleHighlight('autonomy')" /> Autonomy</label><br/>
+                    <label><input type="checkbox" onclick="toggleHighlight('patriarchy')" /> Patriarchy</label><br/>
+                    <label><input type="checkbox" onclick="toggleHighlight('family')" /> Family</label><br/>
+                    <label><input type="checkbox" onclick="toggleHighlight('motherhood')" /> Motherhood</label><br/>
+                    <label><input type="checkbox" onclick="toggleHighlight('alone')" /> Alone/Isolation</label>
+                </div>
+                <br/>
+                <button type="button" onclick="clearAll()">Clear Highlights</button>
+            </aside>
+            
+            <div class="column-text">
+                <h2>Textual Markup: Johnston</h2>
+                <p>Use the sidebar to toggle thematic layers. Hover over highlighted text to see schema metadata.</p>
+                
+                <div class="translation-text">
+                    <div class="line"><span class="line-nu">230</span> Of all things with life and understanding,</div>
+                    <div class="line"><span class="line-nu">231</span> <span class="patriarchy">we women are the most unfortunate.</span></div>
+                    <div class="line"><span class="line-nu">232</span> <span class="marriage" title="non_consensual: coercion"><span class="autonomy" title="loss: woman"><span class="patriarchy"><span class="family">First, we need a husband,</span></span></span></span> someone we get</div>
+                    <div class="line"><span class="line-nu">233</span> for an excessive price. He then becomes</div>
+                    <div class="line"><span class="line-nu">234</span> <span class="autonomy" title="loss: woman"><span class="patriarchy" title="purchase_woman: object">the ruler of our bodies.</span></span> And this misfortune</div>
+                    <div class="line"><span class="line-nu">235</span> adds still more troubles to the grief we have.</div>
+                    <div class="line"><span class="line-nu">236</span> Then comes the crucial struggle: <span class="marriage">this husband</span></div>
+                    <div class="line"><span class="line-nu">237</span> we have selected, is he good or bad?</div>
+                    <div class="line"><span class="line-nu">238</span> <span class="marriage"><span class="family">For a divorce loses women all respect,</span></span></div>
+                    <div class="line"><span class="line-nu">239</span> yet <span class="marriage" title="non_consensual: coercion"><span class="autonomy" title="loss: woman"><span class="patriarchy" title="purchase_woman: object">we can’t refuse to take</span> a husband.</span></span></div>
+                    <div class="line"><span class="line-nu">240</span> Then, <span class="marriage">when she goes into her husband’s home,</span></div>
+                    <div class="line"><span class="line-nu">241</span> with its new rules and different customs,</div>
+                    <div class="line"><span class="line-nu">242</span> <span class="patriarchy">she needs a prophet’s skill to sort out the man</span></div>
+                    <div class="line"><span class="line-nu">243</span> <span class="autonomy" title="loss: woman">whose bed she shares.</span> She can’t learn that at home.</div>
+                    <div class="line"><span class="line-nu">244</span> Once we’ve worked hard at this, and with success,</div>
+                    <div class="line"><span class="line-nu">245</span> <span class="marriage">our husband accepts the marriage yoke</span></div>
+                    <div class="line"><span class="line-nu">246</span> and lives in peace—an enviable life.</div>
+                    <div class="line"><span class="line-nu">247</span> <span class="marriage">But if the marriage doesn’t work,</span> <span class="patriarchy">then death</span></div>
+                    <div class="line"><span class="line-nu">248</span> <span class="patriarchy">is much to be preferred.</span> <span class="alone" title="isolated: man">When the man tires</span></div>
+                    <div class="line"><span class="line-nu">249</span> <span class="alone" title="shame: man">of the company he keeps at home, he leaves,</span></div>
+                    <div class="line"><span class="line-nu">250</span> seeking relief for his distress elsewhere,</div>
+                    <div class="line"><span class="line-nu">251</span> outside the home. He gets his satisfaction</div>
+                    <div class="line"><span class="line-nu">252</span> with some male friend or someone his own age.</div>
+                    <div class="line"><span class="line-nu">253</span> <span class="autonomy" title="loss: woman"><span class="patriarchy" title="faithfulness: female"><span class="alone" title="isolated: woman">We women have to look at just one man.</span></span></span></div>
+                    <div class="line"><span class="line-nu">254</span> <span class="patriarchy">Men tell us we live safe and secure at home,</span></div>
+                    <div class="line"><span class="line-nu">255</span> <span class="violence">while they must go to battle with their spears.</span></div>
+                    <div class="line"><span class="line-nu">256</span> How stupid they are! I’d rather stand there</div>
+                    <div class="line"><span class="line-nu">257</span> <span class="violence">three times in battle holding up my shield</span></div>
+                    <div class="line"><span class="line-nu">258</span> <span class="family"><span class="motherhood" title="birth: comparison">than give birth once.</span></span> But your story and mine</div>
+                    <div class="line"><span class="line-nu">259</span> are not the same. <span class="patriarchy">For you have a city,</span></div>
+                    <div class="line"><span class="line-nu">260</span> <span class="patriarchy"><span class="family">you have your father’s house,</span> enjoy your life</span></div>
+                    <div class="line"><span class="line-nu">261</span> <span class="patriarchy">with friends for company.</span> <span class="patriarchy"><span class="alone" title="alienated: woman">But I’m alone.</span></span></div>
+                    <div class="line"><span class="line-nu">262</span> <span class="patriarchy"><span class="alone" title="isolated: woman">I have no city, and <span class="violence" title="domestic: woman">I’m being abused</span></span></span></div>
+                    <div class="line"><span class="line-nu">263</span> <span class="marriage">by my own husband.</span> <span class="autonomy" title="loss: woman"><span class="patriarchy">I was carried off,</span></span></div>
+                    <div class="line"><span class="line-nu">264</span> <span class="patriarchy" title="purchase_woman: object">a trophy from a barbarian land.</span></div>
+                    <div class="line"><span class="line-nu">265</span> <span class="patriarchy" title="purchase_woman: object"><span class="family"><span class="alone"><span class="motherhood">I have no mother,</span> brother, or relation</span></span></span></div>
+                    <div class="line"><span class="line-nu">266</span> <span class="patriarchy">to shelter with in this extremity.</span></div>
+                </div>
+            </div> 
+        </div>
+    </body>
+</html>

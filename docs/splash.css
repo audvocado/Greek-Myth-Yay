@@ -237,4 +237,18 @@ body.cerrato-page .hero-collage {
     width: 100%;
 }
 
+/* --- 12. JOHNSTON SPECIFIC STYLES --- */
+
+.trans4-hero {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('johnston-header.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.translation-text span span {
+    border-radius: 0; /* Keeps nested highlights from looking messy */
+    padding: 0;
+}
+
 #scrollTopBtn { position: fixed; bottom: 20px; right: 20px; background: #3b1020; color: white; padding: 15px; border-radius: 50%; cursor: pointer; z-index: 3000; }
