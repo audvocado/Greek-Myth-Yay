@@ -283,7 +283,7 @@ body.cerrato-page .hero-collage {
     opacity: 0.7;
 }
 
-/* --- 15. FLOATING ARTIFACTS (Margin Version) --- */
+/* --- 15. FLOATING ARTIFACTS (Micro-Margin Version) --- */
 .artifact-layer {
     position: fixed;
     top: 0;
@@ -296,26 +296,25 @@ body.cerrato-page .hero-collage {
 
 .art-container {
     position: absolute;
-    /* Bobbing is handled by JS, but we keep the container logic */
 }
 
 .artifact {
-    width: 80px;  /* Made them tiny */
-    height: 80px; 
+    width: 55px;  /* Tiny, elegant size */
+    height: 55px; 
     object-fit: cover;
     border-radius: 50%;
-    border: 2px solid #b2945a; /* Thinner border for smaller size */
-    box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
-    opacity: 0.7; /* Made them a bit more subtle */
+    border: 1.5px solid #b2945a; /* Thinner border for the smaller scale */
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    opacity: 0.65; /* Slightly more translucent so they blend into the background */
     transition: transform 0.15s ease-out;
 }
 
-/* Spread out to the extreme margins */
-.sq-shield   { top: 5%;  left: 2%; }
-.statue      { top: 45%; right: 2%; }
-.harp        { top: 85%; left: 3%; }
-.hourglass   { top: 12%; right: 3%; }
-.dagger      { top: 80%; right: 2%; }
-.sil-shield  { top: 60%; left: 1%; }
+/* Extreme Margin Positions */
+.sq-shield   { top: 8%;  left: 1.5%; }
+.statue      { top: 48%; right: 1.5%; }
+.harp        { top: 88%; left: 2%; }
+.hourglass   { top: 15%; right: 2%; }
+.dagger      { top: 82%; right: 1.5%; }
+.sil-shield  { top: 65%; left: 1%; }
 
 #scrollTopBtn { position: fixed; bottom: 20px; right: 20px; background: #3b1020; color: white; padding: 15px; border-radius: 50%; cursor: pointer; z-index: 3000; }
