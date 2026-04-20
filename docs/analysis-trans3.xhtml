@@ -1,9 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
-        <title></title>
+        <title>Analysis: Lisa Cerrato</title>
+        <link rel="stylesheet" type="text/css" href="splash.css" />
+        <script type="text/javascript">
+            function toggleHighlight(category) {
+                document.body.classList.toggle('show-' + category);
+            }
+
+            function clearAll() {
+                const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach(cb => cb.checked = false);
+                const categories = ['marriage', 'violence', 'autonomy', 'patriarchy', 'family', 'motherhood', 'alone'];
+                categories.forEach(cat => document.body.classList.remove('show-' + cat));
+            }
+        </script>
     </head>
-    <body>
+    <body class="cerrato-page">
+        <div class="top-bar">
+            <a href="index.xhtml" class="nav-link">Home</a>
+            <a href="about.xhtml" class="nav-link">About</a>
+            <a href="corpus.xhtml" class="nav-link">Corpus</a>
+            <a href="analysis.xhtml" class="nav-link">Analysis</a>
+        </div>
+        
+        <div class="hero-collage trans3-hero">
+            <h1 class="main-title">Lisa Cerrato Translation</h1>
+        </div>
+        
+        <div class="split-container">
+            <aside class="controls">
+                <h3>Analysis Filters</h3>
+                <div class="control-group">
+                    <h4>Themes</h4>
+                    <label><input type="checkbox" onclick="toggleHighlight('marriage')" /> Marriage</label><br/>
+                    <label><input type="checkbox" onclick="toggleHighlight('violence')" /> Violence</label><br/>
+                    <label><input type="checkbox" onclick="toggleHighlight('autonomy')" /> Autonomy</label><br/>
+                    <label><input type="checkbox" onclick="toggleHighlight('patriarchy')" /> Patriarchy</label><br/>
+                    <label><input type="checkbox" onclick="toggleHighlight('family')" /> Family</label><br/>
+                    <label><input type="checkbox" onclick="toggleHighlight('motherhood')" /> Motherhood</label><br/>
+                    <label><input type="checkbox" onclick="toggleHighlight('alone')" /> Alone/Isolation</label>
+                </div>
+                <br/>
+                <button type="button" onclick="clearAll()">Clear Highlights</button>
+            </aside>
+            
+            <div class="column-text">
+                <h2>Textual Markup: Cerrato</h2>
+                <p>Click the checkboxes on the left to highlight specific thematic elements within the translation.</p>
+                
+                <div class="translation-text">
+                    <div class="line">Of all things that have life and sense we</div>
+                    <div class="line">women are the most hapless creatures; first</div>
+                    <div class="line">must we <span class="marriage" title="Action: purchase_woman">buy a husband</span> at an exorbitant</div>
+                    <div class="line">price, and o’er ourselves a tyrant set which</div>
+                    <div class="line">is an evil worse than the first;</div>
+                    <div class="line">and herein lies the most important issue,</div>
+                    <div class="line">whether our choice be good or bad. For</div>
+                    <div class="line"><span class="marriage" title="Status: discreditable">divorce is discreditable to women</span>, nor can</div>
+                    <div class="line"><span class="patriarchy">we disown our lords.</span> Next must the wife,</div>
+                    <div class="line">coming as she does to ways and customs</div>
+                    <div class="line">new, since she hath not learnt the lesson in</div>
+                    <div class="line">her home, have a diviner’s eye</div>
+                    <div class="line"><span class="patriarchy">to see how best to treat the partner of her life</span>. If</div>
+                    <div class="line"><span class="patriarchy">haply we perform these tasks with</span></div>
+                    <div class="line">thoroughness and tact, and the <span class="marriage">husband</span></div>
+                    <div class="line">live with us, without resenting the yoke, our</div>
+                    <div class="line"><span class="marriage">life is a happy one;</span> if not, <span class="violence" title="Type: suicide">’twere best to die.</span></div>
+                    <div class="line">But when a man is vexed with what he</div>
+                    <div class="line">finds indoors,</div>
+                    <div class="line"><span class="violence">he goeth forth and rids his soul</span> of its</div>
+                    <div class="line">disgust, betaking him to some friend or</div>
+                    <div class="line">comrade of like age; whilst we must needs</div>
+                    <div class="line">regard his single self.</div>
+                    <div class="line">And yet they say we live secure at home,</div>
+                    <div class="line">while they are at the <span class="violence">wars</span>,</div>
+                    <div class="line">with their sorry reasoning, for I would</div>
+                    <div class="line"><span class="autonomy">gladly take my stand in battle array three</span></div>
+                    <div class="line">times o’er, than once give</div>
+                    <div class="line"><span class="motherhood" title="Event: birth">birth</span>.</div>
+                    <div class="line">But enough! this language suits not thee as</div>
+                    <div class="line">it does me; thou hast a city here, a <span class="family">father’s</span></div>
+                    <div class="line">house, <span class="autonomy">some joy in life, and friends to share</span></div>
+                    <div class="line">thy thoughts,</div>
+                    <div class="line"><span class="alone" title="Status: isolated">but I am destitute, without a city</span>, and</div>
+                    <div class="line">therefore <span class="marriage">scorned by my husband, a <span class="alone">captive</span></span></div>
+                    <div class="line">I from a foreign shore, <span class="family">with no mother</span>,</div>
+                    <div class="line">brother, or kinsman in whom to find a new</div>
+                    <div class="line">haven of refuge from this calamity.</div>
+                </div>
+            </div> 
+        </div>
     </body>
 </html>

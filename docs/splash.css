@@ -222,4 +222,19 @@ button[onclick="clearAll()"]:hover {
 }
 
 
+
+
+/* Specific Header for Cerrato */
+.trans3-hero {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('cerrato-header.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Ensure the body class triggers the same styles as the others */
+body.cerrato-page .hero-collage {
+    height: 450px;
+    width: 100%;
+}
+
 #scrollTopBtn { position: fixed; bottom: 20px; right: 20px; background: #3b1020; color: white; padding: 15px; border-radius: 50%; cursor: pointer; z-index: 3000; }
