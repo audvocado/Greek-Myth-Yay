@@ -8,7 +8,7 @@ function animate() {
     containers.forEach((container, index) => {
         // This creates the "bobbing" effect without CSS keyframes
         // It offsets each item slightly so they don't move in perfect sync
-        const yOffset = Math.sin(tick + index) * 20; 
+        const yOffset = Math.sin(tick + index) * 15;
         container.style.marginTop = `${yOffset}px`;
     });
 
