@@ -146,4 +146,80 @@ body.show-motherhood .motherhood { background-color: #e0bbe4; color: black; }
 body.show-alone .alone { background-color: #d3d3d3; color: black; }
 
 
+
+
+/* Specific Header for Luschnig */
+.trans2-hero {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('luschnig-header.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Sidebar Styling for the Analysis Filters */
+.controls {
+    flex: 0 0 250px; /* Fixes the width of the sidebar */
+    padding: 40px;
+    background-color: #f7f2e8;
+    border-right: 2px solid #6e1e2e;
+}
+
+.controls h3 {
+    font-family: 'Cinzel', serif;
+    color: #3b1020;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #b2945a;
+}
+
+.control-group h4 {
+    margin: 15px 0 10px 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #6e1e2e;
+}
+
+/* Checkbox alignment */
+.control-group label {
+    display: inline-block;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.control-group label:hover {
+    color: #741b47;
+}
+
+/* Clear Button Styling */
+button[onclick="clearAll()"] {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #3b1020;
+    color: #fdfaf1;
+    border: none;
+    font-family: 'Cinzel', serif;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+button[onclick="clearAll()"]:hover {
+    background-color: #6e1e2e;
+}
+
+/* Line Number Styling (if you use them later) */
+.line-nu {
+    display: inline-block;
+    width: 30px;
+    color: #999;
+    font-size: 0.8rem;
+    user-select: none; /* Prevents selecting numbers when copying text */
+}
+
+/* Ensure the text column is padded */
+.column-text {
+    padding: 60px;
+}
+
+
 #scrollTopBtn { position: fixed; bottom: 20px; right: 20px; background: #3b1020; color: white; padding: 15px; border-radius: 50%; cursor: pointer; z-index: 3000; }

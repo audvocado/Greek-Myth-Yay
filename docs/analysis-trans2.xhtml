@@ -1,9 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
-        <title></title>
+        <title>Analysis: C. A. E. Luschnig</title>
+        <link rel="stylesheet" type="text/css" href="splash.css" />
+        <script type="text/javascript">
+            function toggleHighlight(category) {
+                document.body.classList.toggle('show-' + category);
+            }
+
+            function clearAll() {
+                const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach(cb => cb.checked = false);
+                const categories = ['marriage', 'violence', 'autonomy', 'patriarchy', 'family', 'motherhood', 'alone'];
+                categories.forEach(cat => document.body.classList.remove('show-' + cat));
+            }
+        </script>
     </head>
-    <body>
+    <body class="luschnig-page">
+        <div class="top-bar">
+            <a href="index.xhtml" class="nav-link">Home</a>
+            <a href="about.xhtml" class="nav-link">About</a>
+            <a href="corpus.xhtml" class="nav-link">Corpus</a>
+            <a href="analysis.xhtml" class="nav-link">Analysis</a>
+        </div>
+        
+        <div class="hero-collage trans2-hero">
+            <h1 class="main-title">C. A. E. Luschnig Translation</h1>
+        </div>
+        
+        <div class="split-container">
+            <aside class="controls">
+                <h3>Analysis Filters</h3>
+                <div class="control-group">
+                    <h4>Themes</h4>
+                    <label><input type="checkbox" onclick="toggleHighlight('marriage')" /> Marriage</label><br/>
+                    <label><input type="checkbox" onclick="toggleHighlight('violence')" /> Violence</label><br/>
+                    <label><input type="checkbox" onclick="toggleHighlight('autonomy')" /> Autonomy</label><br/>
+                    <label><input type="checkbox" onclick="toggleHighlight('patriarchy')" /> Patriarchy</label><br/>
+                    <label><input type="checkbox" onclick="toggleHighlight('family')" /> Family</label><br/>
+                    <label><input type="checkbox" onclick="toggleHighlight('motherhood')" /> Motherhood</label><br/>
+                    <label><input type="checkbox" onclick="toggleHighlight('alone')" /> Alone/Isolation</label>
+                </div>
+                <br/>
+                <button type="button" onclick="clearAll()">Clear Highlights</button>
+            </aside>
+            
+            <div class="column-text">
+                <h2>Textual Markup: Luschnig</h2>
+                <p>Click the checkboxes on the left to highlight specific thematic elements within the translation.</p>
+                
+                <div class="translation-text">
+                    <div class="line">Of all creatures that have life and reason</div>
+                    <div class="line">we women are the sorriest lot:</div>
+                    <div class="line">first we must at a <span class="patriarchy" title="Action: purchase_woman">great expenditure of money</span></div>
+                    <div class="line"><span class="marriage" title="Type: non_consensual">buy a husband</span> and even <span class="autonomy" title="Status: loss">take on a master</span></div>
+                    <div class="line">over our body: this evil is more galling than the first.</div>
+                    <div class="line">Here is the most challenging contest, whether we will get a bad man</div>
+                    <div class="line">or a good one. Besides, <span class="marriage" title="Type: non_consensual">divorce is unsavory</span></div>
+                    <div class="line">for a woman and it is <span class="autonomy" title="Status: loss">not possible to say no to one's husband</span>.</div>
+                    <div class="line">And when she comes into new customs and rules</div>
+                    <div class="line">a woman must be a prophet of what she could never learn at home:</div>
+                    <div class="line">how best to deal with her <span class="marriage" title="Type: consensual">marriage partner</span>;</div>
+                    <div class="line">and if we get it worked out well and a husband shares</div>
+                    <div class="line">our life with us, and he bears the yoke <span class="violence" title="Type: domestic">without violence</span>,</div>
+                    <div class="line">life is to be envied. Otherwise we are better off dead.</div>
+                    <div class="line">But the man, when he is bored with things at home</div>
+                    <div class="line">he can go out to ease the weariness of his heart.</div>
+                    <div class="line">But we have just one person to look to.</div>
+                    <div class="line">They say that we live a life free of danger</div>
+                    <div class="line">at home while they face battle with the spear.</div>
+                    <div class="line">How wrong they are. I would rather stand three times</div>
+                    <div class="line">in the line of battle than once <span class="motherhood" title="Event: birth">bear a child</span>.</div>
+                    <div class="line">But the same story does not apply to you and me.</div>
+                    <div class="line">You have this city and your <span class="family">father's home</span>,</div>
+                    <div class="line">enjoyment of life, and the companionship of <span class="family">friends</span>,</div>
+                    <div class="line">but, <span class="alone" title="Status: alienated">alone and without a city</span>, I am <span class="violence" title="Type: domestic">abused</span></div>
+                    <div class="line">by my husband, carried off as plunder from a foreign land,</div>
+                    <div class="line">I have <span class="alone" title="Status: isolated">no <span class="family">mother</span>, no <span class="family">brother</span>, no relative</span></div>
+                    <div class="line">to offer me a safe haven from this disaster.</div>
+                </div>
+            </div> 
+        </div>
     </body>
 </html>
