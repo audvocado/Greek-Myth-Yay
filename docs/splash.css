@@ -152,7 +152,8 @@ body.show-alone .alone { background-color: #d3d3d3; color: black; }
 .trans2-hero {
     background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('luschnig-header.jpg');
     background-size: cover;
-    background-position: center;
+    /* Pushes the image down by focusing on the top 20% of the file */
+    background-position: center 20%; 
 }
 
 /* Sidebar Styling for the Analysis Filters */
@@ -228,7 +229,8 @@ button[onclick="clearAll()"]:hover {
 .trans3-hero {
     background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('cerrato-header.jpg');
     background-size: cover;
-    background-position: center;
+    /* Adjust this percentage: higher number moves image UP, lower number moves image DOWN */
+    background-position: center 25%;
 }
 
 /* Ensure the body class triggers the same styles as the others */
@@ -240,10 +242,10 @@ body.cerrato-page .hero-collage {
 /* --- 12. JOHNSTON SPECIFIC STYLES --- */
 
 .trans4-hero {
-    /* 1. MOVE IMAGE DOWN: Changed 'center' to '50% 80%' to push the view down */
     background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('johnston-header.jpg');
     background-size: cover;
-    background-position: 50% 80%; 
+    /* Pushing this down significantly to avoid the cut-off you mentioned */
+    background-position: center 30%;
 }
 
 
