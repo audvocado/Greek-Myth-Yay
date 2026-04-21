@@ -46,42 +46,51 @@ body {
     margin: 0;
 }
 
-/* --- TEAM LIST STYLING --- */
+/* --- TEAM SECTION BOX --- */
+.team-bio-container {
+    background-color: rgba(253, 250, 241, 0.95); /* Light parchment background */
+    padding: 25px;
+    border: 2px solid #b2945a;                   /* Gold border */
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    margin-top: 15px;
+}
+
 .team-list {
-    list-style-type: none; /* Removes the bullet points */
+    list-style-type: none; 
     padding: 0;
-    margin-top: 20px;
+    margin: 0;
 }
 
 .team-list li {
-    font-size: 1.1rem;
-    line-height: 2; /* Adds nice vertical spacing */
-    color: #fdfaf1; /* Matches your light text color */
-    border-left: 2px solid transparent; 
-    transition: all 0.3s ease;
-}
-
-/* Specific styling for the Mentor/Advisor to set them apart */
-.team-list li.mentor {
-    margin-top: 15px;
-    font-style: italic;
-    color: #b2945a; /* Gold color for authority figures */
     font-size: 1rem;
+    line-height: 1.5;
+    color: #000000;         /* EXPLICIT BLACK TEXT */
+    margin-bottom: 15px;
+    text-align: left;
 }
 
-
-.team-list li:hover {
-    padding-left: 10px;
-    border-left: 2px solid #b2945a;
-    color: #fdfd96;
+/* Names stay bold and black for consistency */
+.team-list li strong {
+    color: #000000; 
+    font-weight: bold;
 }
 
-/* Vertical divider line */
+/* Divider line inside the white box */
 .team-divider {
     height: 1px;
-    background: linear-gradient(to right, #b2945a, transparent);
+    background: #b2945a;
     margin: 15px 0;
-    width: 60%;
+    width: 100%;
+    opacity: 0.3;
+}
+
+/* Mentor section still in black */
+.team-list li.mentor {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #333333; /* Dark charcoal/black */
+    margin-bottom: 5px;
 }
 
 /* --- 4. CONTENT BOXES --- */
