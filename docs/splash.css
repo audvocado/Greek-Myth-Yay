@@ -454,46 +454,55 @@ body.cerrato-page .hero-collage {
     overflow-y: auto;          /* Adds a scrollbar only if text is too long */
     padding-right: 15px;
 }
-
-/* --- STYLE #1: EXTRA WAVY PAPYRUS --- */
+/* --- STYLE #1: BURNT & WAVY PARCHMENT --- */
 .border-papyrus {
     background-color: #fdfaf1 !important;
     color: #000000 !important;
     padding: 60px;
     margin: 40px auto;
-    border: 2px solid #d2b48c;
-    /* This "wavy" radius creates the hand-drawn parchment look */
-    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
-    /* Layered shadows to give it a 3D warped paper effect */
+    
+    /* Creating the 'burnt' edge look */
+    border: 2px solid #5c4033; 
+    
+    /* This creates the wavy, organic shape */
+    border-radius: 4% 95% 6% 95% / 95% 4% 92% 5%;
+    
+    /* Inner glow makes the edges look toasted/burnt */
     box-shadow: 
-        5px 5px 15px rgba(0,0,0,0.1), 
-        -5px -2px 20px rgba(0,0,0,0.05),
-        inset 0 0 50px rgba(178, 148, 90, 0.2);
-    position: relative;
+        inset 0 0 30px #d2b48c,
+        inset 20px 0 80px rgba(92, 64, 51, 0.2),
+        5px 10px 20px rgba(0,0,0,0.3);
+    
+    /* Slightly tilts the paper for a realistic look */
+    transform: rotate(-0.5deg);
 }
-.border-papyrus h2, .border-papyrus p { color: #000000 !important; }
 
-/* --- STYLE #2: FULL VINE BORDER (ALL SIDES) --- */
+/* --- STYLE #2: FULL VINE BORDER (FIXED) --- */
 .border-vine {
     background-color: #fdfaf1 !important;
     color: #000000 !important;
-    /* Ensure the container handles the border properly */
-    display: flex !important; 
-    border: 20px solid transparent !important;
-    /* Explicitly tells the browser to wrap all sides */
-    border-image-source: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 5c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9zm0 14c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5z' fill='%23b2945a'/%3E%3C/svg%3E") !important;
-    border-image-slice: 30 !important;
-    border-image-repeat: repeat !important;
-    border-image-width: 20px !important; 
     
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    margin-bottom: 40px !important;
+    /* We force a thick transparent border to act as the 'canvas' for the vines */
+    border-style: solid !important;
+    border-width: 25px !important; 
+    border-color: transparent !important;
+    
+    /* The SVG Vine Pattern */
+    border-image-source: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 5c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9zm0 14c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5z' fill='%23b2945a'/%3E%3C/svg%3E") !important;
+    
+    /* This number (slice) MUST match the width of your border to show up */
+    border-image-slice: 25 !important;
+    border-image-repeat: repeat !important;
+    
+    /* Ensures it wraps the flex container correctly */
+    display: flex !important;
+    box-sizing: border-box !important;
 }
-.border-vine h2, .border-vine p, .border-vine li { color: #000000 !important; }
 
-/* Fix for internal spacing so text doesn't hit the vines */
-.border-vine .column-text {
-    padding: 30px !important;
+/* Fixes for the text inside */
+.border-papyrus h2, .border-papyrus p,
+.border-vine h2, .border-vine p, .border-vine li {
+    color: #000000 !important;
 }
 
 #scrollTopBtn { position: fixed; bottom: 20px; right: 20px; background: #3b1020; color: white; padding: 15px; border-radius: 50%; cursor: pointer; z-index: 3000; }
