@@ -422,18 +422,24 @@ body.cerrato-page .hero-collage {
 
 /* --- ANALYSIS PAGE TEXT BOXES --- */
 .analysis-box {
-    background-color: #fdfaf1; /* Light parchment/paper color */
-    border: 2px solid #b2945a;  /* Gold border to match theme */
-    padding: 30px;
+    background-color: #fdfaf1;
+    color: #000000;
+    padding: 40px;
     margin: 20px auto;
-    max-width: 900px;          /* Prevents the box from getting too wide */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    max-width: 900px;
     
-    /* THE OVERFLOW FIX */
-    height: auto;              /* Allows the box to grow with your text */
-    min-height: 200px;         /* Ensures it doesn't look empty */
-    overflow: hidden;          /* Cleans up any stray edges */
-    display: block;
+    /* 1. Base border */
+    border: 18px solid #b2945a; 
+
+    /* 2. The Greek Key (Meander) Pattern via Base64 */
+    /* This is one single value, so Oxygen won't flag it */
+    border-image-source: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cpath d='M0 0v20h20V0H0zm18 18H2V2h16v16zm-4-4H6V6h8v2h-6v4h4v-2h2v4z' fill='%233b1020'/%3E%3C/svg%3E");
+    
+    /* 3. Tell the border how to repeat */
+    border-image-slice: 33% 33%;
+    border-image-repeat: repeat;
+    
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .analysis-text {
