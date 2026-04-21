@@ -455,30 +455,45 @@ body.cerrato-page .hero-collage {
     padding-right: 15px;
 }
 
-/* --- STYLE #1: ANCIENT PAPYRUS (For Project Goals) --- */
+/* --- STYLE #1: EXTRA WAVY PAPYRUS --- */
 .border-papyrus {
     background-color: #fdfaf1 !important;
     color: #000000 !important;
-    padding: 50px;
-    border: 1px solid #d2b48c; 
+    padding: 60px;
+    margin: 40px auto;
+    border: 2px solid #d2b48c;
+    /* This "wavy" radius creates the hand-drawn parchment look */
+    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+    /* Layered shadows to give it a 3D warped paper effect */
     box-shadow: 
-        2px 3px 20px rgba(0,0,0,0.2),
-        0 0 40px rgba(178, 148, 90, 0.1) inset;
-    /* The 'torn paper' effect */
-    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+        5px 5px 15px rgba(0,0,0,0.1), 
+        -5px -2px 20px rgba(0,0,0,0.05),
+        inset 0 0 50px rgba(178, 148, 90, 0.2);
+    position: relative;
 }
 .border-papyrus h2, .border-papyrus p { color: #000000 !important; }
 
-/* --- STYLE #2: GOLDEN VINE (For Methodology, Questions, and Sources) --- */
+/* --- STYLE #2: FULL VINE BORDER (ALL SIDES) --- */
 .border-vine {
     background-color: #fdfaf1 !important;
     color: #000000 !important;
-    padding: 50px;
-    /* Uses the decorative floral meander */
-    border: 12px solid transparent;
-    border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 5c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9zm0 14c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5z' fill='%23b2945a'/%3E%3C/svg%3E") 20 repeat;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    /* Ensure the container handles the border properly */
+    display: flex !important; 
+    border: 20px solid transparent !important;
+    /* Explicitly tells the browser to wrap all sides */
+    border-image-source: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 5c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9zm0 14c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5z' fill='%23b2945a'/%3E%3C/svg%3E") !important;
+    border-image-slice: 30 !important;
+    border-image-repeat: repeat !important;
+    border-image-width: 20px !important; 
+    
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    margin-bottom: 40px !important;
 }
 .border-vine h2, .border-vine p, .border-vine li { color: #000000 !important; }
+
+/* Fix for internal spacing so text doesn't hit the vines */
+.border-vine .column-text {
+    padding: 30px !important;
+}
 
 #scrollTopBtn { position: fixed; bottom: 20px; right: 20px; background: #3b1020; color: white; padding: 15px; border-radius: 50%; cursor: pointer; z-index: 3000; }
