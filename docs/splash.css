@@ -420,26 +420,24 @@ body.cerrato-page .hero-collage {
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-/* --- ANALYSIS PAGE TEXT BOXES --- */
 .analysis-box {
     background-color: #fdfaf1;
     color: #000000;
     padding: 40px;
-    margin: 20px auto;
+    margin: 30px auto;
     max-width: 900px;
     
-    /* 1. Base border */
-    border: 18px solid #b2945a; 
+    /* 1. The visible gold "frame" */
+    border: 15px solid #b2945a; 
 
-    /* 2. The Greek Key (Meander) Pattern via Base64 */
-    /* This is one single value, so Oxygen won't flag it */
-    border-image-source: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cpath d='M0 0v20h20V0H0zm18 18H2V2h16v16zm-4-4H6V6h8v2h-6v4h4v-2h2v4z' fill='%233b1020'/%3E%3C/svg%3E");
+    /* 2. The Pattern - This is a much simpler 'Greek Key' SVG */
+    border-image-source: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath d='M0 0v30h30V0H0zm26 26H4V4h22v22zM8 8h14v14H8V8zm2 2v10h10v-6h-6v2h4v2h-6v-6h8v-2H10z' fill='%233b1020'/%3E%3C/svg%3E");
     
-    /* 3. Tell the border how to repeat */
-    border-image-slice: 33% 33%;
+    /* 3. The Slice - This tells the browser to keep the pattern proportional */
+    border-image-slice: 10;
     border-image-repeat: repeat;
     
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
 
 .analysis-text {
