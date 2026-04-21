@@ -477,26 +477,37 @@ body.cerrato-page .hero-collage {
     transform: rotate(-0.5deg);
 }
 
-/* --- STYLE #2: FULL VINE BORDER (FIXED) --- */
 .border-vine {
     background-color: #fdfaf1 !important;
     color: #000000 !important;
+    display: flex !important;
+    flex-wrap: wrap; /* Helps handle the internal image/text layout */
+    margin-bottom: 40px !important;
     
-    /* We force a thick transparent border to act as the 'canvas' for the vines */
+    /* 1. Force a thick 4-way border 'track' */
     border-style: solid !important;
     border-width: 25px !important; 
-    border-color: transparent !important;
-    
-    /* The SVG Vine Pattern */
+    border-color: #b2945a !important; /* Fallback gold color */
+
+    /* 2. The Vine Pattern */
     border-image-source: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 5c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9zm0 14c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5z' fill='%23b2945a'/%3E%3C/svg%3E") !important;
     
-    /* This number (slice) MUST match the width of your border to show up */
-    border-image-slice: 25 !important;
+    /* 3. The '30' slice tells the browser to cut the SVG into 9 pieces (corners + sides) */
+    border-image-slice: 30 !important;
+    
+    /* 4. 'Repeat' ensures the circles continue along the full length of the sides */
     border-image-repeat: repeat !important;
     
-    /* Ensures it wraps the flex container correctly */
-    display: flex !important;
+    /* 5. This forces the image to actually use the 25px width we set above */
+    border-image-width: 25px !important;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     box-sizing: border-box !important;
+}
+
+/* Ensure the internal text doesn't overlap the vines */
+.border-vine .column-text {
+    padding: 20px !important;
 }
 
 /* Fixes for the text inside */
