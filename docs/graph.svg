@@ -57,11 +57,11 @@
          y2="-500"
          stroke="black"
          stroke-width="2"/>
-   <rect width="100" height="203" x="0" y="-203"/>
-   <rect width="100" height="203" x="0" y="-203"/>
-   <rect width="100" height="203" x="0" y="-203"/>
-   <rect width="100" height="203" x="0" y="-203"/>
-   <rect width="100" height="203" x="0" y="-203"/>
-   <rect width="100" height="203" x="0" y="-203"/>
-   <rect width="100" height="203" x="0" y="-203"/>
+   <rect width="100" height="18" x="0" y="-18"/>
+   <rect width="100" height="8" x="0" y="-8"/>
+   <rect width="100" height="6" x="0" y="-6"/>
+   <rect width="100" height="5" x="0" y="-5"/>
+   <rect width="100" height="6" x="0" y="-6"/>
+   <rect width="100" height="3" x="0" y="-3"/>
+   <rect width="100" height="2" x="0" y="-2"/>
 </svg>

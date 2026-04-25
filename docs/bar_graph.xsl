@@ -41,6 +41,13 @@
                 <rect width="100" height="{$count}" x="0" y="-{$count}"></rect>
             </xsl:for-each>
             
+            <xsl:for-each select="$themes">
+                <xsl:variable name="theme" select="."/>
+                <xsl:variable name="count" as="xs:double"
+                    select="count($doc//line/descendant::*[name() = $theme])"/>
+                <rect width="100" height="{$count}" x="0" y="-{$count}"/>
+            </xsl:for-each>
+            
           <!--  <rect width="25" height="300" x="25" y="163" fill="blue"></rect>
             <text x="5" y="390" fill="blue">marriage</text>
             <rect width="25" height="300" x="75" y="260" stroke="blue"></rect>
