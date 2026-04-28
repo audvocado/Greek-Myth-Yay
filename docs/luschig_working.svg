@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1000"
+     height="1000"
+     viewBox="-150 -400 1000 600">
+   <text x="400" y="-450">Luschig Translation</text>
+   <line x1="1000"
+         y1="0"
+         x2="0"
+         y2="0"
+         stroke="black"
+         stroke-width="5"/>
+   <text x="400" y="100">Themes</text>
+   <line x1="1"
+         y1="0"
+         x2="1"
+         y2="-100"
+         stroke="black"
+         stroke-width="5"/>
+   <text x="-125" y="-200">Times Appeared</text>
+   <text x="-25" y="-0">0</text>
+   <line x1="1000"
+         y1="-0"
+         x2="0"
+         y2="-0"
+         stroke="black"
+         stroke-width="2"/>
+   <text x="-25" y="-80">4</text>
+   <line x1="1000"
+         y1="-80"
+         x2="0"
+         y2="-80"
+         stroke="black"
+         stroke-width="2"/>
+   <text x="-25" y="-160">8</text>
+   <line x1="1000"
+         y1="-160"
+         x2="0"
+         y2="-160"
+         stroke="black"
+         stroke-width="2"/>
+   <text x="-25" y="-240">12</text>
+   <line x1="1000"
+         y1="-240"
+         x2="0"
+         y2="-240"
+         stroke="black"
+         stroke-width="2"/>
+   <text x="-25" y="-320">16</text>
+   <line x1="1000"
+         y1="-320"
+         x2="0"
+         y2="-320"
+         stroke="black"
+         stroke-width="2"/>
+   <text x="-25" y="-400">20</text>
+   <line x1="1000"
+         y1="-400"
+         x2="0"
+         y2="-400"
+         stroke="black"
+         stroke-width="2"/>
+   <rect width="100" height="20" x="0" y="-20" fill="blue"/>
+   <text x="50" y="25" text-anchor="middle" fill="black">patriarchy</text>
+   <rect width="100" height="60" x="120" y="-60" fill="blue"/>
+   <text x="170" y="25" text-anchor="middle" fill="black">marriage</text>
+   <rect width="100" height="40" x="240" y="-40" fill="blue"/>
+   <text x="290" y="25" text-anchor="middle" fill="black">autonomy</text>
+   <rect width="100" height="40" x="360" y="-40" fill="blue"/>
+   <text x="410" y="25" text-anchor="middle" fill="black">violence</text>
+   <rect width="100" height="20" x="480" y="-20" fill="blue"/>
+   <text x="530" y="25" text-anchor="middle" fill="black">motherhood</text>
+   <rect width="100" height="80" x="600" y="-80" fill="blue"/>
+   <text x="650" y="25" text-anchor="middle" fill="black">family</text>
+   <rect width="100" height="40" x="720" y="-40" fill="blue"/>
+   <text x="770" y="25" text-anchor="middle" fill="black">alone</text>
+   <rect width="100" height="20" x="0" y="-20" fill="blue"/>
+   <rect width="100" height="60" x="120" y="-60" fill="blue"/>
+   <rect width="100" height="40" x="240" y="-40" fill="blue"/>
+   <rect width="100" height="40" x="360" y="-40" fill="blue"/>
+   <rect width="100" height="20" x="480" y="-20" fill="blue"/>
+   <rect width="100" height="80" x="600" y="-80" fill="blue"/>
+   <rect width="100" height="40" x="720" y="-40" fill="blue"/>
+</svg>
