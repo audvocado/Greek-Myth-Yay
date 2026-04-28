@@ -3,13 +3,14 @@
      width="1000"
      height="1000"
      viewBox="-150 -400 1000 600">
+   <text x="400" y="-300">Murray Translation</text>
    <line x1="1000"
          y1="0"
          x2="0"
          y2="0"
          stroke="black"
          stroke-width="5"/>
-   <text x="400" y="100">Themes</text>
+   <text x="400" y="300">Themes</text>
    <line x1="1"
          y1="0"
          x2="1"
@@ -60,16 +61,21 @@
          stroke="black"
          stroke-width="2"/>
    <rect width="100" height="60" x="0" y="-60" fill="blue"/>
+   <text x="50" y="25" text-anchor="middle" fill="black">violence</text>
+   <rect width="100" height="40" x="120" y="-40" fill="blue"/>
+   <text x="170" y="25" text-anchor="middle" fill="black">patriarchy</text>
+   <rect width="100" height="80" x="240" y="-80" fill="blue"/>
+   <text x="290" y="25" text-anchor="middle" fill="black">autonomy</text>
+   <rect width="100" height="60" x="360" y="-60" fill="blue"/>
+   <text x="410" y="25" text-anchor="middle" fill="black">alone</text>
+   <rect width="100" height="40" x="480" y="-40" fill="blue"/>
+   <text x="530" y="25" text-anchor="middle" fill="black">family</text>
+   <rect width="100" height="40" x="600" y="-40" fill="blue"/>
+   <text x="650" y="25" text-anchor="middle" fill="black">motherhood</text>
+   <rect width="100" height="60" x="0" y="-60" fill="blue"/>
    <rect width="100" height="40" x="120" y="-40" fill="blue"/>
    <rect width="100" height="80" x="240" y="-80" fill="blue"/>
    <rect width="100" height="60" x="360" y="-60" fill="blue"/>
    <rect width="100" height="40" x="480" y="-40" fill="blue"/>
    <rect width="100" height="40" x="600" y="-40" fill="blue"/>
-   <text x="0" y="25" fill="#ffd1dc">Patriarchy</text>
-   <text x="140" y="25" fill="#fdfd96">Marriage</text>
-   <text x="250" y="25" fill="#d3d3d3">Alone/Isolation</text>
-   <text x="380" y="25" fill="#b3ffb3">Autonomy</text>
-   <text x="500" y="25" fill="#cdecff">Family</text>
-   <text x="620" y="25" fill="#E64747">Violence</text>
-   <text x="740" y="25" fill="#e0bbe4">Motherhood</text>
 </svg>

@@ -13,7 +13,8 @@
         <xsl:variable name="doc" select="/"></xsl:variable>
      
         <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="-150 -400 1000 600">
-<!--            below is x axis-->
+<text x="400" y="-450">Murray Translation</text>
+            <!--            below is x axis-->
             <line x1="1000" y1="0" x2="0" y2="0" stroke="black" stroke-width="5" />
             <text x="400" y="100" >Themes</text>
 <!--            below is y axis-->
@@ -25,8 +26,22 @@
                 <xsl:variable name="ruling_height" as="xs:double" select=". div 5 * 400"/>
                 <text x="-25" y="-{$ruling_height}"><xsl:value-of select="$ruling_height div 20"/></text>
                 <line x1="1000" y1="-{$ruling_height}" x2="0" y2="-{$ruling_height}" stroke="black" stroke-width="2"></line>
+           
             </xsl:for-each>
             
+            <xsl:for-each select="$themes">
+                <xsl:variable name="theme" select="."/>
+                <xsl:variable name="count" as="xs:double" select="count($doc//line/descendant::*[name() = $theme])"/>
+                <xsl:variable name="xPos" select="(position() - 1) * 120"/>
+                
+                <!-- The Bar -->
+                <rect width="100" height="{$count * $scale}" x="{$xPos}" y="-{$count * $scale}" fill="blue"/>
+                
+                <!-- The Dynamic Title -->
+                <text x="{$xPos + 50}" y="25" text-anchor="middle" fill="black">
+                    <xsl:value-of select="$theme"/>
+                </text>
+            </xsl:for-each>
 <!--            the above is to create the height of the x and y axis-->
             
 <!--            <xsl:for-each select="$themes">
@@ -43,16 +58,17 @@
                 <rect width="100" height="{$count * $scale}" x="{(position() - 1) * 120}"  y="-{$count * $scale}" fill="blue"/>
             </xsl:for-each>
 <!--             the above is to create the actual bars themselves-->
-            <text x="0" y="25" fill="#ffd1dc">Patriarchy</text>
+            
+<!--            <text x="0" y="25" fill="#ffd1dc">Patriarchy</text>
             <text x="140" y="25" fill="#fdfd96">Marriage</text>
             <text x="250" y="25" fill="#d3d3d3">Alone/Isolation</text>
             <text x="380" y="25" fill="#b3ffb3">Autonomy</text>
             <text x="500" y="25" fill="#cdecff">Family</text>
             <text x="620" y="25" fill="#E64747">Violence</text>
-            <text x="740" y="25" fill="#e0bbe4">Motherhood</text>
+            <text x="740" y="25" fill="#e0bbe4">Motherhood</text>-->
+
             
-<!--            we need a variable for the x position (not axis) of the rectangles, so it'll basiclaly be like whatever the first theme is ill be the foirst oen and th enetx theme will be a ltitl ebit bumped oevr to the roght-->
-<!--            we need to figure out the how to count the number of elements that are in the document that are equal to the -->
+<!--    the above is hard coded theme names, I'm keeping it just in case but the theme names are now dynamically coded so it's kind of obsolete.         -->
             
             
         </svg>
